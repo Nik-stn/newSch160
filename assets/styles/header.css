@@ -1,0 +1,23 @@
+.header-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-logo img {
+    width: 200px;
+}
+
+.header-bar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header-bar a {
+    line-height: 0;
+}
+
+.header-bar img {
+    width: 32px;
+}
