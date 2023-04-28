@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -50,5 +52,5 @@ body {
 }
 
 .container {
-    width: 100vw; 
+    width: 100vw;
 }

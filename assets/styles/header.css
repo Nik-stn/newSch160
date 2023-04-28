@@ -34,6 +34,9 @@
 
 .header-nav {
     background: #00043c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .site-nav {
@@ -41,27 +44,27 @@
     justify-content: center;
     flex-wrap: wrap;
     list-style-type: none;
+    margin-right: 100px;
 }
 
 .nav-item {
     display: flex;
 }
 
-
 .nav-link {
     text-decoration: none;
-    padding: 0 20px;
+    padding: 0 10px;
     color: #fff;
     line-height: 3;
     flex: 1;
     position: relative;
     z-index: 1;
-    transition: all 0.3s ease-in-out 0s;
+    transition: color 0.3s ease 0s;
 }
 
 .nav-link:hover {
     color: #000;
-    transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease 0s;
 }
 
 .nav-link:hover::before {
@@ -90,4 +93,31 @@
     z-index: -1;
 }
 
+.site-search {
+    display: flex;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.input-search {
+    outline: 0;
+    padding-left: 10px;
+}
+
+.input-control {
+    height: 40px;
+    background: #fff;
+    border: 0;
+}
+
+.button-search {
+    line-height: 0.5;
+    width: 40px;
+    cursor: pointer;
+
+}
+
+.icon-search {
+    width: 30px;
+}
 
