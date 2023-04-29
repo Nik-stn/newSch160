@@ -8,13 +8,14 @@
     <title>Средняя школа №160 г.Минска</title>
     <link rel="stylesheet" href="assets/styles/index.css">
 </head>
+<script defer src="assets/scripts/slider.js"></script>
+
 <style>
     a {
         color: #fff;
         text-decoration: none;
     }
 </style>
-
 <body>
     <header class="header">
         <div class="container">
@@ -67,21 +68,38 @@
 
                 <div class="site-search">
                     <input type="text" class="input-control input-search" placeholder="Поиск по сайту">
-                    <button type="submit"  class="input-control button-search">
+                    <button type="submit" class="input-control button-search">
                         <img class="icon-search" src="assets/images/header/search.svg" alt="search">
                     </button>
                 </div>
             </nav>
         </div>
     </header>
-    <main>
+    <main class="main">
 
+        <!-- slider -->
+        <section class="section">
+            <div class="container">
+                <div class="slider">
+                    <div class="slider-item"><img src="assets/images/slider/pupils1.jpg" alt="pupils"></div>
+                    <div class="slider-item"><img src="assets/images/slider/pupils2.jpg" alt="pupils"></div>
+                    <div class="slider-item"><img src="assets/images/slider/pupils3.jpg" alt="pupils"></div>
+                    <a class="slider-control" id="previous" onclick="previousSlide()">
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 96 960 960" ><path fill="currentColor" d="M561 816 320 575l241-241 43 43-198 198 198 198-43 43Z"/></svg>
+                    </a>
+    
+                    <a class="slider-control" id="next" onclick="nextSlide()">
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 96 960 960" ><path fill="currentColor" d="m375 816-43-43 198-198-198-198 43-43 241 241-241 241Z"/></svg>
+                    </a>
+                </div>
+
+            </div>
+        </section>
     </main>
     <footer>
 
     </footer>
 
-    <script src="assets/scripts/main.js"></script>
 </body>
 
 </html>
