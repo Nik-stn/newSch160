@@ -5,18 +5,18 @@
 }
 
 .slider-item img {
-    object-fit: cover;
+    /* object-fit: cover; */
     width: 100%;
 }
 
-/* Кнопки назад и вперёд: */
-#previous,
-#next {
+.slider-control {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
     transition: all 0.3s linear;
+    background: transparent;
+    border: 0;
 }
 
 #next {
@@ -30,12 +30,10 @@
 }
 
 
-#previous:hover,
-#next:hover {
+.slider-control:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-/* Анимация слайдов: */
 .slider-item {
     animation-name: fade;
     animation-duration: 1.5s;
@@ -43,9 +41,8 @@
 
 @keyframes fade {
 
-    /* Устанавливаем и изменяем степень прозрачности: */
     from {
-        /* opacity: 0.4 */
+        opacity: 0.4
     }
 
     to {
