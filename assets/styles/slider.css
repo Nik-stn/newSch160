@@ -2,6 +2,8 @@
     width: 100%;
     margin: 0 auto 1000px;
     position: relative;
+    /* height: 800px; */
+    overflow: hidden;
 }
 
 .slider-item img {
