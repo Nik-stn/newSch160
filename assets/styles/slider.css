@@ -1,6 +1,6 @@
 .slider {
     width: 100%;
-    margin: 0 auto;
+    margin: 0 auto 1000px;
     position: relative;
 }
 
@@ -13,20 +13,15 @@
     cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
     transition: all 0.3s linear;
     background: transparent;
     border: 0;
+    width: 100px;
+    height: 100px;
 }
 
 #next {
     right: 0;
-}
-
-#next svg,
-#previous svg {
-    color: #fdbe34;
-    width: 100px;
 }
 
 
@@ -35,8 +30,7 @@
 }
 
 .slider-item {
-    animation-name: fade;
-    animation-duration: 1.5s;
+    animation: fade 1.5s ease-in-out;
 }
 
 @keyframes fade {
@@ -49,3 +43,33 @@
         opacity: 1
     }
 }
+
+.scroll-down {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: auto;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+
+
+
+@keyframes bounce {
+    0%,
+    100%,
+    20%,
+    50%,
+    80% {
+     transform:translateY(0)
+    }
+    40% {
+     transform:translateY(-30px)
+    }
+    60% {
+     transform:translateY(-15px)
+    }
+   }
