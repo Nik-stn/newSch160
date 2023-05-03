@@ -11,7 +11,7 @@
 <script defer src="assets/scripts/slider.js"></script>
 
 <style>
-    a {
+    .nav-link {
         color: #fff;
         text-decoration: none;
     }
@@ -78,28 +78,70 @@
     </header>
     <main class="main">
 
-        <!-- slider -->
+        <!-- slider + popular -->
         <section class="section">
             <div class="container">
-                <div class="slider">
-                    <div class="slider-item"><img src="assets/images/slider/pupils1.jpg" alt="pupils"></div>
-                    <div class="slider-item"><img src="assets/images/slider/pupils2.jpg" alt="pupils"></div>
-                    <div class="slider-item"><img src="assets/images/slider/pupils3.jpg" alt="pupils"></div>
-                    <button class="slider-control" id="previous">
-                        <svg width="75" height="75">
-                            <path d="M 52.5 7.5 L 22.5 37.5 L 52.5 67.5" stroke="#fdbe34" stroke-width="10" stroke-linecap="round" fill="none" />
-                        </svg>
-                    </button>
-                    <button class="slider-control" id="next">
-                        <svg width="75" height="75">
-                            <path d="M 22.5 7.5 L 52.5 37.5 L 22.5 67.5" stroke="#fdbe34" stroke-width="10" stroke-linecap="round" fill="none" />
-                        </svg>
-                    </button>
-                    <button class="scroll-down">
-                        <svg width="50" height="50">
-                            <path d="M 5 15 L 25 35 L 45 15" stroke="#fdbe34" stroke-width="7" stroke-linecap="round" fill="none" />
-                        </svg>
-                    </button>
+                <div class="section-inner">
+                    <div class="popular">
+                        <div class="popular-box">
+                            <h3 class="popular-title">Популярные разделы </h3>
+                            <div class="popular-wrap">
+                                <div class="popular-item">
+                                    <a href="#" class="popular-link">
+                                        Образовательный процесс в 2022/2023 учебном году
+                                    </a>
+                                </div>
+                                <div class="popular-item">
+                                    <a href="#" class="popular-link">
+                                        План мероприятий в 6-ой школьный день
+                                    </a>
+                                </div>
+                                <div class="popular-item">
+                                    <a href="#" class="popular-link">
+                                        Каникулы
+                                    </a>
+                                </div>
+                                <div class="popular-item">
+                                    <a href="#" class="popular-link">
+                                        Экзаменационная кампания
+                                    </a>
+                                </div>
+                                <div class="popular-item">
+                                    <a href="#" class="popular-link">
+                                        Деловой стиль одежды
+                                    </a>
+                                </div>
+                                <div class="popular-item">
+                                    <a href="#" class="popular-link">
+                                        2023 - Год мира и созидания
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="slider-item"><img src="assets/images/slider/pupils1.jpg" alt="pupils"></div>
+                        <div class="slider-item"><img src="assets/images/slider/pupils2.jpg" alt="pupils"></div>
+                        <div class="slider-item"><img src="assets/images/slider/pupils3.jpg" alt="pupils"></div>
+                        <button class="slider-control" id="previous">
+                            <svg width="50" height="50">
+                                <path d="M 35 5 L 15 25 L 35 45" stroke="#fdbe34" stroke-width="10"
+                                    stroke-linecap="round" fill="none" />
+                            </svg>
+                        </button>
+                        <button class="slider-control" id="next">
+                            <svg width="50" height="50">
+                                <path d="M 15 5 L 35 25 L 15 45" stroke="#fdbe34" stroke-width="10"
+                                    stroke-linecap="round" fill="none" />
+                            </svg>
+                        </button>
+                        <!-- <button class="scroll-down">
+                            <svg width="50" height="50">
+                                <path d="M 5 15 L 25 35 L 45 15" stroke="#fdbe34" stroke-width="7"
+                                    stroke-linecap="round" fill="none" />
+                            </svg>
+                        </button> -->
+                    </div>
                 </div>
             </div>
         </section>

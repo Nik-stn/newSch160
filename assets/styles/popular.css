@@ -1,0 +1,16 @@
+.popular  {
+    width: 35%;
+    margin-right: 20px;
+    border: 2px solid #becddd;
+    background-image: linear-gradient(315deg, #ffffff 0%, #dee4eb 74%);
+    box-shadow: 10px 8px 10px 5px #d7e1ec79;
+}
+
+.popular-box {
+    margin: 10px;
+    
+}
+
+.popular-title {
+    text-align: center;
+}
