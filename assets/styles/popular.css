@@ -1,9 +1,8 @@
 .popular  {
     width: 35%;
     margin-right: 20px;
-    border: 2px solid #becddd;
-    background-image: linear-gradient(315deg, #ffffff 0%, #dee4eb 74%);
-    box-shadow: 10px 8px 10px 5px #d7e1ec79;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background: #f8f9fd;
 }
 
 .popular-box {
@@ -13,4 +12,75 @@
 
 .popular-title {
     text-align: center;
+}
+
+.popular-item {
+	width: 300px;
+	height: 55px;
+	cursor: pointer;
+	background: #ffc421;
+	border: 2px solid black;
+    border-radius: 20px;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+	transition: 500ms;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.popular-item:after {
+	content: '';
+	position: absolute;
+	transform: translateX(-55px) translateY(-40px);
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: transparent;
+	box-shadow: 0px 0px 50px transparent;
+	transition: 500ms;
+}
+
+.popular-item:hover {
+	transform: translateY(-5px);
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+}
+
+/* .popular-item:hover:after {
+	background: white;
+	box-shadow: 0px 0px 20px #ffc421, 0px 0px 30px #ffc421, inset 0px 0px 10px #ffc421;
+	animation: spin 1s infinite linear;
+}
+
+@keyframes spin{
+	25%{transform: translateX(-25px) translateY(-35px);
+			width: 15px;
+			height: 15px;}
+	50% {transform: translateX(-55px) translateY(-30px);
+			width: 5px;
+			height: 5px;}
+	75% {transform: translateX(-85px) translateY(-35px);
+			width: 15px;
+			height: 15px;}
+} */
+
+.popular-item:focus {
+	outline: none;
+}
+
+.popular-link {
+    text-decoration: none;
+    color: #000;
+    margin-left: 10px;
+}
+
+.popular-icon-wrap {
+    margin-left: 10px;
+    margin-right: 2px;
+}
+
+.popular-icon {
+    width: 40px;
+    height: 40px;
 }

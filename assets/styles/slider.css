@@ -9,7 +9,9 @@
     width: 65%;
     position: relative;
     overflow: hidden;
-    align-self: flex-start;
+    align-self: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    line-height: 0;
 }
 
 .slider-item img {
