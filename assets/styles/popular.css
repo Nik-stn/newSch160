@@ -1,17 +1,25 @@
 .popular  {
     width: 35%;
     margin-right: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    background: #f8f9fd;
+    /* border: 1px solid rgba(0, 0, 0, 0.05); */
+    border-radius: 5px;
+    /* background: #f8f9fd; */
+    align-self: center;
 }
 
 .popular-box {
-    margin: 10px;
+    margin: 30px 0;
     
+}
+
+.popular-wrap {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .popular-title {
     text-align: center;
+    font-size: 35px;
 }
 
 .popular-item {
