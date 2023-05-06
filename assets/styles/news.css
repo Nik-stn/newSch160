@@ -28,8 +28,8 @@
 }
 
 .news-box {
-    padding: 20px;
     border: 2px solid #ffc421;
+    padding: 10px 0;
 }
 
 .news-tabs-item {
@@ -54,19 +54,20 @@
     }
 }
 
-.news-tabs-inner {
+.news-sch {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.news-item {
+.news-sch-item {
     width: 47%;
     border: 2px solid rgba(0, 0, 0, 0.05);
     position: relative;
 }
 
-.news-link:after {
+.news-sch-link:after {
     content: "";
     width: 100%;
     height: 100%;
@@ -76,30 +77,31 @@
     transition: all .2s ease-in-out;
 }
 
-.news-link:hover:after {
+.news-sch-link:hover:after {
     background-position: 100% 100%;
     z-index: 2;
     position: absolute;
 }
 
-.news-link {
-    text-decoration: none;
+.news-sch-link {
     text-align: center;
     color: #000;
     position: relative;
     z-index: 1;
 }
 
-.news-link img {
+.news-sch-link img {
     transition: transform .2s ease-in-out;
+    filter: brightness(70%);
+
 }
 
-.news-link:hover img {
+.news-sch-link:hover img {
     transform: scale(1.2);
     transition: transform .2s ease-in-out;
 }
 
-.news-logo {
+.news-sch-logo {
     width: 100%;
     height: 300px;
     overflow: hidden;
@@ -108,18 +110,75 @@
     justify-content: center;
 }
 
-.news-content {
+.news-sch-content {
     position: absolute;
     width: 100%;
     bottom: 0;
     z-index: 4;
     color: #fff;
+    font-weight: 700;
+    transition: all .3s ease-in-out;
 }
 
-.news-date {
+.news-sch-link:hover .news-sch-content {
+    bottom: 30%;
+}
+
+.news-sch-date {
     margin-bottom: 10px;
 }
 
-.news-title {
+.news-sch-title {
     margin-bottom: 20px;
+}
+
+.news-rss {
+    margin: 20px;
+    color: #333;
+}
+
+.news-rss-content {
+    border-bottom: 2px solid #ffc421;
+    padding: 10px 0;
+}
+
+.news-rss-title {
+    margin-bottom: 10px;
+}
+
+.news-rss-link {
+    color: #00043c;
+}
+
+.news-rss-link:hover {
+    color: #3740b5;
+    text-decoration: underline;
+    transition: all .3s linear;
+}
+
+.news-sch-archive {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.news-sch-arcive-text {
+    width: 200px;
+    height: 40px;
+    background: #ffc421;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news-sch-arcive-text:hover {
+    opacity: .7;
+    color: #3c3c3c;
+    transition: all .3s linear;
+}
+
+.news-sch-archive-link {
+    color: #fff;
+    text-align: center;
 }
