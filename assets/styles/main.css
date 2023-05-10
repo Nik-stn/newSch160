@@ -66,3 +66,8 @@ a {
 .section {
     padding: 20px 10px 10px;
 }
+
+.section-inner {
+    width: 100%;
+    display: flex;
+}

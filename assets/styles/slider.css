@@ -1,7 +1,4 @@
-.section-inner {
-    width: 100%;
-    display: flex;
-}
+
 
 .slider {
     width: 65%;
@@ -28,7 +25,7 @@
     height: 70px;
 }
 
-#next {
+.slider-control.next {
     right: 0;
 }
 
