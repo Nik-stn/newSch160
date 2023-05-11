@@ -1,0 +1,45 @@
+.banners {
+    position: relative;
+    width: 100%;
+    overflow: hidden;   
+}
+
+.banners-inner {
+    transition: margin-left 250ms;
+    width: 9999px;
+    list-style: none;
+}
+
+.banners:hover .banners-control {
+    opacity: 1;
+}
+
+.banners-item {
+    display: inline-block;
+}
+
+.banner-logo {
+    width: 200px;
+    height: 200px;
+    display: block;
+}
+
+.banners-control {
+    position: absolute;
+    background: transparent;
+    border: 0;
+    top: 35%;
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    transition: all 0.3s linear;
+    opacity: 0;
+}
+
+.banners-control:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.banners-control.next {
+    right: 0;
+}

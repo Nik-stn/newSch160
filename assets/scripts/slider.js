@@ -1,7 +1,6 @@
 //slider
-const next = document.querySelector(".next");
-const previous = document.querySelector(".previous");
-const autoSlider = document.querySelector(".slider");
+const next = document.querySelector(".slider-control.next");
+const previous = document.querySelector(".slider-control.previous");
 
 let slideIndex = 1;
 showSlides(slideIndex);
