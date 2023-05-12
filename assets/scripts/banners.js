@@ -1,76 +1,42 @@
-const nextBan = document.querySelector(".banners-control.next");
-const previousBan = document.querySelector(".banners-control.previous");
-let list = document.querySelector('.banners-inner');
-let listElems = document.querySelectorAll('.banners-item');
-
-/* конфигурация */
-let width = 200; // ширина картинки
-let count = 9; // видимое количество изображений
-
-
-let position = 0; // положение ленты прокрутки
-
-previousBan.onclick = function() {
-  // сдвиг влево
-  position += width * count;
-  // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
-  position = Math.min(position, 0)
-  list.style.marginLeft = position + 'px';
-};
-
-nextBan.onclick = function() {
-  // сдвиг вправо
-  position -= width * count;
-  // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
-  position = Math.max(position, -width * (listElems.length - count));
-  list.style.marginLeft = position + 'px';
-};
-
-
-
-
 (function() {
-    var carousels = document.querySelectorAll('.js-product-carousel');
+    let banners = document.querySelectorAll('.banners');
     
-    [].forEach.call(carousels, function(carousel) {
+    [].forEach.call(banners, function(carousel) {
       carouselize(carousel);
     });
     
   })();
   
   function carouselize(carousel) {
-    var productList = carousel.querySelector('.js-product-list');
-    var productListWidth = 0;
-    var productListSteps = 0;
-    var products = carousel.querySelectorAll('.product');
-    var productAmount = 0;
-    var productAmountVisible = 8;
-    var carouselPrev = carousel.querySelector('.js-carousel-prev');
-    var carouselNext = carousel.querySelector('.js-carousel-next');
+    let bannersInner = carousel.querySelector('.banners-inner');
+    let bannerLogo = carousel.querySelectorAll('.banner-logo');
+    let logoWidth = 0;
+    let logoSteps = 0;
+    let logoAmount = 0;
+    let logoAmountVisible = 9;
+    let btnPrev = carousel.querySelector('.banners-control.previous');
+    let btnNext = carousel.querySelector('.banners-control.next');
   
-    //Count all the products
-    [].forEach.call(products, function(product) {
-      productAmount++;
-      productListWidth += 250;
-      productList.style.width = productListWidth+"px";
+    [].forEach.call(bannerLogo, function() {
+      logoAmount++;
+      logoWidth += 250;
+      bannersInner.style.width = logoWidth+"px";
     });
   
-    carouselNext.onclick = function() {
-      if(productListSteps < productAmount-productAmountVisible) {
-        productListSteps++;
-        moveProductList();
+    btnNext.onclick = function() {
+      if(logoSteps < logoAmount-logoAmountVisible) {
+        logoSteps++;
+        moveLogo();
       }
     }
-    carouselPrev.onclick = function() {
-      if(productListSteps > 0) {
-        productListSteps--;
-        moveProductList();
+    btnPrev.onclick = function() {
+      if(logoSteps > 0) {
+        logoSteps--;
+        moveLogo();
       }
     }
     
-    // This is a bit hacky, let me know if you find a better way to do this!
-    // Move the carousels product-list
-    function moveProductList() {
-      productList.style.transform = "translateX(-"+205*productListSteps+"px)";
+    function moveLogo() {
+      bannersInner.style.transform = "translateX(-"+205*logoSteps+"px)";
     }
   }
