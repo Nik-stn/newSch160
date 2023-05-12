@@ -5,9 +5,7 @@
 }
 
 .banners-inner {
-    transition: transform 250ms;
-    width: 9999px;
-    list-style: none;
+    transition: transform .3s ease-in-out;
 }
 
 .banners:hover .banners-control {
@@ -16,12 +14,19 @@
 
 .banners-item {
     display: inline-block;
+    overflow: hidden;
 }
 
 .banner-logo {
-    width: 200px;
-    height: 200px;
-    display: block;
+  width: 200px;
+  height: 200px;
+  display: block;
+  transition: all .3s ease-in-out;
+}
+
+.banners-item:hover .banner-logo {
+  transform: scale(1.05,1.05);
+  transition: all .3s ease-in-out;
 }
 
 .banners-control {
