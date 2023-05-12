@@ -1,0 +1,30 @@
+.footer-flex {
+    background: #252525;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 90px 0 38px;
+}
+
+.footer-title {
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.about-text {
+    color: #ffffff80;
+    font-size: 16px;
+}
+
+.about-text-item {
+    margin-bottom: 7px;
+}
+
+.about-text-item a {
+    color: #fff;
+}
+
+.about-text-item a:hover {
+    color: #fdbe34;
+    transition: all .3s linear;
+}
