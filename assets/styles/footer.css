@@ -1,9 +1,20 @@
-.footer-flex {
+.footer {
     background: #252525;
     color: #fff;
+}
+
+.footer-inner {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.footer-flex {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 90px 0 38px;
+    border-bottom: 1px solid rgba(253, 189, 52, 0.5);
 }
 
 .footer-title {
@@ -11,20 +22,26 @@
     font-size: 26px;
 }
 
-.about-text {
+.about-text, .footer-nav-item, .count-title {
     color: #ffffff80;
     font-size: 16px;
 }
 
-.about-text-item {
+.about-text-item, .footer-nav-item, .count-title {
     margin-bottom: 7px;
 }
 
-.about-text-item a {
+.about-text-item a, .footer-nav-link, .footer-copyright a {
     color: #fff;
 }
 
-.about-text-item a:hover {
+.about-text-item a:hover, .footer-nav-link:hover, .footer-copyright a:hover {
     color: #fdbe34;
     transition: all .3s linear;
+}
+
+.footer-copyright {
+    font-size: 14px;
+    padding: 20px 0 50px;
+    color: #ffffff80;
 }
