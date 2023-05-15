@@ -25,9 +25,7 @@ function carouselize(carousel) {
     logoWidth += bannerLogo.offsetWidth;
   });
 
-  console.log(logoWidth)
   logoAmountVisible = Math.floor(clientWidth / (logoWidth / bannerLogos.length));
-  console.log(logoAmountVisible)
   
   bannersInner.style.width = (logoWidth + (logoAmountVisible * 20)) + 'px';
 

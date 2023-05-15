@@ -77,7 +77,7 @@ ul {
 }
 
 .scrooll-to-top {
-    display: block; 
+    display: none; 
     line-height: 0px; 
     position: fixed;
     right: 1%;
