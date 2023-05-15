@@ -52,6 +52,7 @@
 
 .nav-item {
     display: flex;
+    position: relative;
 }
 
 .nav-link {
@@ -84,11 +85,43 @@
     left: 0;
     background-color: #fdbe34;
     visibility: hidden;
-    -webkit-transform: scaleX(0);
-    -ms-transform: scaleX(0);
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
     z-index: -1;
+}
+
+.sub-nav {
+    background: #fff;
+    position: absolute;
+    transform: scaleY(0);
+    transform-origin: 0 0;
+    top: 100%;
+    left: 0;
+    width: 280px;
+    z-index: 10;
+    transition: all .3s ease-in-out;
+}
+
+.sub-nav-item {
+    border-bottom: 1px solid rgb(204, 204, 204);
+    cursor: pointer;
+}
+
+.sub-nav-item:hover {
+    background: #fdbe34;
+    transition: all .3s linear;
+}
+
+.sub-nav-link {
+    display: block;
+    color: #000;
+    font-size: 16px;
+    text-align: left;
+    padding: 7px;
+}
+
+.nav-item:hover .sub-nav {
+    transform: scaleY(1);
 }
 
 .site-search {
