@@ -23,6 +23,7 @@
     font-size: 16px;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
+    padding: 0 5px;
 }
 
 .announcement-tab-btn {
@@ -184,11 +185,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 500ms;
 }
 
 .news-sch-arcive-text:hover, .announcement-sch-arcive-text:hover {
-    opacity: .7;
-    transition: all .3s linear;
+    transform: translateY(-5px);
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
 }
 
 .news-sch-archive-link, .announcement-sch-archive-link {
