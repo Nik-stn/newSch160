@@ -41,6 +41,11 @@
     opacity: 0;
 }
 
+.banners-icon {
+    width: 50px;
+    height: 50px;
+}
+
 .banners-control:hover {
     background-color: rgba(0, 0, 0, 0.4);
 }

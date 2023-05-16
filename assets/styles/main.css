@@ -88,6 +88,11 @@ ul {
     opacity: 0.6;
 }
 
+.to-top-icon {
+    width: 45px;
+    height: 40px;
+}
+
 .scrooll-to-top:hover {
     opacity: 1;
     transition: all .3s linear;
