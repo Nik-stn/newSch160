@@ -9,7 +9,7 @@
 }
 
 .header-logo img {
-    width: 200px;
+    width: 100%;
 }
 
 .header-box {
@@ -176,3 +176,12 @@
     width: 30px;
 }
 
+@media (max-width: 1600px) {
+    .header-logo img {
+        width: 80%;
+    }
+
+    .input-control {
+        height: auto;
+    }
+}

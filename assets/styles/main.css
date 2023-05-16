@@ -43,7 +43,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;
+    font-size: 20px;    
     color: #000;
     line-height: 1.2;
     background-color: #fff;
@@ -96,4 +96,10 @@ ul {
 .scrooll-to-top:hover {
     opacity: 1;
     transition: all .3s linear;
+}
+
+@media (max-width: 1600px) {
+    body {
+        font-size: 18px;
+    }
 }

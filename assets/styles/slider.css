@@ -51,3 +51,13 @@
         opacity: 1
     }
 }
+
+@media (max-width: 1800px) {
+    .slider {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1600px) {
+    
+}
