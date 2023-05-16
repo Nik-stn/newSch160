@@ -83,7 +83,7 @@ ul {
     right: 1%;
     bottom: 1%;
     z-index: 10000;
-    background: #fff;
+    background: rgb(41, 41, 161);
     border-radius: 10px;
     opacity: 0.6;
 }
