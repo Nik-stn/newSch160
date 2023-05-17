@@ -151,7 +151,6 @@
 .sub-nav-link {
     display: block;
     color: #000;
-    font-size: 16px;
     text-align: left;
     padding: 7px;
 }
@@ -216,6 +215,14 @@
 @media (max-width: 1200px) {
     .site-search {
         margin-right: 20px;
+    }
+
+    .sub-nav {
+        width: 240px;
+    }
+
+    .sub-nav-link {
+        padding: 5px;
     }
 
     .header-logo {
@@ -290,6 +297,14 @@
 
     .site-search {
         margin-right: 7px;
+    }
+
+    .sub-nav {
+        width: 200px;
+    }
+
+    .sub-nav-link {
+        padding: 4px;
     }
 
     .header-logo {
