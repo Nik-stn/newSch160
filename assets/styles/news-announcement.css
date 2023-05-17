@@ -198,3 +198,24 @@
     color: #000;
     text-align: center;
 }
+
+@media (max-width: 1600px) {
+    .news-tabs-btn, .announcement-tab-btn {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .news-sch-arcive-text, .announcement-sch-arcive-text {
+        height: 35px;
+    }
+
+    .news-sch-logo, .announcement-sch-logo {
+        height: 250px;
+    }
+
+    .news-tabs-btn, .announcement-tab-btn {
+        font-size: 12px;
+        height: 35px;
+    }
+}

@@ -21,10 +21,11 @@
     transition: all 0.3s linear;
     background: transparent;
     border: 0;
+    transform: translateY(-50%);
 }
 
 .slider-icon {
-    width: 100px;
+    width: 100%;
     height: 100px;
 }
 
@@ -59,5 +60,13 @@
 }
 
 @media (max-width: 1600px) {
-    
+    .slider-icon {
+        height: 90px;
+    }
+}
+
+@media (max-width: 1400px) {
+    .slider-icon {
+        height: 80px;
+    }
 }
