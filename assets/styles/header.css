@@ -9,6 +9,11 @@
     align-items: center;
 }
 
+.header-logo {
+    width: 100%;
+    max-width: 200px;
+}
+
 .header-logo img {
     width: 100%;
 }
@@ -27,7 +32,6 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    width: 150px;
     gap: 10px;
 }
 
@@ -40,7 +44,7 @@
     background: #ffc421;
     border: 2px solid black;
     border-radius: 20px;
-    width: 90%;
+    width: 60%;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -155,11 +159,11 @@
 }
 
 .input-search {
-    outline: 0;
     padding-left: 10px;
 }
 
 .input-control {
+    outline: 0;
     height: 40px;
     background: #fff;
     border: 0;
@@ -177,8 +181,8 @@
 }
 
 @media (max-width: 1600px) {
-    .header-logo img {
-        width: 80%;
+    .header-logo {
+        max-width: 160px;
     }
 
     .input-control {
@@ -187,12 +191,11 @@
 }
 
 @media (max-width: 1400px) {
-    .header-logo img {
-        width: 70%;
+    .header-logo {
+        max-width: 140px;
     }
 
     .btn-header-bar {
-        width: 80%;
         height: 40px;
     }
 
@@ -207,12 +210,11 @@
         margin-right: 20px;
     }
 
-    .header-logo img {
-        width: 60%;
+    .header-logo {
+        max-width: 120px;
     }
 
     .btn-header-bar {
-        width: 70%;
         height: 30px;
     }
 
@@ -231,4 +233,88 @@
     .icon-search {
         width: 25px;
     }
+}
+
+@media (max-width: 1024px) {
+    .header {
+        margin-top: 10px;
+    }
+
+    .site-search {
+        margin-right: 10px;
+    }
+
+    .header-logo {
+        max-width: 100px;
+    }
+
+    .header-box-item {
+        margin-bottom: 5px;
+    }
+
+    .nav-link {
+        padding: 0 5px;
+    }
+
+    .btn-header-bar {
+        height: 25px;
+        border-width: 1px;
+    }
+
+    .header-bar img {
+        width: 20px;
+    }
+
+    .input-search {
+        width: 120px;
+    }
+
+    .input-search::placeholder {
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .header {
+        margin-top: 7px;
+    }
+
+    .site-search {
+        margin-right: 7px;
+    }
+
+    .header-logo {
+        max-width: 90px;
+    }
+
+    .header-box-item {
+        margin-bottom: 4px;
+    }
+
+    .nav-link {
+        padding: 0 4px;
+    }
+
+
+    .header-bar img {
+        width: 18px;
+    }
+
+    .input-search {
+        width: 120px;
+    }
+
+    .icon-search {
+        width: 20px;
+    }
+
+    .button-search {
+        width: 30px;
+    }
+
+    .input-search::placeholder {
+        font-size: 10px;
+    }
+
 }

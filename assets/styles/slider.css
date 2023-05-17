@@ -71,8 +71,20 @@
     }
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
     .slider-icon {
         height: 70px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider-icon {
+        height: 60px;
+    }
+}
+
+@media (max-width: 900px) {
+    .slider-icon {
+        height: 50px;
     }
 }

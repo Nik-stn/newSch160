@@ -103,3 +103,38 @@
         margin: 0 5px;
     }
 }
+
+@media (max-width: 1024px) {
+    .popular-icon {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .popular-item  {
+        font-size: 10px;
+        height: 30px;
+        margin: 10px auto;
+        border-width: 1px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .popular-icon {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .popular-item  {
+        font-size: 9px;
+        margin: 7px auto;
+    }
+
+    .popular-text {
+        margin: 0 3px;
+    }
+
+    .popular-icon-wrap {
+        margin-left: 5px;
+    }
+}

@@ -30,3 +30,15 @@
         height: 400px;
     }
 }
+
+@media (max-width: 1024px) {
+    .sch-map iframe {
+        height: 300px;
+    }
+}
+
+@media (max-width: 900px) {
+    .sch-map iframe {
+        height: 250px;
+    }
+}

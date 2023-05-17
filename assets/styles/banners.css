@@ -82,3 +82,23 @@
         height: 60px;
     }
 }
+
+@media (max-width: 1024px) {
+    .banner-logo {
+        height: 120px;
+    }
+
+    .banners-icon {
+        height: 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .banner-logo {
+        height: 100px;
+    }
+
+    .banners-icon {
+        height: 40px;
+    }
+}
