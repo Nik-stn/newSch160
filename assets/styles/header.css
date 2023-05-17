@@ -1,5 +1,6 @@
 .header {
     margin-bottom: 0;
+    margin-top: 20px;
 }
 
 .header-flex {
@@ -39,7 +40,7 @@
     background: #ffc421;
     border: 2px solid black;
     border-radius: 20px;
-    width: 125px;
+    width: 90%;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -191,6 +192,7 @@
     }
 
     .btn-header-bar {
+        width: 80%;
         height: 40px;
     }
 
@@ -203,5 +205,30 @@
 @media (max-width: 1200px) {
     .site-search {
         margin-right: 20px;
+    }
+
+    .header-logo img {
+        width: 60%;
+    }
+
+    .btn-header-bar {
+        width: 70%;
+        height: 30px;
+    }
+
+    .header-bar img {
+        width: 24px;
+    }
+
+    .input-search {
+        width: 150px;
+    }
+
+    .input-search::placeholder {
+        font-size: 12px;
+    }
+
+    .icon-search {
+        width: 25px;
     }
 }

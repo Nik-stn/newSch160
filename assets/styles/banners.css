@@ -72,3 +72,13 @@
         height: 70px;
     }
 }
+
+@media (max-width: 1200px) {
+    .banner-logo {
+        height: 140px;
+    }
+
+    .banners-icon {
+        height: 60px;
+    }
+}

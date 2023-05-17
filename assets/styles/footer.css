@@ -42,3 +42,20 @@
     padding: 20px 0 50px;
     color: #ffffff80;
 }
+
+@media (max-width: 1400px) {
+    .footer-flex {
+        padding: 70px 0 32px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer-flex {
+        padding: 50px 0 28px;
+    }
+
+    .footer-copyright {
+        padding: 10px 0 30px;
+        font-size: 12px;
+    }
+}

@@ -208,6 +208,7 @@
 @media (max-width: 1400px) {
     .news-sch-arcive-text, .announcement-sch-arcive-text {
         height: 35px;
+        width: 150px;
     }
 
     .news-sch-logo, .announcement-sch-logo {
@@ -218,4 +219,24 @@
         font-size: 12px;
         height: 35px;
     }
+}
+
+@media (max-width: 1200px) {
+    .news-sch-arcive-text, .announcement-sch-arcive-text {
+        height: 30px;
+        width: 140px;
+    }
+
+    .news-sch, .announcement-sch {
+        gap: 15px;
+    }
+
+    .news-sch-logo, .announcement-sch-logo {
+        height: 200px;
+    }
+
+    .news-box, .announcement-box {
+        padding: 5px 0;
+    }
+
 }

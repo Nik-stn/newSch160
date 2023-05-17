@@ -84,7 +84,22 @@
     
     .popular-item  {
         font-size: 14px;
-        font-weight: 700;
         height: 50px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .popular-icon {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .popular-item  {
+        font-size: 12px;
+        height: 40px;
+    }
+
+    .popular-text {
+        margin: 0 5px;
     }
 }

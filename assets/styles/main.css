@@ -114,4 +114,8 @@ ul {
     body {
         font-size: 14px;
     }
+
+    .section {
+        padding: 10px 5px 5px;
+    }
 }

@@ -18,3 +18,15 @@
     border: 2px solid rgb(204, 204, 204);
     line-height: 1;
 }
+
+@media (max-width: 1400px) {
+    .sch-map iframe {
+        height: 500px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sch-map iframe {
+        height: 400px;
+    }
+}
