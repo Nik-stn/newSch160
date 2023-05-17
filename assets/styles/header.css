@@ -70,6 +70,14 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    width: 100%;
+}
+
+.header-nav.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
 }
 
 .site-nav {
@@ -303,6 +311,7 @@
 
     .input-search {
         width: 120px;
+        font-size: 12px;
     }
 
     .icon-search {
