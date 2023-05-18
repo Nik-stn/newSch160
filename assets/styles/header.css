@@ -71,6 +71,7 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    position: relative;
 }
 
 .header-nav.fixed {
@@ -351,6 +352,15 @@
 
     .header-bar {
         justify-content: center;
+    }
+
+    .header-nav {
+        height: 36px;
+        justify-content: space-between;
+    }
+
+    .site-nav {
+        display: none;
     }
 }
 
