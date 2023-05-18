@@ -97,3 +97,11 @@
         margin-bottom: 7px;
     }
 }
+
+@media (max-width: 768px) {
+    .footer-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}

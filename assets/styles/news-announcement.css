@@ -308,3 +308,26 @@
         margin-bottom: 10px;
     }
 }
+
+@media (max-width: 768px) {
+    .news, .announcement {
+        width: 100%;
+    }
+
+    .news-sch-link img, .announcement-sch-link img {
+        width: 500px;
+    }
+
+    .news-sch-logo, .announcement-sch-logo {
+        height: 200px;
+    }
+
+    .news-sch-arcive-text, .announcement-sch-arcive-text {
+        height: 25px;
+        width: 120px;
+    }
+    
+    .news, .announcement {
+        margin-top: 10px;
+    }
+}

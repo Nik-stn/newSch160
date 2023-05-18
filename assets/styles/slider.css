@@ -88,3 +88,13 @@
         height: 50px;
     }
 }
+
+@media (max-width: 768px) {
+    .slider {
+        width: 100%;
+    }
+
+    .slider-icon {
+        height: 60px;
+    }
+}

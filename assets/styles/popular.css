@@ -138,3 +138,19 @@
         margin-left: 5px;
     }
 }
+
+@media (max-width: 768px) {
+    .popular {
+        width: 100%;
+    }
+
+    .popular-item {
+        width: 30%;
+        font-size: 12px;
+    }
+
+    .popular-icon {
+        width: 20px;
+        height: 20px;
+    }
+}

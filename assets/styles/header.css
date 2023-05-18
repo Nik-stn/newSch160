@@ -54,7 +54,7 @@
 
 .btn-header-bar:hover {
     transform: translateY(-5px);
-	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 .link-header-bar {
@@ -209,7 +209,7 @@
     .header-bar img {
         width: 28px;
     }
-    
+
 }
 
 @media (max-width: 1200px) {
@@ -341,4 +341,22 @@
         font-size: 10px;
     }
 
+}
+
+@media (max-width: 768px) {
+    .header-flex {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .header-bar {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 666px) {
+    .header-box {
+        order: 3;
+    }
+    
 }
