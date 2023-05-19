@@ -98,3 +98,9 @@
         height: 60px;
     }
 }
+
+@media (max-width: 480px) {
+    .slider-icon {
+        height: 50px;
+    }
+}

@@ -145,3 +145,25 @@ ul {
         flex-direction: column;
     }
 }
+
+@media (max-width: 600px) {
+    body {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 10px;
+    }
+
+    .section {
+        padding: 3px 4px 1px;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        font-size: 9px;
+    }
+}

@@ -102,3 +102,13 @@
         height: 40px;
     }
 }
+
+@media (max-width: 480px) {
+    .banner-logo {
+        height: 80px;
+    }
+
+    .banners-icon {
+        height: 30px;
+    }
+}
