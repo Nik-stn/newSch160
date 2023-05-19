@@ -16,6 +16,7 @@
 function carouselize(carousel) {
   let bannersInner = carousel.querySelector('.banners-inner');
   let bannerLogos = carousel.querySelectorAll('.banner-logo');
+  let bannerLogo = carousel.querySelector('.banner-logo');
   let logoAmount = bannerLogos.length;
   let logoWidth = 0;
   let logoAmountVisible = 0;
@@ -54,7 +55,7 @@ function carouselize(carousel) {
     } else if (logoSteps > maxSteps) {
       logoSteps = maxSteps;
     }
-    bannersInner.style.transform = "translateX(-" + (205 * logoSteps) + "px)";
+    bannersInner.style.transform = "translateX(-" + (bannerLogo.offsetWidth * logoSteps) + "px)";
   }
 
 }
