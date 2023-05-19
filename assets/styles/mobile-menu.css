@@ -12,7 +12,7 @@
         height: 32px;
         cursor: pointer;
         opacity: 0;
-        z-index: 2;
+        z-index: 10;
     }
 
     .checkbox-line {
@@ -24,7 +24,7 @@
     .checkbox-line span {
         display: flex;
         width: 29px;
-        height: 2px;
+        height: 3px;
         margin-bottom: 5px;
         position: relative;
         left: 10px;
@@ -47,8 +47,9 @@
 
     .checkbox:checked~.checkbox-line span {
         opacity: 1;
+        z-index: 3;
         background: #ffc421;
-        transform: rotate(45deg) translate(-8px, -11px);
+        transform: rotate(45deg) translate(-9px, -12px)
     }
 
     .checkbox:checked~.checkbox-line span:nth-last-child(3) {
@@ -63,19 +64,25 @@
     .mobile-site-nav {
         display: block;
         position: absolute;
-        width: 180px;
-        box-shadow: 0 0 10px #85888C;
+        width: 220px;
+        height: 100vh;
         top: 0;
-        padding-top: 50px;
-        background-color: #00043c;
+        z-index: 2;
+        padding: 30px 10px 30px 40px;
+        background: #00043c;
         -webkit-font-smoothing: antialiased;
         transform-origin: 0% 0%;
         transform: translate(-100%, 0);
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-        color: #fff;
+        overflow-y: auto;
     }
-
-
+    
+    .mobile-nav-item {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        position: relative;
+    }
 
     .mobile-site-nav .mobile-nav-item {
         padding: 10px 0;
@@ -84,4 +91,53 @@
     .checkbox:checked~.mobile-site-nav {
         transform: none;
     }
+
+    .mobile-nav-link {
+        color: #fff;
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+
+    .sub-checkbox {
+        position: absolute;
+        top:11px;
+        left: 9px;
+        width: 20px;
+        height: 20px;
+        opacity: 0;
+    }
+    
+    .mobile-nav-item svg {
+        width: 20px;
+        margin-left: 10px;
+    }
+
+    .mobile-nav-item svg path {
+        fill: #fff;
+        stroke: #fff;
+    }
+
+    .mobile-sub-nav {
+        margin-top: 10px;
+        transform: scaleY(0);
+        height: 0;
+        transform-origin: 0 0;
+        transition: all .3s ease-in-out;
+    }
+
+    .sub-checkbox:checked ~ .mobile-sub-nav {
+        transform: scaleY(1);
+        height: 100%;
+    }
+
+    .mobile-sub-nav-item {
+        margin-bottom: 5px;
+    }
+    
+    .mobile-sub-nav-link {
+        color: #d3d3d3;
+        font-weight: 700;
+    }
+
+    
 }
