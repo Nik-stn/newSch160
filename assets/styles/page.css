@@ -4,7 +4,26 @@
 @import url('mobile-menu.css');
 
 .main-flex {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    gap: 20px;
     padding: 20px 15px;
+}
+
+.article {
+    width: 80%;
+}
+
+.aside {
+    width: 20%;
+}
+
+.aside-item>span {
+    font-weight: 700;
+}
+
+.aside-sub-nav {
+    list-style-type: disc;
+    margin-left: 20px;
 }
