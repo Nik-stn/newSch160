@@ -248,10 +248,6 @@
         max-width: 120px;
     }
 
-    .btn-header-bar {
-        height: 30px;
-    }
-
     .header-bar img {
         width: 24px;
     }
@@ -291,7 +287,7 @@
     }
 
     .btn-header-bar {
-        height: 25px;
+        height: 35px;
         border-width: 1px;
     }
 
