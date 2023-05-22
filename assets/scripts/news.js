@@ -5,9 +5,9 @@ tabsBtn.forEach(onTabClick);
 
 function onTabClick(item) {
     item.addEventListener("click", function() {
-        let currentBtn = item;
-        let tabId = currentBtn.getAttribute("data-tab");
-        let currentTab = document.querySelector(tabId);
+        const currentBtn = item;
+        const tabId = currentBtn.getAttribute("data-tab");
+        const currentTab = document.querySelector(tabId);
 
         if( ! currentBtn.classList.contains('active') ) {
             tabsBtn.forEach(function(item) {

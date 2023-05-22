@@ -1,5 +1,5 @@
-  let mapTitle = document.createElement('div'); mapTitle.className = 'sch-map-title';
-  let schMap = document.querySelector('.sch-map');
+  const mapTitle = document.createElement('div'); mapTitle.className = 'sch-map-title';
+  const schMap = document.querySelector('.sch-map');
 
    mapTitle.textContent = 'Для активации карты нажмите по ней';
    schMap.appendChild(mapTitle);
