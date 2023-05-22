@@ -43,7 +43,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    font-size: 20px;    
+    font-size: 20px;
     color: #000;
     line-height: 1.2;
     background-color: #fff;
@@ -78,8 +78,8 @@ ul {
 }
 
 .scrooll-to-top {
-    display: none; 
-    line-height: 0px; 
+    display: none;
+    line-height: 0px;
     position: fixed;
     right: 1%;
     bottom: 1%;
@@ -116,20 +116,15 @@ ul {
         font-size: 14px;
     }
 
-   
 }
 
 @media (max-width: 1024px) {
     body {
         font-size: 12px;
     }
-
-    
 }
 
-@media (max-width: 900px) {
-    
-}
+@media (max-width: 900px) {}
 
 @media (max-width: 768px) {
     body {
