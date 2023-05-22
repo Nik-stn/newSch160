@@ -2,7 +2,7 @@ window.addEventListener('scroll', () => {
   const scrollUp = document.querySelector('.scrooll-to-top');
   const scrollPosition = window.scrollY;
   const windowWidth = window.innerWidth;
-  let headerFixed = document.querySelector('.header-nav');
+  const headerFixed = document.querySelector('.header-nav');
 
   if (scrollPosition > 100 && windowWidth > 768) {
     scrollUp.style.display = 'block';
