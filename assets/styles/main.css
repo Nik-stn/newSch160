@@ -115,9 +115,7 @@ ul {
         font-size: 14px;
     }
 
-    .section {
-        padding: 10px 5px 5px;
-    }
+   
 }
 
 @media (max-width: 1024px) {
@@ -125,15 +123,11 @@ ul {
         font-size: 12px;
     }
 
-    .section {
-        padding: 7px 4px 4px;
-    }
+    
 }
 
 @media (max-width: 900px) {
-    body {
-        font-size: 10px;
-    }
+    
 }
 
 @media (max-width: 768px) {
@@ -153,17 +147,8 @@ ul {
 }
 
 @media (max-width: 480px) {
-    body {
-        font-size: 10px;
-    }
 
     .section {
         padding: 3px 4px 1px;
-    }
-}
-
-@media (max-width: 320px) {
-    body {
-        font-size: 9px;
     }
 }
