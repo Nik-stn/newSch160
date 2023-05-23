@@ -320,6 +320,10 @@
     .news, .announcement {
         margin-top: 10px;
     }
+
+    .news-tabs-btn, .announcement-tab-btn {
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -335,4 +339,7 @@
         font-size: 16px;
     }
    
+    .news-tabs-btn, .announcement-tab-btn {
+        font-size: 11px;
+    }
 }
