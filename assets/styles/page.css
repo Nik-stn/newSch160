@@ -80,3 +80,27 @@
 .content {
     text-align: justify;
 }
+
+@media (max-width: 768px) {
+    .main-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .article, .aside {
+        width: 100%;
+        padding: 7px;
+    }
+
+    .article-title {
+        margin: 7px 0;
+    }
+
+    .aside-title {
+        margin-bottom: 7px;
+    }
+
+    .aside-sub-nav {
+        margin: 0 0 7px 14px;
+    }
+}
