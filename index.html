@@ -27,9 +27,9 @@
                     </a>
                 </div>
                 <div class="header-box">
-                    <span class="header-text header-box-item">Министерство образования Республики Беларусь </span>
-                    <span class="header-text header-box-item">Управление по образованию
-                        администрации Московского района г. Минска</span>
+                    <p class="header-text header-box-item">Министерство образования Республики Беларусь </p>
+                    <p class="header-text header-box-item">Управление по образованию
+                        администрации Московского района г. Минска</p>
                     <h2 class="header-subtitle header-box-item">Государственное учреждение образования</h2>
                     <h1 class="header-title header-box-item">"Средняя школа №160 г.Минска"</h1>
 
@@ -466,11 +466,36 @@
                 </div>
 
                 <div class="site-search">
-                    <input type="text" class="input-control input-search" placeholder="Поиск по сайту">
+                    <!-- <input type="text" class="input-control input-search" placeholder="Поиск по сайту">
                     <button type="submit" class="input-control button-search">
                         <img class="icon-search" src="assets/images/header/search.svg" alt="search">
-                    </button>
+                    </button> -->
+
+                    <div class="ya-site-form ya-site-form_inited_no"
+                        onclick="return {'action':'http://sch160.minsk.edu.by/ru/main.aspx?guid=1461','arrow':false,'bg':'transparent','language':'ru','logo':'rb','publicname':'Поиск по sch160.minsk.edu.by','suggest':true,'target':'_self','tld':'ru','type':2,'usebigdictionary':true,'searchid':2212267,'webopt':false,'websearch':false,'input_placeholder':'Поиск по сайту','input_placeholderColor':'#999999'}">
+
+                        <form action="http://yandex.ru/sitesearch" method="get" target="_self">
+                            <input type="hidden" name="searchid" value="2212267" />
+                            <input type="hidden" name="l10n" value="ru" />
+                            <input type="hidden" name="reqenc" value="" />
+                            <input type="search" name="text" value="" />
+                            <input type="submit" value="Найти" />
+                        </form>
+
+                    </div>
+
+                    <style type="text/css">
+                        .ya-page_js_yes .ya-site-form_inited_no {
+                            display: none;
+                        }
+                    </style>
+
+                    <script
+                        type="text/javascript">(function (w, d, c) { var s = d.createElement('script'), h = d.getElementsByTagName('script')[0], e = d.documentElement; if ((' ' + e.className + ' ').indexOf(' ya-page_js_yes ') === -1) { e.className += ' ya-page_js_yes'; } s.type = 'text/javascript'; s.async = true; s.charset = 'utf-8'; s.src = (d.location.protocol === 'https:' ? 'https:' : 'http:') + '//site.yandex.net/v2.0/js/all.js'; h.parentNode.insertBefore(s, h); (w[c] || (w[c] = [])).push(function () { Ya.Site.Form.init() }) })(window, document, 'yandex_site_callbacks');
+                    </script>
+
                 </div>
+
             </nav>
         </div>
     </header>

@@ -167,25 +167,44 @@
     display: flex;
     overflow: hidden;
     border-radius: 6px;
+    max-width: 210px;
 }
 
-.input-search {
-    padding-left: 10px;
-}
-
-.input-control {
+.input-control, .ya-site-form {
     outline: 0;
+    width: 210px;
     height: 40px;
     background: #fff;
     border: 0;
 }
 
-.button-search {
+.ya-site-form__input input {
+    width: 170px;
+    height: 40px;
+}
+
+#ya-site-form0 td.ya-site-form__search-input {
+    padding: 0;
+}
+
+#ya-site-form0 .ya-site-form__search-input .ya-site-form__input-text {
+    border: 0;
+}
+
+.ya-site-form__input-text {
+    padding-left: 10px;
+}
+
+/* .input-search {
+    padding-left: 10px;
+} */
+
+
+/* .button-search {
     line-height: 0.5;
     width: 40px;
     cursor: pointer;
-
-}
+} */
 
 .icon-search {
     width: 30px;
@@ -196,7 +215,7 @@
         max-width: 160px;
     }
 
-    .input-control {
+    .input-control, .ya-site-form {
         height: auto;
     }
 }
@@ -237,9 +256,18 @@
         width: 24px;
     }
 
-    .input-search {
+    .input-control, .ya-site-form {
         width: 150px;
+        height: 30px;
     }
+
+    .ya-site-form__input input {
+        height: 30px;
+    }
+
+    /* .input-search {
+        width: 150px;
+    } */
 
     .input-search::placeholder {
         font-size: 12px;
@@ -280,9 +308,22 @@
         width: 20px;
     }
 
-    .input-search {
-        width: 120px;
+    #ya-site-form0 div.ya-site-form__form * {
+        font-size: 10px !important;
     }
+
+    .input-control, .ya-site-form {
+        width: 130px;
+        height: 20px;
+    }
+
+    .ya-site-form__input input {
+        height: 20px;
+    }
+
+    /* .input-search {
+        width: 120px;
+    } */
 
     .input-search::placeholder {
         font-size: 11px;
@@ -324,12 +365,12 @@
         width: 18px;
     }
 
-    .input-search {
-        width: 120px;
-        font-size: 12px;
+    .ya-site-form__input input {
+        /* width: 120px; */
+        height: 20px;
     }
 
-    .icon-search {
+    /* .icon-search {
         width: 20px;
     }
 
@@ -339,7 +380,7 @@
 
     .input-search::placeholder {
         font-size: 10px;
-    }
+    } */
 
 }
 
@@ -363,7 +404,7 @@
     }
 }
 
-@media (max-width: 666px) {
+@media (max-width: 650px) {
     .header-box {
         order: 3;
     }
