@@ -82,18 +82,18 @@
     z-index: 20;
 }
 
-.site-nav {
+.header-pc .level_0 {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.nav-item {
+.header-pc .parent {
     display: flex;
     position: relative;
 }
 
-.nav-link {
+.header-pc .parent>a {
     padding: 0 10px;
     color: #fff;
     line-height: 3;
@@ -105,33 +105,18 @@
     align-items: center;
 }
 
-.nav-link svg {
-    width: 20px;
-    margin-left: 10px;
-}
-
-.nav-link svg path {
-    fill: #fff;
-    stroke: #fff;
-}
-
-.nav-link:hover {
+.header-pc .parent>a:hover {
     color: #000;
     transition: all 0.3s ease 0s;
 }
 
-.nav-link:hover svg path {
-    fill: #000;
-    stroke: #000;
-}
-
-.nav-link:hover::before {
+.header-pc .parent>a:hover::before {
     visibility: visible;
     background-color: #fdbe34;
     transform: scaleX(1);
 }
 
-.nav-link::before {
+.header-pc .parent>a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -145,7 +130,7 @@
     z-index: -1;
 }
 
-.sub-nav {
+.header-pc .level_1 {
     background: #fff;
     position: absolute;
     transform: scaleY(0);
@@ -157,24 +142,24 @@
     transition: all .3s ease-in-out;
 }
 
-.sub-nav-item {
+.header-pc .level_1>li {
     border-bottom: 1px solid rgb(204, 204, 204);
     cursor: pointer;
 }
 
-.sub-nav-item:hover {
+.header-pc .level_1>li:hover {
     background: #fdbe34;
     transition: all .3s linear;
 }
 
-.sub-nav-link {
+.header-pc .level_1>li>a {
     display: block;
     color: #000;
     text-align: left;
     padding: 7px;
 }
 
-.nav-item:hover .sub-nav {
+.header-pc .parent:hover .level_1 {
     transform: scaleY(1);
 }
 
@@ -236,11 +221,11 @@
         margin-right: 20px;
     }
 
-    .sub-nav {
+    .header-pc .level_1 {
         width: 240px;
     }
 
-    .sub-nav-link {
+    .header-pc .level_1>li>a {
         padding: 5px;
     }
 
@@ -282,7 +267,7 @@
         margin-bottom: 5px;
     }
 
-    .nav-link {
+    .header-pc .parent>a {
         padding: 0 5px;
     }
 
@@ -314,11 +299,11 @@
         margin-right: 7px;
     }
 
-    .sub-nav {
+    .header-pc .level_1 {
         width: 200px;
     }
 
-    .sub-nav-link {
+    .header-pc .level_1>li>a {
         padding: 4px;
     }
 
@@ -330,7 +315,7 @@
         margin-bottom: 4px;
     }
 
-    .nav-link {
+    .header-pc .parent>a {
         padding: 0 4px;
     }
 
@@ -373,7 +358,7 @@
         justify-content: space-between;
     }
 
-    .site-nav {
+    .header-pc .level_0 {
         display: none;
     }
 }
