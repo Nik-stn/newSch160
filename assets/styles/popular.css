@@ -16,21 +16,23 @@
 	cursor: pointer;
 	background: #ffc421;
 	border: 2px solid black;
+	border-left: 10px solid black;
     border-radius: 20px;
 	box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
 	transition: 500ms;
     margin: 20px auto;
-    padding: 10px 0;
     width: 49%;
     height: 55px;
     font-size: 18px;
-    display: flex;
-    align-items: center;
+    container-type: size;
+   
 }
 
 .popular-item:hover {
 	transform: translateY(-5px);
 	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+    border-left: 2px solid black;
+    border-right: 10px solid black;
 }
 
 .popular-item:focus {
@@ -39,22 +41,11 @@
 
 .popular-link {
     color: #000;
-	display: flex;
+    display: flex;
     align-items: center;
-    justify-content: flex-start;
-}
-
-.popular-icon-wrap {
-    margin-left: 10px;
-}
-
-.popular-icon {
-    width: 40px;
-    height: 40px;
-}
-
-.popular-text {
-	margin: 0 10px;
+    width: 100cqw;
+    height: 100cqh;
+    padding: 0 20px;
 }
 
 @media (max-width: 1800px) {
@@ -64,10 +55,6 @@
 }
 
 @media (max-width: 1600px) {
-    .popular-icon {
-        width: 35px;
-        height: 35px;
-    }
     
     .popular-item  {
         font-size: 16px;
@@ -76,10 +63,6 @@
 }
 
 @media (max-width: 1400px) {
-    .popular-icon {
-        width: 30px;
-        height: 30px;
-    }
     
     .popular-item  {
         font-size: 14px;
@@ -88,53 +71,33 @@
 }
 
 @media (max-width: 1200px) {
-    .popular-icon {
-        width: 25px;
-        height: 25px;
-    }
     
     .popular-item  {
         font-size: 12px;
         height: 40px;
     }
 
-    .popular-text {
-        margin: 0 5px;
-    }
 }
 
 @media (max-width: 1024px) {
-    .popular-icon {
-        width: 20px;
-        height: 20px;
-    }
-    
     .popular-item  {
         font-size: 10px;
         height: 35px;
         margin: 10px auto;
-        border-width: 1px;
     }
 
 }
 
 @media (max-width: 900px) {
-    .popular-icon {
-        width: 15px;
-        height: 15px;
-    }
     
     .popular-item  {
         margin: 7px auto;
     }
 
-    .popular-text {
-        margin: 0 3px;
+    .popular-link {
+        padding: 0 10px;
     }
 
-    .popular-icon-wrap {
-        margin-left: 5px;
-    }
 }
 
 @media (max-width: 768px) {
@@ -149,10 +112,6 @@
         font-size: 12px;
     }
 
-    .popular-icon {
-        width: 20px;
-        height: 20px;
-    }
 }
 
 @media (max-width: 600px) {
@@ -169,8 +128,5 @@
 
 @media (max-width: 320px) {
 
-    .popular-icon {
-        width: 15px;
-        height: 15px;
-    }
+
 }
