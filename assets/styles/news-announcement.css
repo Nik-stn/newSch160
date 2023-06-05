@@ -1,6 +1,40 @@
+/* cms web perspective */
+.ajax__tab_container {
+    width: 100%;
+}
+
+.ajax__tab_header {
+    width: inherit;
+    line-height: 0;
+}
+
+.ajax__tab_active {
+    display: inline-block;
+    width: inherit;
+}
+
+.ajax__tab_outer {
+    width: inherit;
+}
+
+.ajax__tab_inner {
+    width: inherit;
+}
+
+.ajax__tab_default span.ajax__tab_tab {
+    cursor: default;
+    width: inherit;
+}
+/* end */
+
 .news, .announcement {
     width: 50%;
     border-radius: 5px;
+}
+
+.announcement-tab {
+    text-align: left;
+    width: inherit;
 }
 
 .news-tabs {
