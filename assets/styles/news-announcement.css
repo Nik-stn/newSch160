@@ -6,15 +6,21 @@
 .ajax__tab_header {
     width: inherit;
     line-height: 0;
+    display: flex;
+    gap: 5px;
 }
 
-.ajax__tab_active {
+.ajax__tab_header>span {
     display: inline-block;
-    width: inherit;
+    width: calc(100%/4);
+}
+
+.ajax__tab_default div.ajax__tab_header {
+    white-space: normal;
 }
 
 .ajax__tab_outer {
-    width: inherit;
+    width: 100%;
 }
 
 .ajax__tab_inner {
@@ -46,7 +52,7 @@
     background: #00043c;
     color: #fff;
     border: 0;
-    width: calc(100%/4);
+    width: 100%;
     height: 40px;
     cursor: pointer;
     font-family: inherit;
@@ -244,6 +250,7 @@
 
     .news-tabs-btn, .announcement-tab-btn {
         height: 35px;
+        font-size: 12px;
     }
 }
 
