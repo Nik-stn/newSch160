@@ -20,19 +20,19 @@
     margin-bottom: 20px;
 }
 
-.about-text, .footer-nav-item, .count-title {
+.about-text, .footer-nav .parent, .count-title {
     color: #ffffff80;
 }
 
-.about-text-item, .footer-nav-item, .count-title {
+.about-text-item, .footer-nav li, .count-title {
     margin-bottom: 7px;
 }
 
-.about-text-item a, .footer-nav-link, .footer-copyright a {
+.about-text-item a, .footer-nav li a, .footer-copyright a {
     color: #fff;
 }
 
-.about-text-item a:hover, .footer-nav-link:hover, .footer-copyright a:hover {
+.about-text-item a:hover, .footer-nav li a:hover, .footer-copyright a:hover {
     color: #fdbe34;
     transition: all .3s linear;
 }
@@ -70,7 +70,7 @@
         font-size: 10px;
     }
 
-    .about-text-item, .footer-nav-item, .count-title {
+    .about-text-item, .footer-nav li, .count-title {
         margin-bottom: 5px;
     }
 
@@ -89,7 +89,7 @@
         font-size: 8px;
     }
 
-    .about-text-item, .footer-nav-item, .count-title {
+    .about-text-item, .footer-nav li, .count-title {
         margin-bottom: 4px;
     }
 

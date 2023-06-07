@@ -59,3 +59,5 @@ function carouselize(carousel) {
   }
 
 }
+
+setTimeout(carouselize, 4000);
