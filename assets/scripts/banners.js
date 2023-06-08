@@ -1,5 +1,8 @@
-(function () {
-  let banners = document.querySelectorAll('.banners');
+const bannerLogos = document.querySelectorAll('.banner-logo');
+const logoAmount = bannerLogos.length;
+
+setTimeout((function () {
+  const banners = document.querySelectorAll('.banners');
 
   [].forEach.call(banners, function (carousel) {
     carouselize(carousel);
@@ -11,13 +14,13 @@
     });
   });
 
-})();
+}),154 * logoAmount);
 
 function carouselize(carousel) {
-  let bannersInner = carousel.querySelector('.banners-inner');
-  let bannerLogos = carousel.querySelectorAll('.banner-logo');
-  let bannerLogo = carousel.querySelector('.banner-logo');
-  let logoAmount = bannerLogos.length;
+  const bannersInner = carousel.querySelector('.banners-inner');
+  const bannerLogos = carousel.querySelectorAll('.banner-logo');
+  const bannerLogo = carousel.querySelector('.banner-logo');
+  const logoAmount = bannerLogos.length;
   let logoWidth = 0;
   let logoAmountVisible = 0;
   let clientWidth = document.documentElement.clientWidth;
@@ -26,13 +29,13 @@ function carouselize(carousel) {
     logoWidth += bannerLogo.offsetWidth;
   });
 
-  logoAmountVisible = Math.floor(clientWidth / (logoWidth / bannerLogos.length));
+  logoAmountVisible = Math.floor(clientWidth / (logoWidth / logoAmount));
   
-  bannersInner.style.width = (logoWidth + (logoAmountVisible * 20)) + 'px';
+  bannersInner.style.width = (logoWidth + (logoAmount * 20)) + 'px';  
 
   let logoSteps = 0;
-  let btnPrev = carousel.querySelector('.banners-control.previous');
-  let btnNext = carousel.querySelector('.banners-control.next');
+  const btnPrev = carousel.querySelector('.banners-control.previous');
+  const btnNext = carousel.querySelector('.banners-control.next');
 
   btnNext.onclick = function () {
     if (logoSteps < (bannerLogos.length - logoAmountVisible)) {
@@ -60,4 +63,3 @@ function carouselize(carousel) {
 
 }
 
-setTimeout(carouselize, 4000);

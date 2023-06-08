@@ -36,6 +36,10 @@
     gap: 10px;
 }
 
+.item-header-bar {
+    line-height: 0;
+}
+
 .header-bar a {
     line-height: 0;
 }
