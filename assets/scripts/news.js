@@ -35,6 +35,8 @@ if (activeTabId) {
     const activeTab = document.querySelector(activeTabId);
     if (activeTab) {
         // Если найден сохраненный таб, добавляем ему класс 'active'
+        document.getElementById('btn-1').classList.remove('active');
+        document.getElementById('tab-1').classList.remove('active');
         activeTab.classList.add('active');
     }
 }
