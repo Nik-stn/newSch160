@@ -21,6 +21,10 @@
     width: 80%;
 }
 
+.article-inner {
+    padding: 0 20px;
+}
+
 .article-title {
     margin: 10px 0;
 }
@@ -79,6 +83,10 @@
 
 .content {
     text-align: justify;
+}
+
+.content * {
+    margin: revert;
 }
 
 @media (max-width: 768px) {

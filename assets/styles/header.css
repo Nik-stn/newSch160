@@ -95,9 +95,10 @@
 .header-pc .parent {
     display: flex;
     position: relative;
+    align-items: center;
 }
 
-.header-pc .parent>a {
+.header-pc .parent>a, .header-pc .parent>span {
     padding: 0 10px;
     color: #fff;
     line-height: 3;
@@ -109,18 +110,19 @@
     align-items: center;
 }
 
-.header-pc .parent>a:hover {
+.header-pc .parent>a:hover, .header-pc .parent>span:hover {
     color: #000;
     transition: all 0.3s ease 0s;
+    cursor: pointer;
 }
 
-.header-pc .parent>a:hover::before {
+.header-pc .parent>a:hover::before, .header-pc .parent>span:hover::before {
     visibility: visible;
     background-color: #fdbe34;
     transform: scaleX(1);
 }
 
-.header-pc .parent>a::before {
+.header-pc .parent>a::before, .header-pc .parent>span::before {
     content: "";
     position: absolute;
     width: 100%;

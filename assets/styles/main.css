@@ -37,6 +37,22 @@ ul {
     padding: 20px 10px 10px;
 }
 
+.rebuild {
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.rebuild-img {
+    width: clamp(100px, 15cqw, 200px) ;
+}
+
+.rebuild-title {
+    width: 50%;
+}
+
 .section-inner {
     width: 100%;
     display: flex;
