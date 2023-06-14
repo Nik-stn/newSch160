@@ -1,0 +1,11 @@
+#ya-site-form0 input.ya-site-form__submit {
+    background: url(../images/search.png) 50% no-repeat;
+}
+
+#ya-site-form0 input.ya-site-form__submit:hover {
+    background: #d7e1ec url(../images/search.png) 50% no-repeat;
+}
+
+.main {
+    background: url(../images/backgound.png);
+}

@@ -211,6 +211,10 @@
     margin: 10px 0;
 }
 
+.news-sch-title, .announcement-sch-title {
+    padding: 0 10px;
+}
+
 .news-sch-arcive-text, .announcement-sch-arcive-text {
     width: 200px;
     height: 40px;
@@ -350,7 +354,7 @@
     }
 
     .news-sch-item, .announcement-sch-item {
-        font-size: 16px;
+        font-size: 14px;
     }
 
     .news-sch-logo, .announcement-sch-logo {
@@ -375,10 +379,6 @@
         font-size: 14px;
     }
 
-    .news-sch-title, .announcement-sch-title {
-        font-size: 16px;
-    }
-   
     .news-tabs-btn, .announcement-tab-btn {
         font-size: 11px;
     }
