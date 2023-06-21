@@ -224,6 +224,44 @@
     margin-bottom: 0.6em;
 }
 
+.w_card {
+    display: flex;
+    gap: 10px;
+    border-bottom: dotted 2px #ffc421;
+    padding: 0.5em 0.5em 1.5em;
+    margin: 0 0 1em;
+    overflow: hidden;
+}
+
+.w_card a {
+    color: #337ab7;
+}
+
+ul.no-list {
+    margin: 0;
+}
+
+ul.no-list .name {
+    font-weight: 700;
+}
+
+.w_card .show-hide:hover, .w_card .read_more:hover {
+    text-decoration: underline;
+}
+
+.w_card .show-hide, .w_card .read_more {
+    display: block;
+    margin: 1em 0;
+}
+
+.excerpt_preview img {
+    min-width: 0;
+    max-width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 @media (max-width: 768px) {
     .main-flex {
         flex-direction: column;
