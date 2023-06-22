@@ -229,12 +229,16 @@
 }
 
 .w_card {
-    display: flex;
     gap: 10px;
     border-bottom: dotted 2px #ffc421;
     padding: 0.5em 0.5em 1.5em;
     margin: 0 0 1em;
     overflow: hidden;
+}
+
+.excerpt {
+    display: flex;
+    gap: 20px;
 }
 
 .w_card a {
@@ -263,7 +267,16 @@ ul.no-list .name {
     max-width: 100px;
     height: auto;
     display: block;
-    margin: 0 auto;
+}
+
+.news.excerpt_preview, .news.excerpt, .news.excerpt_content, .excerpt {
+    width: auto;
+    border-radius: 0;
+    margin-bottom: 20px;
+}
+
+.news.excerpt_preview img {
+    max-width: 300px;
 }
 
 @media (max-width: 768px) {
