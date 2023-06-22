@@ -285,3 +285,9 @@ ul.no-list .name {
         margin: 0 0 7px 14px;
     }
 }
+
+@media (max-width: 480px) {
+    .content-box .tabs-inner {
+        flex-wrap: wrap;
+    }
+}
