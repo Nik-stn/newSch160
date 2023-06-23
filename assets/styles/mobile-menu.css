@@ -64,7 +64,7 @@
     .header-mobile .level_0 {
         display: block;
         position: absolute;
-        width: 300px;
+        width: 270px;
         height: 100vh;
         top: 0;
         z-index: 2;
@@ -75,7 +75,7 @@
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
         overflow-y: auto;
     }
-    
+
     .header-mobile .parent {
         display: flex;
         align-items: center;
@@ -92,18 +92,17 @@
         color: #fff;
         font-size: 0.9rem;
         font-weight: 700;
-        margin-right: 30px;
     }
 
     .sub-checkbox {
         position: absolute;
-        top:11px;
+        top: 11px;
         left: 9px;
         width: 20px;
         height: 20px;
         opacity: 0;
     }
-    
+
     .header-mobile .parent svg {
         width: 20px;
         margin-left: 10px;
@@ -116,18 +115,25 @@
 
     .header-mobile .level_1 {
         margin-top: 10px;
-        margin-left: 20px;
+        margin-left: 40px;
         transform: scaleY(0);
         height: 0;
         transform-origin: 0 0;
         transition: all .3s ease-in-out;
     }
 
-    .header-mobile .level_1 input, .header-mobile .level_1 span {
+    .header-mobile .level_1 input,
+    .header-mobile .level_1 .mobile-nav-chevron {
         display: none;
     }
 
-    .sub-checkbox:checked ~ .level_1 {
+    .header-mobile  li.active span {
+        color: #ffc421;
+        font-weight: 700;
+        font-size: 0.9rem;
+    }
+
+    .sub-checkbox:checked~.level_1 {
         transform: scaleY(1);
         height: 100%;
     }
@@ -135,11 +141,11 @@
     .header-mobile .level_1>li {
         margin-bottom: 5px;
     }
-    
+
     .header-mobile .level_1>li>a {
         color: #d3d3d3;
         font-weight: 700;
     }
 
-    
+
 }
