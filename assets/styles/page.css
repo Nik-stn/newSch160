@@ -233,6 +233,40 @@
     margin-bottom: 0.6em;
 }
 
+.MapYear, .MapMonth span {
+    display: flex;
+    justify-content: space-between;
+    background: #fdbe34;
+    color: #000;
+    height: 2rem;
+}
+
+.MapYear span, .MapMonth b, .MapMonth a {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+.MapYear span.sel, .MapMonth b {
+    cursor: default;
+    background: #fcad02;
+    font-weight: 700;
+    border-bottom: 2px solid #00043c;
+}
+
+.MapMonth a {
+    color: #000;
+}
+
+.MapMonth a:hover, .MapYear span:hover {
+    background: #fcad02;
+    color: #000;
+}
+
+.MapYear, .MapMonth {
+    margin-bottom: 20px;
+}
+
 .excerpt {
     display: flex;
     gap: 20px;
