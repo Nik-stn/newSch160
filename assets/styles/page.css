@@ -31,6 +31,7 @@
 
 .breadcrumbs {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .breadcrumbs-item::after {
@@ -138,6 +139,15 @@
     margin-left: 10px;
 }
 
+.content-box .parent a {
+    color: #000;
+}
+
+.content-box .parent a:hover {
+    color: #ffc421;
+    transition: all .2s ease;
+}
+
 .tabs-btn {
     width: 100%;
 }
@@ -236,9 +246,14 @@
 .MapYear, .MapMonth span {
     display: flex;
     justify-content: space-between;
-    background: #fdbe34;
     color: #000;
     height: 2rem;
+}
+
+.MapYear, .MapMonth {
+    margin-bottom: 20px;
+    overflow-x: inherit;
+    background: #fdbe34;
 }
 
 .MapYear span, .MapMonth b, .MapMonth a {
@@ -263,12 +278,10 @@
     color: #000;
 }
 
-.MapYear, .MapMonth {
-    margin-bottom: 20px;
-}
 
 .excerpt {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     gap: 10px;
     border-bottom: dotted 2px #ffc421;
@@ -339,8 +352,18 @@ ul.no-list .name {
     }
 }
 
+@media (max-width: 600px) {
+    .news.excerpt_preview, .news.excerpt, .news.excerpt_content, .excerpt {
+        margin-bottom: 0;
+    }
+}
+
 @media (max-width: 480px) {
     .content-box .tabs-inner {
         flex-wrap: wrap;
+    }
+
+    .news.excerpt_preview img {
+        max-width: 100%;
     }
 }
