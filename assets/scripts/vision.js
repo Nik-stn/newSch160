@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .news-tabs-btn, .announcement-tab-btn, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .header-mobile .level_0').forEach(function (item) {
             item.style.background = "#f8f8f8";
         });
-        document.querySelectorAll('.checkbox-line span').forEach(function (item) {
+        document.querySelectorAll('.checkbox-line span, .scrooll-to-top').forEach(function (item) {
             item.style.background = "#000";
         });
         document.querySelectorAll('.footer-flex').forEach(function (item) {
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("normal-eyed").style.display = "none";
         document.querySelector(".vision").style.display = "none";
         document.getElementById("tender-eyed").style.display = "inline-block";
-        document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a, .checkbox-line span').forEach(function (item) {
+        document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a, .checkbox-line span, .scrooll-to-top').forEach(function (item) {
             item.removeAttribute("style");
         });
         removeCookies("havingPoorVision");
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function reduceFontClick(event) {
         event.preventDefault();
-        let siteContent = document.querySelectorAll(".site-content, .popular-item");
+        let siteContent = document.querySelectorAll(".site-content, .popular-item, .news-sch-item, .announcement-sch-item");
         siteContent.forEach(function (item) {
             let fz = parseFloat(window.getComputedStyle(item).fontSize);
             if (fz <= 16) return;
@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function increaseFontClick(event) {
         event.preventDefault();
-        let siteContent = document.querySelectorAll(".site-content, .popular-item");
+        let siteContent = document.querySelectorAll(".site-content, .popular-item, .news-sch-item, .announcement-sch-item");
         siteContent.forEach(function (item) {
             let fz = parseFloat(window.getComputedStyle(item).fontSize);
             if (fz >= 24) return;
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function imagesNoClick(event) {
         event.preventDefault();
-        let img = document.querySelectorAll("img");
+        let img = document.querySelectorAll("img, .sch-map");
         img.forEach(function (item) {
             item.classList.remove("imagesBlackWhite");
             item.style.display = "none";
