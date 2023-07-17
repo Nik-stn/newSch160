@@ -7,10 +7,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.add("colorSiteWhite");
         setObjCookies('{"bg": "colorSiteWhite"}');
         document.querySelector(".main").style.background = "0";
-        document.querySelectorAll('.header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .news-sch-content, .announcement-sch-content').forEach(function (item) {
+        document.querySelectorAll('.header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .news-sch-content, .announcement-sch-content, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .parent>a, .header-mobile .level_1>li>a').forEach(function (item) {
             item.style.color = "#000";
         });
-        document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .news-tabs-btn, .announcement-tab-btn, .news-sch-arcive-text, .announcement-sch-arcive-text').forEach(function (item) {
+        document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .news-tabs-btn, .announcement-tab-btn, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .header-mobile .level_0').forEach(function (item) {
             item.style.background = "#f8f8f8";
         });
     }
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("normal-eyed").style.display = "none";
         document.querySelector(".vision").style.display = "none";
         document.getElementById("tender-eyed").style.display = "inline-block";
-        document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text').forEach(function (item) {
+        document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a').forEach(function (item) {
             item.removeAttribute("style");
         });
         removeCookies("havingPoorVision");
@@ -30,22 +30,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function reduceFontClick(event) {
         event.preventDefault();
-        let siteContent = document.querySelector(".site-content");
-        let fz = parseFloat(window.getComputedStyle(siteContent).fontSize);
-        if (fz <= 16) return;
-        fz -= 1;
-        siteContent.style.fontSize = fz + "px";
-        setObjCookies('{"fz": "' + fz + '"}');
+        let siteContent = document.querySelectorAll(".site-content, .popular-item");
+        siteContent.forEach(function (item) {
+            let fz = parseFloat(window.getComputedStyle(item).fontSize);
+            if (fz <= 16) return;
+            fz -= 1;
+            item.style.fontSize = fz + "px";
+            setObjCookies('{"fz": "' + fz + '"}');
+        });
     }
 
     function increaseFontClick(event) {
         event.preventDefault();
-        let siteContent = document.querySelector(".site-content");
-        let fz = parseFloat(window.getComputedStyle(siteContent).fontSize);
-        if (fz >= 24) return;
-        fz += 1;
-        siteContent.style.fontSize = fz + "px";
-        setObjCookies('{"fz": "' + fz + '"}');
+        let siteContent = document.querySelectorAll(".site-content, .popular-item");
+        siteContent.forEach(function (item) {
+            let fz = parseFloat(window.getComputedStyle(item).fontSize);
+            if (fz >= 24) return;
+            fz += 1;
+            item.style.fontSize = fz + "px"; 
+            setObjCookies('{"fz": "' + fz + '"}');
+        });
     }
 
     function colorSiteClick(event) {
@@ -69,12 +73,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function imagesYesClick(event) {
         event.preventDefault();
-        let img = document.querySelectorAll("img");
+        let img = document.querySelectorAll("img, .sch-map");
+        img.forEach(function (item) {
+            item.classList.remove("imagesBlackWhite");
+            item.style.display = "block";
+        });
+        setObjCookies('{"images": "yes"}');
+    }
+
+    function imagesBlackWhiteClick(event) {
+        event.preventDefault();
+        let img = document.querySelectorAll("img, .sch-map");
         img.forEach(function (item) {
             item.classList.add("imagesBlackWhite");
             item.style.display = "block";
         });
-        setObjCookies('{"images": "yes"}');
     }
 
     function setObjCookies(obj) {
@@ -87,18 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.cookie = cookieName + "=; path=/; expires=" + date.toUTCString();
     }
 
-    function renderColorBorderImages() {
-        let bodyClass = document.body.classList;
-        if (bodyClass.contains("colorSiteBlack")) {
-            document.querySelectorAll("img").forEach(function (item) {
-                item.classList.add("imagesBlackWhite");
-            });
-        } else {
-            document.querySelectorAll("img").forEach(function (item) {
-                item.classList.remove("imagesBlackWhite");
-            });
-        }
-    }
 
     function init() {
         document.getElementById("tender-eyed").addEventListener("click", tenderEyed);
@@ -110,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         document.getElementById("imagesNo").addEventListener("click", imagesNoClick);
         document.getElementById("imagesYes").addEventListener("click", imagesYesClick);
+        document.getElementById("imagesBlackWhite").addEventListener("click", imagesBlackWhiteClick);
 
         window.addEventListener("resize", onResize);
 

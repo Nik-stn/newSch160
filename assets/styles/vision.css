@@ -22,6 +22,7 @@
 }
 
 .vision-block>div {
+    color: #000;
     margin-bottom: 10px;
 }
 
@@ -58,4 +59,28 @@
 .colorSiteBeige {
     background: #f7f3d6;
     color: brown;
+}
+
+#colorSiteBlack {
+    background: #000;
+    color: #fff ;
+}
+
+#colorSiteWhite {
+    background: #fff;
+    color: #000 ;
+}
+
+#colorSiteBlue {
+    background: #9dd1ff;
+    color: #00f;
+}
+
+#colorSiteBeige {
+    background: #f7f3d6;
+    color: brown;
+}
+
+img.imagesBlackWhite, .sch-map.imagesBlackWhite {
+    filter: grayscale(100%);
 }
