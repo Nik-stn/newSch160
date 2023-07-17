@@ -81,6 +81,15 @@
     color: brown;
 }
 
-img.imagesBlackWhite, .sch-map.imagesBlackWhite {
+img.imagesBlackWhite, .sch-map.imagesBlackWhite, #ya-site-form0 input.ya-site-form__submit.imagesBlackWhite {
     filter: grayscale(100%);
+}
+
+.slider-icon.imagesBlackWhite path, .banners-icon.imagesBlackWhite path, .header-mobile .parent.imagesBlackWhite svg path{
+    stroke: #000;
+    fill: #000;
+}
+
+.footer-flex.imagesBlackWhite {
+    border: 0;
 }

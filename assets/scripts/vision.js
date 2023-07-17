@@ -13,6 +13,12 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .news-tabs-btn, .announcement-tab-btn, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .header-mobile .level_0').forEach(function (item) {
             item.style.background = "#f8f8f8";
         });
+        document.querySelectorAll('.checkbox-line span').forEach(function (item) {
+            item.style.background = "#000";
+        });
+        document.querySelectorAll('.footer-flex').forEach(function (item) {
+            item.style.border = "0";
+        });
     }
 
     function normalEyed(event) {
@@ -22,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("normal-eyed").style.display = "none";
         document.querySelector(".vision").style.display = "none";
         document.getElementById("tender-eyed").style.display = "inline-block";
-        document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a').forEach(function (item) {
+        document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a, .checkbox-line span').forEach(function (item) {
             item.removeAttribute("style");
         });
         removeCookies("havingPoorVision");
@@ -73,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function imagesYesClick(event) {
         event.preventDefault();
-        let img = document.querySelectorAll("img, .sch-map");
+        let img = document.querySelectorAll("img, .sch-map, #ya-site-form0 input.ya-site-form__submit, .slider-icon, .banners-icon, .header-mobile .parent");
         img.forEach(function (item) {
             item.classList.remove("imagesBlackWhite");
             item.style.display = "block";
@@ -83,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function imagesBlackWhiteClick(event) {
         event.preventDefault();
-        let img = document.querySelectorAll("img, .sch-map");
+        let img = document.querySelectorAll("img, .sch-map, #ya-site-form0 input.ya-site-form__submit, .slider-icon, .banners-icon, .header-mobile .parent");
         img.forEach(function (item) {
             item.classList.add("imagesBlackWhite");
             item.style.display = "block";
