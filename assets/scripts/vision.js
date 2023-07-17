@@ -119,9 +119,6 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("imagesYes").addEventListener("click", imagesYesClick);
         document.getElementById("imagesBlackWhite").addEventListener("click", imagesBlackWhiteClick);
 
-        window.addEventListener("resize", onResize);
-
-        renderColorBorderImages();
     }
 
     init();
