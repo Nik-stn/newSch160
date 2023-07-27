@@ -1,3 +1,7 @@
+let img = document.querySelectorAll("img, .sch-map, #ya-site-form0 input.ya-site-form__submit, .slider-icon, .banners-icon, .header-mobile .parent");
+let siteContent = document.querySelectorAll(".site-content, .popular-item, .news-sch-item, .announcement-sch-item");
+const letterSpacing = document.querySelectorAll(".changeLetterSpacing");
+
 document.addEventListener("DOMContentLoaded", function () {
     function tenderEyed(event) {
         event.preventDefault();
@@ -36,7 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function reduceFontClick(event) {
         event.preventDefault();
-        let siteContent = document.querySelectorAll(".site-content, .popular-item, .news-sch-item, .announcement-sch-item");
         siteContent.forEach(function (item) {
             let fz = parseFloat(window.getComputedStyle(item).fontSize);
             if (fz <= 16) return;
@@ -48,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function increaseFontClick(event) {
         event.preventDefault();
-        let siteContent = document.querySelectorAll(".site-content, .popular-item, .news-sch-item, .announcement-sch-item");
         siteContent.forEach(function (item) {
             let fz = parseFloat(window.getComputedStyle(item).fontSize);
             if (fz >= 24) return;
@@ -63,13 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.removeAttribute("class");
         let id = this.getAttribute("id");
         document.body.classList.add(id);
-        renderColorBorderImages();
         setObjCookies('{"bg": "' + id + '"}');
     }
 
     function imagesNoClick(event) {
         event.preventDefault();
-        let img = document.querySelectorAll("img, .sch-map");
         img.forEach(function (item) {
             item.classList.remove("imagesBlackWhite");
             item.style.display = "none";
@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function imagesYesClick(event) {
         event.preventDefault();
-        let img = document.querySelectorAll("img, .sch-map, #ya-site-form0 input.ya-site-form__submit, .slider-icon, .banners-icon, .header-mobile .parent");
         img.forEach(function (item) {
             item.classList.remove("imagesBlackWhite");
             item.style.display = "block";
@@ -89,12 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function imagesBlackWhiteClick(event) {
         event.preventDefault();
-        let img = document.querySelectorAll("img, .sch-map, #ya-site-form0 input.ya-site-form__submit, .slider-icon, .banners-icon, .header-mobile .parent");
         img.forEach(function (item) {
             item.classList.add("imagesBlackWhite");
             item.style.display = "block";
         });
     }
+
+   
 
     function setObjCookies(obj) {
         let date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 365);
@@ -114,6 +114,15 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("increaseFont").addEventListener("click", increaseFontClick);
         document.querySelectorAll(".colorSite").forEach(function (item) {
             item.addEventListener("click", colorSiteClick);
+        });
+        
+        letterSpacing.forEach(function (item) {
+            item.addEventListener("click", function() {
+                const data = item.getAttribute("data-letter-spacing");
+                siteContent.forEach(function (item) {
+                    item.style.letterSpacing = data + 'px'; 
+                });
+            });
         });
         document.getElementById("imagesNo").addEventListener("click", imagesNoClick);
         document.getElementById("imagesYes").addEventListener("click", imagesYesClick);
