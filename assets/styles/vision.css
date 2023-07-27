@@ -41,44 +41,52 @@
     background: #eee;
 }
 
-.colorSiteBlack {
+.colorSiteBlack, #colorSiteBlack {
     background: #000;
     color: #fff ;
 }
 
-.colorSiteWhite {
+.colorSiteWhite, #colorSiteWhite {
     background: #fff;
     color: #000 ;
 }
 
-.colorSiteBlue {
+.colorSiteBlue, #colorSiteBlue {
     background: #9dd1ff;
     color: #00f;
 }
 
-.colorSiteBeige {
+.colorSiteBeige, #colorSiteBeige {
     background: #f7f3d6;
     color: brown;
 }
 
-#colorSiteBlack {
+.linkColorSiteWhite, .header-mobile .parent>a.linkColorSiteWhite {
+    color: #000;
+}
+
+.buttonColorSiteWhite, .header-mobile .level_0.buttonColorSiteWhite {
+    background: #f8f8f8;
+}
+
+.checkboxColorSiteWhite, span.checkboxColorSiteWhite, .checkbox:checked~.checkbox-line span.checkboxColorSiteWhite {
     background: #000;
-    color: #fff ;
 }
 
-#colorSiteWhite {
+.linkColorSiteBlue {
+    color: #1616ff;
+}
+
+.buttonColorSiteBlue {
+    background: #a4d5ff;
+}
+
+.checkboxColorSiteBlue, span.checkboxColorSiteBlue {
     background: #fff;
-    color: #000 ;
 }
 
-#colorSiteBlue {
-    background: #9dd1ff;
-    color: #00f;
-}
-
-#colorSiteBeige {
-    background: #f7f3d6;
-    color: brown;
+.footerNoBorder {
+    border: 0;
 }
 
 img.imagesBlackWhite, .sch-map.imagesBlackWhite, #ya-site-form0 input.ya-site-form__submit.imagesBlackWhite {

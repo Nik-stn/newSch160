@@ -1,6 +1,19 @@
 let img = document.querySelectorAll("img, .sch-map, #ya-site-form0 input.ya-site-form__submit, .slider-icon, .banners-icon, .header-mobile .parent");
-let siteContent = document.querySelectorAll(".site-content, .popular-item, .news-sch-item, .announcement-sch-item");
+
+const siteContent = document.querySelectorAll(".site-content, .popular-item, .news-sch-item, .announcement-sch-item");
+
 const letterSpacing = document.querySelectorAll(".changeLetterSpacing");
+
+const buttons = document.querySelectorAll(".popular-item, .btn-header-bar, .header-nav, .news-tabs-btn, .announcement-tab-btn, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .header-mobile .level_0");
+
+const checkbox = document.querySelectorAll(".checkbox-line span, .scrooll-to-top");
+
+const noBorder = document.querySelectorAll('.footer-flex');
+
+const links = document.querySelectorAll('.header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .news-sch-content, .announcement-sch-content, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .parent>a, .header-mobile .level_1>li>a, .popular-item a');
+
+const mostSelectors =  document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a, .checkbox-line span, .scrooll-to-top');
+
 
 document.addEventListener("DOMContentLoaded", function () {
     function tenderEyed(event) {
@@ -11,17 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.add("colorSiteWhite");
         setObjCookies('{"bg": "colorSiteWhite"}');
         document.querySelector(".main").style.background = "0";
-        document.querySelectorAll('.header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .news-sch-content, .announcement-sch-content, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .parent>a, .header-mobile .level_1>li>a').forEach(function (item) {
-            item.style.color = "#000";
+        links.forEach(function (item) {
+            item.classList.add('linkColorSiteWhite');
         });
-        document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .news-tabs-btn, .announcement-tab-btn, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .header-mobile .level_0').forEach(function (item) {
-            item.style.background = "#f8f8f8";
+        buttons.forEach(function (item) {
+            item.classList.add('buttonColorSiteWhite');
         });
-        document.querySelectorAll('.checkbox-line span, .scrooll-to-top').forEach(function (item) {
-            item.style.background = "#000";
+        checkbox.forEach(function (item) {
+            item.classList.add('checkboxColorSiteWhite');
         });
-        document.querySelectorAll('.footer-flex').forEach(function (item) {
-            item.style.border = "0";
+        noBorder.forEach(function (item) {
+            item.classList.add('footerNoBorder');
         });
     }
 
@@ -32,9 +45,10 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("normal-eyed").style.display = "none";
         document.querySelector(".vision").style.display = "none";
         document.getElementById("tender-eyed").style.display = "inline-block";
-        document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a, .checkbox-line span, .scrooll-to-top').forEach(function (item) {
+        mostSelectors.forEach(function (item) {
             item.removeAttribute("style");
         });
+       
         removeCookies("havingPoorVision");
     }
 
@@ -66,6 +80,30 @@ document.addEventListener("DOMContentLoaded", function () {
         let id = this.getAttribute("id");
         document.body.classList.add(id);
         setObjCookies('{"bg": "' + id + '"}');
+        if (id === 'colorSiteBlue') {
+            links.forEach(function (item) {
+                item.classList.add('linkColorSiteBlue');
+            });
+            buttons.forEach(function (item) {
+                item.classList.add('buttonColorSiteBlue');
+            });
+            checkbox.forEach(function (item) {
+                item.classList.add('checkboxColorSiteBlue');
+            });
+        } else  {
+            links.forEach(function (item) {
+                item.classList.remove("linkColorSiteBlue");
+            });
+            buttons.forEach(function (item) {
+                item.classList.remove('buttonColorSiteBlue');
+            });
+            checkbox.forEach(function (item) {
+                item.classList.remove('checkboxColorSiteBlue');
+            });
+            noBorder.forEach(function (item) {
+                item.classList.remove('footerNoBorder');
+            });
+        }
     }
 
     function imagesNoClick(event) {
@@ -85,13 +123,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         setObjCookies('{"images": "yes"}');
     }
-
+    
     function imagesBlackWhiteClick(event) {
         event.preventDefault();
         img.forEach(function (item) {
             item.classList.add("imagesBlackWhite");
             item.style.display = "block";
         });
+        setObjCookies('{"images": "yes"}');
     }
 
    
