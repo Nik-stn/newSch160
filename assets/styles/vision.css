@@ -61,11 +61,11 @@
     color: brown;
 }
 
-.linkColorSiteWhite, .header-mobile .parent>a.linkColorSiteWhite {
+.linkColorSiteWhite, .active.linkColorSiteWhite, li a.linkColorSiteWhite, .header-mobile .parent>a.linkColorSiteWhite, .header-pc .parent>.linkColorSiteWhite, .about-text-item a.linkColorSiteWhite, .announcement-tab-btn.buttonColorSiteWhite {
     color: #000;
 }
 
-.buttonColorSiteWhite, .header-mobile .level_0.buttonColorSiteWhite {
+.buttonColorSiteWhite, .active.buttonColorSiteWhite, .header-mobile .level_0.buttonColorSiteWhite {
     background: #f8f8f8;
 }
 
@@ -73,17 +73,42 @@
     background: #000;
 }
 
-.linkColorSiteBlue {
+.linkColorSiteBlack, .active.linkColorSiteBlack,  li a.linkColorSiteBlack, .header-mobile .parent>a.linkColorSiteBlack, .header-pc .parent>.linkColorSiteBlack, .about-text-item a.linkColorSiteBlack, .announcement-tab-btn.buttonColorSiteBlack {
+    color: #e2e2e2;
+}
+
+.buttonColorSiteBlack, .active.buttonColorSiteBlack, .header-mobile .level_0.buttonColorSiteBlack {
+    background: #242424;
+}
+
+.checkboxColorSiteBlack, span.checkboxColorSiteBlack, .checkbox:checked~.checkbox-line span.checkboxColorSiteBlack {
+    background: #555555;
+}
+
+.linkColorSiteBlue, .active.linkColorSiteBlue,  li a.linkColorSiteBlue, .header-mobile .parent>a.linkColorSiteBlue, .header-pc .parent>.linkColorSiteBlue, .about-text-item a.linkColorSiteBlue, .announcement-tab-btn.buttonColorSiteBlue {
     color: #1616ff;
 }
 
-.buttonColorSiteBlue {
+.buttonColorSiteBlue, .active.buttonColorSiteBlue, .header-mobile .level_0.buttonColorSiteBlue {
     background: #a4d5ff;
 }
 
-.checkboxColorSiteBlue, span.checkboxColorSiteBlue {
+.checkboxColorSiteBlue, span.checkboxColorSiteBlue, .checkbox:checked~.checkbox-line span.checkboxColorSiteBlue {
     background: #fff;
 }
+
+.linkColorSiteBeige, .active.linkColorSiteBeige,  li a.linkColorSiteBeige, .header-mobile .parent>a.linkColorSiteBeige, .header-pc .parent>.linkColorSiteBeige, .about-text-item a.linkColorSiteBeige, .announcement-tab-btn.buttonColorSiteBeige {
+    color: #a03030;
+}
+
+.buttonColorSiteBeige, .active.buttonColorSiteBeige, .header-mobile .level_0.buttonColorSiteBeige {
+    background: #fdf9d5;
+}
+
+.checkboxColorSiteBeige, span.checkboxColorSiteBeige, .checkbox:checked~.checkbox-line span.checkboxColorSiteBeige {
+    background: #fff;
+}
+
 
 .footerNoBorder {
     border: 0;
@@ -100,4 +125,6 @@ img.imagesBlackWhite, .sch-map.imagesBlackWhite, #ya-site-form0 input.ya-site-fo
 
 .footer-flex.imagesBlackWhite {
     border: 0;
+    
 }
+

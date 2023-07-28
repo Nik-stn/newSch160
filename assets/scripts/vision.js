@@ -14,6 +14,7 @@ const links = document.querySelectorAll('.header-pc .parent>a, .header-pc .paren
 
 const mostSelectors =  document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a, .checkbox-line span, .scrooll-to-top');
 
+const noHover = document.querySelectorAll('.header-pc .parent>a:hover::before, .header-pc .parent>span:hover::before');
 
 document.addEventListener("DOMContentLoaded", function () {
     function tenderEyed(event) {
@@ -36,6 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
         noBorder.forEach(function (item) {
             item.classList.add('footerNoBorder');
         });
+        noHover.forEach(function (item) {
+            item.style.backgroundColor = 'inherit';
+        });
     }
 
     function normalEyed(event) {
@@ -47,6 +51,27 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("tender-eyed").style.display = "inline-block";
         mostSelectors.forEach(function (item) {
             item.removeAttribute("style");
+        });
+        links.forEach(function (item) {
+            item.classList.remove("linkColorSiteBlue");
+            item.classList.remove("linkColorSiteWhite");
+            item.classList.remove("linkColorSiteBlack");
+            item.classList.remove("linkColorSiteBeige");
+        });
+        buttons.forEach(function (item) {
+            item.classList.remove('buttonColorSiteBlue');
+            item.classList.remove("buttonColorSiteWhite");
+            item.classList.remove("buttonColorSiteBlack");
+            item.classList.remove("buttonColorSiteBeige");
+        });
+        checkbox.forEach(function (item) {
+            item.classList.remove('checkboxColorSiteBlue');
+            item.classList.remove("checkboxColorSiteWhite");
+            item.classList.remove("checkboxColorSiteBlack");
+            item.classList.remove("checkboxColorSiteBeige");
+        });
+        noBorder.forEach(function (item) {
+            item.classList.remove('footerNoBorder');
         });
        
         removeCookies("havingPoorVision");
@@ -83,26 +108,81 @@ document.addEventListener("DOMContentLoaded", function () {
         if (id === 'colorSiteBlue') {
             links.forEach(function (item) {
                 item.classList.add('linkColorSiteBlue');
+                item.classList.remove("linkColorSiteWhite");
+                item.classList.remove("linkColorSiteBlack");
+                item.classList.remove("linkColorSiteBeige");
             });
             buttons.forEach(function (item) {
                 item.classList.add('buttonColorSiteBlue');
+                item.classList.remove("buttonColorSiteWhite");
+                item.classList.remove("buttonColorSiteBlack");
+                item.classList.remove("buttonColorSiteBeige");
             });
             checkbox.forEach(function (item) {
                 item.classList.add('checkboxColorSiteBlue');
+                item.classList.remove("checkboxColorSiteWhite");
+                item.classList.remove("checkboxColorSiteBlack");
+                item.classList.remove("checkboxColorSiteBeige");
             });
-        } else  {
+        } else if (id === 'colorSiteBlack') {
             links.forEach(function (item) {
+                item.classList.add('linkColorSiteBlack');
+                item.classList.remove("linkColorSiteWhite");
                 item.classList.remove("linkColorSiteBlue");
+                item.classList.remove("linkColorSiteBeige");
             });
             buttons.forEach(function (item) {
-                item.classList.remove('buttonColorSiteBlue');
+                item.classList.add('buttonColorSiteBlack');
+                item.classList.remove("buttonColorSiteWhite");
+                item.classList.remove("buttonColorSiteBlue");
+                item.classList.remove("buttonColorSiteBeige");
             });
             checkbox.forEach(function (item) {
-                item.classList.remove('checkboxColorSiteBlue');
+                item.classList.add('checkboxColorSiteBlack');
+                item.classList.remove("checkboxColorSiteWhite");
+                item.classList.remove("checkboxColorSiteBlue");
+                item.classList.remove("checkboxColorSiteBeige");
             });
-            noBorder.forEach(function (item) {
-                item.classList.remove('footerNoBorder');
+        } else if (id === 'colorSiteWhite') {
+            links.forEach(function (item) {
+                item.classList.add('linkColorSiteWhite');
+                item.classList.remove("linkColorSiteBlack");
+                item.classList.remove("linkColorSiteBlue");
+                item.classList.remove("linkColorSiteBeige");
             });
+            buttons.forEach(function (item) {
+                item.classList.add('buttonColorSiteWhite');
+                item.classList.remove("buttonColorSiteBlack");
+                item.classList.remove("buttonColorSiteBlue");
+                item.classList.remove("buttonColorSiteBeige");
+            });
+            checkbox.forEach(function (item) {
+                item.classList.add('checkboxColorSiteWhite');
+                item.classList.remove("checkboxColorSiteBlack");
+                item.classList.remove("checkboxColorSiteBlue");
+                item.classList.remove("checkboxColorSiteBeige");
+            });
+        } else if (id === 'colorSiteBeige') {
+            links.forEach(function (item) {
+                item.classList.add('linkColorSiteBeige');
+                item.classList.remove("linkColorSiteBlack");
+                item.classList.remove("linkColorSiteBlue");
+                item.classList.remove("linkColorSiteWhite");
+            });
+            buttons.forEach(function (item) {
+                item.classList.add('buttonColorSiteBeige');
+                item.classList.remove("buttonColorSiteBlack");
+                item.classList.remove("buttonColorSiteBlue");
+                item.classList.remove("buttonColorSiteWhite");
+            });
+            checkbox.forEach(function (item) {
+                item.classList.add('checkboxColorSiteBeige');
+                item.classList.remove("checkboxColorSiteBlack");
+                item.classList.remove("checkboxColorSiteBlue");
+                item.classList.remove("checkboxColorSiteWhite");
+            });
+        } else  {
+            console.log('2134');
         }
     }
 
