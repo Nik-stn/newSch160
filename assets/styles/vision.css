@@ -61,7 +61,7 @@
     color: brown;
 }
 
-.linkColorSiteWhite, .active.linkColorSiteWhite, li a.linkColorSiteWhite, .header-mobile .parent>a.linkColorSiteWhite, .header-pc .parent>.linkColorSiteWhite, .about-text-item a.linkColorSiteWhite, .announcement-tab-btn.buttonColorSiteWhite {
+.linkColorSiteWhite, .active.linkColorSiteWhite, li a.linkColorSiteWhite, .header-mobile .parent>a.linkColorSiteWhite, .header-pc .parent>.linkColorSiteWhite, .about-text-item a.linkColorSiteWhite, .announcement-tab-btn.buttonColorSiteWhite, .footer-copyright a.linkColorSiteWhite {
     color: #000;
 }
 
@@ -73,7 +73,7 @@
     background: #000;
 }
 
-.linkColorSiteBlack, .active.linkColorSiteBlack,  li a.linkColorSiteBlack, .header-mobile .parent>a.linkColorSiteBlack, .header-pc .parent>.linkColorSiteBlack, .about-text-item a.linkColorSiteBlack, .announcement-tab-btn.buttonColorSiteBlack {
+.linkColorSiteBlack, .active.linkColorSiteBlack,  li a.linkColorSiteBlack, .header-mobile .parent>a.linkColorSiteBlack, .header-pc .parent>.linkColorSiteBlack, .about-text-item a.linkColorSiteBlack, .announcement-tab-btn.buttonColorSiteBlack, .footer-copyright a.linkColorSiteBlack {
     color: #e2e2e2;
 }
 
@@ -85,7 +85,7 @@
     background: #555555;
 }
 
-.linkColorSiteBlue, .active.linkColorSiteBlue,  li a.linkColorSiteBlue, .header-mobile .parent>a.linkColorSiteBlue, .header-pc .parent>.linkColorSiteBlue, .about-text-item a.linkColorSiteBlue, .announcement-tab-btn.buttonColorSiteBlue {
+.linkColorSiteBlue, .active.linkColorSiteBlue,  li a.linkColorSiteBlue, .header-mobile .parent>a.linkColorSiteBlue, .header-pc .parent>.linkColorSiteBlue, .about-text-item a.linkColorSiteBlue, .announcement-tab-btn.buttonColorSiteBlue, .footer-copyright a.linkColorSiteBlue {
     color: #1616ff;
 }
 
@@ -97,7 +97,7 @@
     background: #fff;
 }
 
-.linkColorSiteBeige, .active.linkColorSiteBeige,  li a.linkColorSiteBeige, .header-mobile .parent>a.linkColorSiteBeige, .header-pc .parent>.linkColorSiteBeige, .about-text-item a.linkColorSiteBeige, .announcement-tab-btn.buttonColorSiteBeige {
+.linkColorSiteBeige, .active.linkColorSiteBeige,  li a.linkColorSiteBeige, .header-mobile .parent>a.linkColorSiteBeige, .header-pc .parent>.linkColorSiteBeige, .about-text-item a.linkColorSiteBeige, .announcement-tab-btn.buttonColorSiteBeige, .footer-copyright a.linkColorSiteBeige {
     color: #a03030;
 }
 

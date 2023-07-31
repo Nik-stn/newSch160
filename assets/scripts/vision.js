@@ -1,29 +1,28 @@
-let img = document.querySelectorAll("img, .sch-map, #ya-site-form0 input.ya-site-form__submit, .slider-icon, .banners-icon, .header-mobile .parent");
-
-const siteContent = document.querySelectorAll(".site-content, .popular-item, .news-sch-item, .announcement-sch-item");
-
-const letterSpacing = document.querySelectorAll(".changeLetterSpacing");
-
-const buttons = document.querySelectorAll(".popular-item, .btn-header-bar, .header-nav, .news-tabs-btn, .announcement-tab-btn, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .header-mobile .level_0");
-
-const checkbox = document.querySelectorAll(".checkbox-line span, .scrooll-to-top");
-
-const noBorder = document.querySelectorAll('.footer-flex');
-
-const links = document.querySelectorAll('.header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .news-sch-content, .announcement-sch-content, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .parent>a, .header-mobile .level_1>li>a, .popular-item a');
-
-const mostSelectors =  document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a, .checkbox-line span, .scrooll-to-top');
-
-const noHover = document.querySelectorAll('.header-pc .parent>a:hover::before, .header-pc .parent>span:hover::before');
-
 document.addEventListener("DOMContentLoaded", function () {
+
+    let img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img, .sch-map,  .slider-icon, .banners-icon, .header-mobile .parent");
+    
+    const siteContent = document.querySelectorAll(".site-content, .popular-item, .news-sch-item, .announcement-sch-item");
+    
+    const buttons = document.querySelectorAll(".popular-item, .btn-header-bar, .header-nav, .news-tabs-btn, .announcement-tab-btn, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .header-mobile .level_0");
+    
+    const checkbox = document.querySelectorAll(".checkbox-line span, .scrooll-to-top");
+    
+    const noBorder = document.querySelectorAll('.footer-flex');
+    
+    const links = document.querySelectorAll('.header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .news-sch-content, .announcement-sch-content, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .parent>a, .header-mobile .level_1>li>a, .popular-item a, .link-header-bar, .news-sch-archive-link, .announcement-sch-archive-link');
+    
+    const mostSelectors =  document.querySelectorAll('.popular-item, .btn-header-bar, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a, .checkbox-line span, .scrooll-to-top');
+    
+    const noHover = document.querySelectorAll('.header-pc .parent>a:hover::before, .header-pc .parent>span:hover::before');
+
     function tenderEyed(event) {
         event.preventDefault();
         this.style.display = "none";
         document.getElementById("normal-eyed").style.display = "inline-block";
         document.querySelector(".vision").style.display = "block";
         document.body.classList.add("colorSiteWhite");
-        setObjCookies('{"bg": "colorSiteWhite"}');
+        // setObjCookies('{"bg": "colorSiteWhite"}');
         document.querySelector(".main").style.background = "0";
         links.forEach(function (item) {
             item.classList.add('linkColorSiteWhite');
@@ -74,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
             item.classList.remove('footerNoBorder');
         });
        
-        removeCookies("havingPoorVision");
+        // removeCookies("havingPoorVision");
     }
 
     function reduceFontClick(event) {
@@ -84,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (fz <= 16) return;
             fz -= 1;
             item.style.fontSize = fz + "px";
-            setObjCookies('{"fz": "' + fz + '"}');
+            // setObjCookies('{"fz": "' + fz + '"}');
         });
     }
 
@@ -95,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (fz >= 24) return;
             fz += 1;
             item.style.fontSize = fz + "px"; 
-            setObjCookies('{"fz": "' + fz + '"}');
+            // setObjCookies('{"fz": "' + fz + '"}');
         });
     }
 
@@ -104,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.removeAttribute("class");
         let id = this.getAttribute("id");
         document.body.classList.add(id);
-        setObjCookies('{"bg": "' + id + '"}');
+        // setObjCookies('{"bg": "' + id + '"}');
         if (id === 'colorSiteBlue') {
             links.forEach(function (item) {
                 item.classList.add('linkColorSiteBlue');
@@ -192,16 +191,16 @@ document.addEventListener("DOMContentLoaded", function () {
             item.classList.remove("imagesBlackWhite");
             item.style.display = "none";
         });
-        setObjCookies('{"images": "no"}');
+        // setObjCookies('{"images": "no"}');
     }
-
+    
     function imagesYesClick(event) {
         event.preventDefault();
         img.forEach(function (item) {
             item.classList.remove("imagesBlackWhite");
             item.style.display = "block";
         });
-        setObjCookies('{"images": "yes"}');
+        // setObjCookies('{"images": "yes"}');
     }
     
     function imagesBlackWhiteClick(event) {
@@ -210,21 +209,27 @@ document.addEventListener("DOMContentLoaded", function () {
             item.classList.add("imagesBlackWhite");
             item.style.display = "block";
         });
-        setObjCookies('{"images": "yes"}');
+        // setObjCookies('{"images": "yes"}');
     }
 
    
 
-    function setObjCookies(obj) {
-        let date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 365);
-        document.cookie = "havingPoorVision=" + obj + "; path=/; expires=" + date.toUTCString();
-    }
+    // function setObjCookies(obj) {
+    //     let date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 365);
+    //     document.cookie = "havingPoorVision=" + obj + "; path=/; expires=" + date.toUTCString();
+    // }
 
-    function removeCookies(cookieName) {
-        let date = new Date(new Date().getTime() - 1000);
-        document.cookie = cookieName + "=; path=/; expires=" + date.toUTCString();
-    }
+    // function removeCookies(cookieName) {
+    //     let date = new Date(new Date().getTime() - 1000);
+    //     document.cookie = cookieName + "=; path=/; expires=" + date.toUTCString();
+    // }
 
+    function spacing() {
+        const data = this.getAttribute("data-letter-spacing");
+        siteContent.forEach( (item) => {
+            item.style.letterSpacing = data + 'px'; 
+        });
+    }
 
     function init() {
         document.getElementById("tender-eyed").addEventListener("click", tenderEyed);
@@ -234,15 +239,11 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".colorSite").forEach(function (item) {
             item.addEventListener("click", colorSiteClick);
         });
-        
-        letterSpacing.forEach(function (item) {
-            item.addEventListener("click", function() {
-                const data = item.getAttribute("data-letter-spacing");
-                siteContent.forEach(function (item) {
-                    item.style.letterSpacing = data + 'px'; 
-                });
-            });
+
+        document.querySelectorAll(".changeLetterSpacing").forEach( (item) => {
+            item.addEventListener("click", spacing); 
         });
+        
         document.getElementById("imagesNo").addEventListener("click", imagesNoClick);
         document.getElementById("imagesYes").addEventListener("click", imagesYesClick);
         document.getElementById("imagesBlackWhite").addEventListener("click", imagesBlackWhiteClick);
