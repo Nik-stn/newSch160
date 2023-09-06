@@ -1,12 +1,12 @@
 .header {
     margin-bottom: 0;
+    margin-top: 20px;
 }
 
 .header-flex {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 20px;
 }
 
 .header-logo {
@@ -103,6 +103,10 @@
     height: 40px;
     width: 30px;
     text-indent: -9999px;
+    border: 0;
+}
+
+td.ya-site-form__search-input-layout-l, td.ya-site-form__search-input-layout-r, td.ya-site-form__search-input, td.ya-site-form__search-wrap, table.ya-site-form__search, table.ya-site-form__search-input-layout, table.ya-site-form__wrap {
     border: 0;
 }
 
