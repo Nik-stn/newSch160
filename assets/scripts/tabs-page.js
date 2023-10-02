@@ -9,7 +9,8 @@ firstItem.classList.add('active');
 tabsLink.forEach(onTabClick);
 
 function onTabClick(item) {
-    item.addEventListener("click", function () {
+    item.addEventListener("click", function (event) {
+        event.preventDefault();
         const currentLink = item;
         const tabId = currentLink.getAttribute("data-tab");
         const currentTab = document.querySelector(tabId);
