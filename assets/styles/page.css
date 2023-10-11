@@ -101,7 +101,22 @@
 }
 
 .content-box a {
-    color: #6c757d;
+    color: #004e88;
+}
+
+.content-box .content-link {
+    margin: 10px;
+    max-width: 300px; 
+    min-height: 130px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-top-style: solid;
+    padding: 10px 20px;
+    text-shadow: 0 1px 0 #fff;
+    background-color: #fff;
+    font-weight: bold;
+    display: block;
+    border-bottom: 1px solid #CBCBCC ;
 }
 
 .aside-inner a:hover, .content-box a:hover {
@@ -195,9 +210,13 @@
     transition: all .2s ease;
 }
 
-.content-box ul {
+.content-box ul, .content-box ol {
     margin-left: 20px;
     list-style-type: disc;
+}
+
+.content-box ol {
+    list-style-type: decimal;
 }
 
 .content-box ul.no-list {
