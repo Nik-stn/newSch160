@@ -23,7 +23,7 @@ document.querySelector('.scrooll-to-top').addEventListener('click', (event) => {
 });
 
 // Modal img
-const images = document.querySelectorAll(".post_content img, .html_block img, .excerpt_content img");
+const images = document.querySelectorAll(".gallery-list img");
 let imgSrc;
 images.forEach((img) => {
     img.addEventListener("click", (e) => {

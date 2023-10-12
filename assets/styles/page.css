@@ -146,47 +146,9 @@
 .content-box * {
     margin: revert;
 }
-
-.post_content img, .html_block img, .excerpt_content img{
-    width: 100%;
+.content-box img {
+    max-width: 100%;
     height: 100%;
-    max-width: 700px;
-    cursor: pointer;
-    object-fit: cover;
-    transition: 0.3s ease-in-out;
-    border-radius: 6px;
-}
-
-.post_content img:hover, .html_block img:hover, .excerpt_content img:hover {
-    transform: scale(1.02);
-}
-
-.modal {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.733);
-    margin-top: -1px;
-    z-index: 1000;
-    animation: zoom 0.3s ease-in-out;
-}
-
-@keyframes zoom {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-.modal img {
-    max-height: calc(100vh - 150px);
-    object-fit: cover;
-    cursor: pointer;
 }
 
 .content-box .tabs-inner {
@@ -211,7 +173,7 @@
 }
 
 .content-box ul, .content-box ol {
-    margin-left: 20px;
+    margin-left: 40px;
     list-style-type: disc;
 }
 
@@ -221,6 +183,14 @@
 
 .content-box ul.no-list {
     list-style-type: none;
+}
+
+.content-box>.thumbs_box.photo {
+    display: none;
+}
+
+.content-box>.html_block.post+.thumbs_box.photo {
+    display: block;
 }
 
 .tabs-btn {
@@ -403,11 +373,7 @@ ul.no-list .name {
     max-width: 300px;
 }
 
-@media (max-width: 900px) {
-    .modal img {
-        width: 80%;
-    }
-}
+
 
 @media (max-width: 768px) {
     .content-box .tabs-link {
