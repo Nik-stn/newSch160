@@ -50,6 +50,41 @@
     animation: zoom 0.3s ease-in-out;
 }
 
+.modal-inner {
+    position: relative;
+}
+
+.modal button {
+    position: absolute;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    top: -10px;
+    right: -10px;
+    background: #000;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.modal button span {
+    position: absolute;
+    display: block;
+    background: #fdbe34;
+    width: 15px;
+    height: 3px;
+    border-radius: 30px;
+    top: 11px;
+    left: 6px;
+}
+
+.modal button span:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.modal button span:nth-child(2) {
+    transform: rotate(-45deg) ;
+}
+
 @keyframes zoom {
     from {
         transform: scale(0);
@@ -58,10 +93,27 @@
         transform: scale(1);
     }
 }
+
+
+.modalRemove {
+    animation: zoomOut 0.3s ease-in-out; 
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+
 .modal img {
     max-height: calc(100vh - 150px);
     object-fit: cover;
     cursor: pointer;
+    border: 5px solid #ffc421;
+    border-radius: 2%;
 } 
 
 @media (max-width: 900px) {
