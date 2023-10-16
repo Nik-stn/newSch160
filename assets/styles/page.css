@@ -364,17 +364,15 @@ ul.no-list .name {
     display: block;
 }
 
-.news.excerpt_preview, .news.excerpt, .news.excerpt_content, .excerpt {
+.news.excerpt_preview, .news.excerpt, .news.excerpt_content, .excerpt, .excerpt_preview, .excerpt_content {
     width: auto;
     border-radius: 0;
     margin-bottom: 20px;
 }
 
-.news.excerpt_preview img {
+.news.excerpt_preview img, .photo-gallery.excerpt_preview img {
     max-width: 300px;
 }
-
-
 
 @media (max-width: 768px) {
     .content-box .tabs-link {

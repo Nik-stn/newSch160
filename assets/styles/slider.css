@@ -8,6 +8,14 @@
     line-height: 0;
 }
 
+.slider-item {
+    display: none;
+}
+
+.slider-item:first-child {
+    display: block;
+}
+
 .slider-item img {
     width: 100%;
 }
