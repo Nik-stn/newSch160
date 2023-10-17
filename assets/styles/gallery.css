@@ -111,14 +111,23 @@
     }
 }
 
-.modal img {
+.modal-item.visible {
     width: 90%;
+}
+
+.modal img {
+    display: none;
+    width: 100%;
     max-height: calc(100vh - 150px);
     object-fit: cover;
     cursor: pointer;
     border: 5px solid #ffc421;
     border-radius: 2%;
 } 
+
+.modal img.visible-img {
+    display: block;
+}
 
 @media (max-width: 600px) {
     .modal button {
