@@ -105,9 +105,15 @@
     color: #004e88;
 }
 
+.content-box .post-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .content-box .content-link {
     margin: 10px;
-    max-width: 300px; 
+    width: 300px; 
     min-height: 130px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
     text-align: center;
@@ -116,7 +122,6 @@
     text-shadow: 0 1px 0 #fff;
     background-color: #fff;
     font-weight: bold;
-    display: block;
     border-bottom: 1px solid #CBCBCC ;
 }
 
