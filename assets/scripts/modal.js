@@ -16,6 +16,12 @@ nextButton.innerHTML = `
   </svg>
 `;
 
+// Создаем кнопку "X"
+const btn = document.createElement("button");
+  btn.setAttribute("type", "button");
+  btn.classList.add("modal-close");
+  btn.innerHTML = `<span></span><span></span>`;
+
 // Modal img
 const galleryList = document.querySelector(".gallery-list");
 galleryList.addEventListener("click", (e) => {
@@ -56,10 +62,7 @@ let imgModal = (src, sliderIndex) => {
     }
   });
 
-  const btn = document.createElement("button");
-  btn.setAttribute("type", "button");
-  btn.classList.add("modal-close");
-  btn.innerHTML = `<span></span><span></span>`;
+  
 
   modalInner.append(btn);
   modalInner.append(previousButton);
@@ -75,7 +78,6 @@ let imgModal = (src, sliderIndex) => {
     }, 200);
   };
 
-  // clickedImage.onclick = closeModal;
   btn.onclick = closeModal;
 
   //slider
@@ -89,28 +91,24 @@ let imgModal = (src, sliderIndex) => {
     showSlides((sliderIndex -= 1));
   });
   
-  function currentSlide(n) {
-    showSlides((sliderIndex = n));
-  }
-  
   function showSlides(n) {
     n = +n;
-    console.log(n, typeof(n));
+    sliderIndex = +sliderIndex;
     let slides = document.getElementsByClassName("modal-item");
   
     if (n > slides.length) {
-      n = 1;
+      sliderIndex = 1;
     }
     if (n < 1) {
-      n = slides.length;
+      sliderIndex = slides.length;
     }
   
     for (let slide of slides) {
       slide.style.display = "none";
       slide.classList.remove('visible')
     }
-    slides[n - 1].style.display = "block";
-    slides[n - 1].classList.add('visible');
-    numberSlide.innerHTML = n + '/' + slides.length;
+    slides[sliderIndex - 1].style.display = "block";
+    slides[sliderIndex - 1].classList.add('visible');
+    numberSlide.innerHTML = sliderIndex + '/' + slides.length;
   }
 };
