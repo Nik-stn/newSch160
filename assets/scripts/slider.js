@@ -13,10 +13,6 @@ previous.addEventListener("click", () => {
   showSlides((slideIndex -= 1));
 });
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
 function showSlides(n) {
   let slides = document.getElementsByClassName("slider-item");
 

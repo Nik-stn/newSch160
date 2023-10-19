@@ -22,34 +22,36 @@ galleryList.addEventListener("click", (e) => {
   const clickedImage = e.target.closest("img");
   if (clickedImage) {
     const src = clickedImage.getAttribute("data");
-    imgModal(src);
+    const sliderIndex = clickedImage.getAttribute("number");
+    imgModal(src, sliderIndex);
   }
 });
 
-let imgModal = (src) => {
+let imgModal = (src, sliderIndex) => {
   const modal = document.createElement("div");
   modal.classList.add("modal");
+  
+  const numberSlide = document.createElement("div");
+  numberSlide.classList.add("modal-number");
 
   const modalInner = document.createElement("div");
   modalInner.classList.add("modal-inner");
 
-  const clickedImage = document.createElement("img");
-  clickedImage.setAttribute("src", src);
-  clickedImage.classList.add("visible-img");
-
-  const divImage = document.createElement("div");
-  divImage.classList.add("modal-item", "visible");
-  divImage.append(clickedImage);
-  modalInner.append(divImage);
-
   const allImages = galleryList.querySelectorAll("img");
   allImages.forEach((img) => {
-    if (img !== clickedImage) {
+    if (img.getAttribute('number') !== sliderIndex) {
       const newImage = document.createElement("img");
       newImage.setAttribute("src", img.getAttribute("data"));
       const divImage = document.createElement("div");
       divImage.classList.add("modal-item");
       divImage.append(newImage);
+      modalInner.append(divImage);
+    } else {
+      const clickedImage = document.createElement("img");
+      clickedImage.setAttribute("src", src);
+      const divImage = document.createElement("div");
+      divImage.classList.add("modal-item", "visible");
+      divImage.append(clickedImage);
       modalInner.append(divImage);
     }
   });
@@ -62,6 +64,7 @@ let imgModal = (src) => {
   modalInner.append(btn);
   modalInner.append(previousButton);
   modalInner.append(nextButton);
+  modal.append(numberSlide);
   modal.append(modalInner);
   document.querySelector("body").append(modal);
 
@@ -72,39 +75,42 @@ let imgModal = (src) => {
     }, 200);
   };
 
-  clickedImage.onclick = closeModal;
+  // clickedImage.onclick = closeModal;
   btn.onclick = closeModal;
+
+  //slider
+  showSlides(sliderIndex);
+  
+  nextButton.addEventListener("click", () => {
+    showSlides((sliderIndex += 1));
+  });
+  
+  previousButton.addEventListener("click", () => {
+    showSlides((sliderIndex -= 1));
+  });
+  
+  function currentSlide(n) {
+    showSlides((sliderIndex = n));
+  }
+  
+  function showSlides(n) {
+    n = +n;
+    console.log(n, typeof(n));
+    let slides = document.getElementsByClassName("modal-item");
+  
+    if (n > slides.length) {
+      n = 1;
+    }
+    if (n < 1) {
+      n = slides.length;
+    }
+  
+    for (let slide of slides) {
+      slide.style.display = "none";
+      slide.classList.remove('visible')
+    }
+    slides[n - 1].style.display = "block";
+    slides[n - 1].classList.add('visible');
+    numberSlide.innerHTML = n + '/' + slides.length;
+  }
 };
-
-// //slider
-// let sliderIndex = 1;
-// showSlides(sliderIndex);
-
-// nextButton.addEventListener("click", () => {
-//   showSlides((sliderIndex += 1));
-// });
-
-// previousButton.addEventListener("click", () => {
-//   showSlides((sliderIndex -= 1));
-// });
-
-// function currentSlide(n) {
-//   showSlides((sliderIndex = n));
-// }
-
-// function showSlides(n) {
-//   let slides = document.getElementsByClassName("modal-item");
-//   console.log(slides);
-
-//   if (n > slides.length) {
-//     sliderIndex = 1;
-//   }
-//   if (n < 1) {
-//     sliderIndex = slides.length;
-//   }
-
-//   for (let slide of slides) {
-//     slide.style.display = "none";
-//   }
-//   slides[sliderIndex - 1].style.display = "block";
-// }
