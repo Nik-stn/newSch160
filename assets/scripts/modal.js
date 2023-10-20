@@ -64,7 +64,7 @@ let imgModal = (src, sliderIndex) => {
 
   
 
-  modalInner.append(btn);
+  modal.append(btn);
   modal.append(previousButton);
   modal.append(nextButton);
   modal.append(numberSlide);
