@@ -1,4 +1,4 @@
-let img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img, .sch-map,  .slider-icon, .banners-icon, .header-mobile .parent");
+const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img, .sch-map,  .slider-icon, .banners-icon, .header-mobile .parent");
 
 const siteContent = document.querySelectorAll(".site-content, .popular-item, .news-sch-item, .announcement-sch-item");
 
@@ -20,23 +20,12 @@ function tenderEyed(event) {
     document.getElementById("normal-eyed").style.display = "inline-block";
     document.querySelector(".vision").style.display = "block";
     document.body.classList.add("colorSiteWhite");
-    // setObjCookies('{"bg": "colorSiteWhite"}');
     document.querySelector(".main").style.background = "0";
-    links.forEach(function (item) {
-        item.classList.add('linkColorSiteWhite');
-    });
-    buttons.forEach(function (item) {
-        item.classList.add('buttonColorSiteWhite');
-    });
-    checkbox.forEach(function (item) {
-        item.classList.add('checkboxColorSiteWhite');
-    });
-    noBorder.forEach(function (item) {
-        item.classList.add('footerNoBorder');
-    });
-    noHover.forEach(function (item) {
-        item.style.backgroundColor = 'inherit';
-    });
+    links.forEach(item => item.classList.add('linkColorSiteWhite'));
+    buttons.forEach(item => item.classList.add('buttonColorSiteWhite'));
+    checkbox.forEach(item => item.classList.add('checkboxColorSiteWhite'));
+    noBorder.forEach(item => item.classList.add('footerNoBorder'));
+    noHover.forEach(item => item.style.backgroundColor = 'inherit');
 }
 
 function normalEyed(event) {
@@ -46,62 +35,29 @@ function normalEyed(event) {
     document.getElementById("normal-eyed").style.display = "none";
     document.querySelector(".vision").style.display = "none";
     document.getElementById("tender-eyed").style.display = "inline-block";
-    mostSelectors.forEach(function (item) {
-        item.removeAttribute("style");
-    });
-    links.forEach(function (item) {
-        item.classList.remove("linkColorSiteBlue");
-        item.classList.remove("linkColorSiteWhite");
-        item.classList.remove("linkColorSiteBlack");
-        item.classList.remove("linkColorSiteBeige");
-    });
-    buttons.forEach(function (item) {
-        item.classList.remove('buttonColorSiteBlue');
-        item.classList.remove("buttonColorSiteWhite");
-        item.classList.remove("buttonColorSiteBlack");
-        item.classList.remove("buttonColorSiteBeige");
-    });
-    checkbox.forEach(function (item) {
-        item.classList.remove('checkboxColorSiteBlue');
-        item.classList.remove("checkboxColorSiteWhite");
-        item.classList.remove("checkboxColorSiteBlack");
-        item.classList.remove("checkboxColorSiteBeige");
-    });
-    noBorder.forEach(function (item) {
-        item.classList.remove('footerNoBorder');
-    });
-
-    // removeCookies("havingPoorVision");
+    mostSelectors.forEach( item => item.removeAttribute("style"));
+    siteContent.forEach( item => item.removeAttribute("style"));
+    links.forEach( item => item.classList.remove("linkColorSiteBlue", "linkColorSiteWhite", "linkColorSiteBlack" ,"linkColorSiteBeige"));
+    buttons.forEach( item => item.classList.remove('buttonColorSiteBlue', "buttonColorSiteWhite", "buttonColorSiteBlack", "buttonColorSiteBeige"));
+    checkbox.forEach( item => item.classList.remove('checkboxColorSiteBlue', "checkboxColorSiteWhite", "checkboxColorSiteBlack", "checkboxColorSiteBeige"));
+    noBorder.forEach( item => item.classList.remove('footerNoBorder'));
 }
 
-function reduceFontClick(event) {
-    event.preventDefault();
-    siteContent.forEach(function (item) {
-        let fz = parseFloat(window.getComputedStyle(item).fontSize);
-        if (fz <= 16) return;
-        fz -= 1;
-        item.style.fontSize = fz + "px";
-        // setObjCookies('{"fz": "' + fz + '"}');
+function updateFontSizes(changeAmount) {
+   return siteContent.forEach(item => {
+      let fz = parseFloat(window.getComputedStyle(item).fontSize);
+      fz += changeAmount;
+      if (fz >= 12 && fz <= 24) item.style.fontSize = fz + "px";
+      else if (fz > 24) fz = 24;
+      else fz = 12
     });
-}
+  }
 
-function increaseFontClick(event) {
-    event.preventDefault();
-    siteContent.forEach(function (item) {
-        let fz = parseFloat(window.getComputedStyle(item).fontSize);
-        if (fz >= 24) return;
-        fz += 1;
-        item.style.fontSize = fz + "px";
-        // setObjCookies('{"fz": "' + fz + '"}');
-    });
-}
-
-function colorSiteClick(event) {
+  function colorSiteClick(event) {
     event.preventDefault();
     document.body.removeAttribute("class");
     let id = this.getAttribute("id");
     document.body.classList.add(id);
-    // setObjCookies('{"bg": "' + id + '"}');
     if (id === 'colorSiteBlue') {
         links.forEach(function (item) {
             item.classList.add('linkColorSiteBlue');
@@ -189,7 +145,6 @@ function imagesNoClick(event) {
         item.classList.remove("imagesBlackWhite");
         item.style.display = "none";
     });
-    // setObjCookies('{"images": "no"}');
 }
 
 function imagesYesClick(event) {
@@ -198,7 +153,6 @@ function imagesYesClick(event) {
         item.classList.remove("imagesBlackWhite");
         item.style.display = "block";
     });
-    // setObjCookies('{"images": "yes"}');
 }
 
 function imagesBlackWhiteClick(event) {
@@ -207,20 +161,7 @@ function imagesBlackWhiteClick(event) {
         item.classList.add("imagesBlackWhite");
         item.style.display = "block";
     });
-    // setObjCookies('{"images": "yes"}');
 }
-
-
-
-// function setObjCookies(obj) {
-//     let date = new Date(new Date().getTime() + 60 * 1000 * 60 * 24 * 365);
-//     document.cookie = "havingPoorVision=" + obj + "; path=/; expires=" + date.toUTCString();
-// }
-
-// function removeCookies(cookieName) {
-//     let date = new Date(new Date().getTime() - 1000);
-//     document.cookie = cookieName + "=; path=/; expires=" + date.toUTCString();
-// }
 
 function spacing() {
     const data = this.getAttribute("data-letter-spacing");
@@ -232,8 +173,9 @@ function spacing() {
 function init() {
     document.getElementById("tender-eyed").addEventListener("click", tenderEyed);
     document.getElementById("normal-eyed").addEventListener("click", normalEyed);
-    document.getElementById("reduceFont").addEventListener("click", reduceFontClick);
-    document.getElementById("increaseFont").addEventListener("click", increaseFontClick);
+    document.getElementById("reduceFont").addEventListener("click", () => updateFontSizes(-1));
+    document.getElementById("increaseFont").addEventListener("click", () => updateFontSizes(1));
+
     document.querySelectorAll(".colorSite").forEach(function (item) {
         item.addEventListener("click", colorSiteClick);
     });
