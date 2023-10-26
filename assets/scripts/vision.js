@@ -147,6 +147,7 @@ function spacing() {
 function init() {
     document.getElementById("tender-eyed").addEventListener("click", tenderEyed);
     document.getElementById("normal-eyed").addEventListener("click", normalEyed);
+    document.getElementById("normal-eyed-white").addEventListener("click", normalEyed);
     document.getElementById("reduceFont").addEventListener("click", () => updateFontSizes(-1));
     document.getElementById("increaseFont").addEventListener("click", () => updateFontSizes(1));
     document.querySelectorAll(".colorSite").forEach( item => item.addEventListener("click", colorSiteClick));
