@@ -109,8 +109,7 @@
     background: #fff;
 }
 
-
-.footerNoBorder {
+.footerNoBorder, .newsNoBorder {
     border: 0;
 }
 
