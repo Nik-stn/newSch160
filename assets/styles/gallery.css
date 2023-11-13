@@ -165,6 +165,12 @@
     display: block;
 }
 
+.modal-item p {
+    margin: 10px;
+    font-weight: bold;
+    color: #fdbe34;
+}
+
 .modal img {
     width: 100%;
     max-height: calc(100vh - 150px);

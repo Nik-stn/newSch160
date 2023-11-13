@@ -29,11 +29,12 @@ galleryList.addEventListener("click", (e) => {
   if (clickedImage) {
     const src = clickedImage.getAttribute("data");
     const sliderIndex = clickedImage.getAttribute("number");
-    imgModal(src, sliderIndex);
+    const sliderAlt = clickedImage.getAttribute("alt");
+    imgModal(src, sliderIndex, sliderAlt);
   }
 });
 
-let imgModal = (src, sliderIndex) => {
+let imgModal = (src, sliderIndex, sliderAlt) => {
   const modal = document.createElement("div");
   modal.classList.add("modal");
   
@@ -50,14 +51,21 @@ let imgModal = (src, sliderIndex) => {
       newImage.setAttribute("src", img.getAttribute("data"));
       const divImage = document.createElement("div");
       divImage.classList.add("modal-item");
+      const imgAlt = img.getAttribute("alt")
+      const pAlt = document.createElement("p");
+      pAlt.textContent = imgAlt;
       divImage.append(newImage);
+      divImage.append(pAlt);
       modalInner.append(divImage);
     } else {
       const clickedImage = document.createElement("img");
       clickedImage.setAttribute("src", src);
       const divImage = document.createElement("div");
+      const pAlt = document.createElement("p");
+      pAlt.textContent = sliderAlt;
       divImage.classList.add("modal-item", "visible");
       divImage.append(clickedImage);
+      divImage.append(pAlt);
       modalInner.append(divImage);
     }
   });
