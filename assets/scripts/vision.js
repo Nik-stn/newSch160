@@ -15,25 +15,7 @@ const siteMain = document.querySelector(".main");
 const normalEyeWhiteSvg = document.getElementById("normal-eyed-white");
 const imgYes = document.getElementById("imagesYes");
 
-const getWhiteSite = {
-    activeNormalEye: localStorage.getItem('toggleNormalEye'),
-    whiteBody: localStorage.getItem('toggleWhiteBody'),
-    noneTenderEye: localStorage.getItem('toggleTenderEye'),
-    boxVision: localStorage.getItem('toggleVision'),
-    backgroundMain: localStorage.getItem('noBackground'),
-    whiteLinks: localStorage.getItem('toggleWhiteLinks'),
-    whiteButtons: localStorage.getItem('toggleWhiteButtons'),
-    whiteCheckbox: localStorage.getItem('toggleWhiteCheckbox'),
-    noneBorder: localStorage.getItem('toggleNoBorder'),
-    noneHover: localStorage.getItem('toggleNoHover')
-};
 
-for (let key in getWhiteSite) {
-    if (getWhiteSite[key]) {
-        applyWhiteStyles();
-        break; // Прерываем цикл после применения стилей applyWhiteStyles()
-    }
-}
 
 function applyWhiteStyles() {
     normalEyeSvg.style.display = "inline-block";
@@ -41,40 +23,75 @@ function applyWhiteStyles() {
     vision.style.display = "block";
     tenderEyeSvg.style.display = "none";
     siteMain.style.background = "0";
-    links.forEach(item => item.classList.add('linkColorSiteWhite'));
-    buttons.forEach(item => item.classList.add('buttonColorSiteWhite'));
-    checkbox.forEach(item => item.classList.add('checkboxColorSiteWhite'));
+    normalEyeWhiteSvg.style.display = "none";
+    links.forEach(item => {
+        item.classList.add('linkColorSiteWhite');
+        item.classList.remove("linkColorSiteBlue", "linkColorSiteBlack", "linkColorSiteBeige");
+    });
+    buttons.forEach(item => {
+        item.classList.add('buttonColorSiteWhite');
+        item.classList.remove("buttonColorSiteBlue", "buttonColorSiteBlack", "buttonColorSiteBeige");
+    });
+    checkbox.forEach(item => {
+        item.classList.add('checkboxColorSiteWhite');
+        item.classList.remove("checkboxColorSiteBlue", "checkboxColorSiteBlack", "checkboxColorSiteBeige");
+    });
     noBorder.forEach(item => item.classList.add('footerNoBorder', 'newsNoBorder'));
     noHover.forEach(item => item.style.backgroundColor = 'inherit');
 }
 
-function tenderEyed(event) {
-    event.preventDefault();
-    tenderEyeSvg.style.display = "none";
+function applyBlueStyles() {
     normalEyeSvg.style.display = "inline-block";
-    vision.style.display = "block";
-    siteBody.classList.add("colorSiteWhite");
-    siteMain.style.background = "0";
-    const setWhiteSite = {
-        toggleNormalEye: normalEyeSvg,
-        toggleWhiteBody: siteBody,
-        toggleVision: vision,
-        toggleTenderEye: tenderEyeSvg,
-        noBackground: siteMain,
-        toggleWhiteLinks: links.forEach(item => item.classList.add('linkColorSiteWhite')),
-        toggleWhiteButtons: buttons.forEach(item => item.classList.add('buttonColorSiteWhite')),
-        toggleWhiteCheckbox: checkbox.forEach(item => item.classList.add('checkboxColorSiteWhite')),
-        toggleNoBorder: noBorder.forEach(item => item.classList.add('footerNoBorder', 'newsNoBorder')),
-        toggleNoHover: noHover.forEach(item => item.style.backgroundColor = 'inherit')
-    };
-    for (let key in setWhiteSite) {
-        localStorage.setItem(key, setWhiteSite[key]);
-    }
+    normalEyeWhiteSvg.style.display = "none";
+    links.forEach(item => {
+        item.classList.add('linkColorSiteBlue');
+        item.classList.remove("linkColorSiteWhite", "linkColorSiteBlack", "linkColorSiteBeige");
+    });
+    buttons.forEach(item => {
+        item.classList.add('buttonColorSiteBlue');
+        item.classList.remove("buttonColorSiteWhite", "buttonColorSiteBlack", "buttonColorSiteBeige");
+    });
+    checkbox.forEach(item => {
+        item.classList.add('checkboxColorSiteBlue');
+        item.classList.remove("checkboxColorSiteWhite", "checkboxColorSiteBlack", "checkboxColorSiteBeige");
+    });
 }
 
-function normalEyed(event) {
-    event.preventDefault();
-    siteBody.removeAttribute("class");
+function applyBlackStyles() {
+    normalEyeSvg.style.display = "none";
+    normalEyeWhiteSvg.style.display = "inline-block";
+    links.forEach(item => {
+        item.classList.add('linkColorSiteBlack');
+        item.classList.remove("linkColorSiteWhite", "linkColorSiteBlue", "linkColorSiteBeige");
+    });
+    buttons.forEach(item => {
+        item.classList.add('buttonColorSiteBlack');
+        item.classList.remove("buttonColorSiteWhite", "buttonColorSiteBlue", "buttonColorSiteBeige");
+    });
+    checkbox.forEach(item => {
+        item.classList.add('checkboxColorSiteBlack');
+        item.classList.remove("checkboxColorSiteWhite", "checkboxColorSiteBlue", "checkboxColorSiteBeige");
+    });
+}
+
+function applyBeigeStyles() {
+    normalEyeSvg.style.display = "inline-block";
+    normalEyeWhiteSvg.style.display = "none";
+    links.forEach(item => {
+        item.classList.add('linkColorSiteBeige');
+        item.classList.remove("linkColorSiteBlack", "linkColorSiteBlue", "linkColorSiteWhite");
+    });
+    buttons.forEach(item => {
+        item.classList.add('buttonColorSiteBeige');
+        item.classList.remove("buttonColorSiteBlack", "buttonColorSiteBlue", "buttonColorSiteWhite");
+    });
+    checkbox.forEach(item => {
+        item.classList.add('checkboxColorSiteBeige');
+        item.classList.remove("checkboxColorSiteBlack", "checkboxColorSiteBlue", "checkboxColorSiteWhite");
+    });
+}
+
+function deleteVisionStyles() {
     imgYes.dispatchEvent(new Event("click"));
     normalEyeSvg.style.display = "none";
     normalEyeWhiteSvg.style.display = "none";
@@ -82,26 +99,63 @@ function normalEyed(event) {
     tenderEyeSvg.style.display = "inline-block";
     mostSelectors.forEach(item => item.removeAttribute("style"));
     siteContent.forEach(item => item.removeAttribute("style"));
+    siteBody.removeAttribute("class");
     links.forEach(item => item.classList.remove("linkColorSiteBlue", "linkColorSiteWhite", "linkColorSiteBlack", "linkColorSiteBeige"));
     buttons.forEach(item => item.classList.remove('buttonColorSiteBlue', "buttonColorSiteWhite", "buttonColorSiteBlack", "buttonColorSiteBeige"));
     checkbox.forEach(item => item.classList.remove('checkboxColorSiteBlue', "checkboxColorSiteWhite", "checkboxColorSiteBlack", "checkboxColorSiteBeige"));
     noBorder.forEach(item => item.classList.remove('footerNoBorder', 'newsNoBorder'));
-    const removeWhiteSite = {
-        activeNormalEye: localStorage.removeItem('toggleNormalEye'),
-        whiteBody: localStorage.removeItem('toggleWhiteBody'),
-        noneTenderEye: localStorage.removeItem('toggleTenderEye'),
-        boxVision: localStorage.removeItem('toggleVision'),
-        backgroundMain: localStorage.removeItem('noBackground'),
-        whiteLinks: localStorage.removeItem('toggleWhiteLinks'),
-        whiteButtons: localStorage.removeItem('toggleWhiteButtons'),
-        whiteCheckbox: localStorage.removeItem('toggleWhiteCheckbox'),
-        noneBorder: localStorage.removeItem('toggleNoBorder'),
-        noneHover: localStorage.removeItem('toggleNoHover')
-    };
-    for (let key in removeWhiteSite) {
-        localStorage.removeItem(key, removeWhiteSite[key]);
-    }
-   
+    localStorage.removeItem('applyBlackStyles', 'applyWhiteStyles', 'applyBlueStyles', 'applyBeigeStyles');
+}
+
+function tenderEyed(event) {
+    event.preventDefault();
+    applyWhiteStyles();
+    localStorage.setItem('applyWhiteStyles', applyWhiteStyles);
+    localStorage.removeItem('applyBlackStyles', 'applyBlueStyles', 'applyBeigeStyles');
+}
+
+function normalEyed(event) {
+    event.preventDefault();
+    deleteVisionStyles();
+}
+
+function colorSiteClick(event) {
+    event.preventDefault();
+    siteBody.removeAttribute("class");
+    let id = this.getAttribute("id");
+    siteBody.classList.add(id);
+    if (id === 'colorSiteBlue') {
+        applyBlueStyles();
+        localStorage.setItem('applyBlueStyles', applyBlueStyles);
+        localStorage.removeItem('applyBlackStyles', 'applyWhiteStyles', 'applyBeigeStyles');
+    } else if (id === 'colorSiteBlack') {
+        applyBlackStyles();
+        localStorage.setItem('applyBlackStyles', applyBlackStyles);
+        localStorage.removeItem('applyBlueStyles', 'applyWhiteStyles', 'applyBeigeStyles');
+    } else if (id === 'colorSiteWhite') {
+        applyWhiteStyles();
+        localStorage.setItem('applyWhiteStyles', applyWhiteStyles);
+        localStorage.removeItem('applyBlackStyles', 'applyBlueStyles', 'applyBeigeStyles');
+    } else if (id === 'colorSiteBeige') {
+        applyBeigeStyles();
+        localStorage.setItem('applyBeigeStyles', applyBeigeStyles);
+        localStorage.removeItem('applyBlackStyles', 'applyWhiteStyles', 'applyBlueStyles');
+    } else console.log('Error classlist');
+}
+
+const getWhiteStyles = localStorage.getItem('applyWhiteStyles');
+const getBlackStyles = localStorage.getItem('applyBlackStyles');
+const getBlueStyles = localStorage.getItem('applyBlueStyles');
+const getBeigeStyles = localStorage.getItem('applyBeigeStyles');
+
+if (getWhiteStyles !== null) {
+    applyWhiteStyles();
+} else if (getBlackStyles !== null) {
+    applyBlackStyles();
+} else if (getBlueStyles !== null) {
+    applyBlueStyles();
+} else if (getBeigeStyles !== null) {
+    applyBeigeStyles();
 }
 
 function updateFontSizes(changeAmount) {
@@ -112,74 +166,6 @@ function updateFontSizes(changeAmount) {
         else if (fz > 24) fz = 24;
         else fz = 12;
     });
-}
-
-function colorSiteClick(event) {
-    event.preventDefault();
-    document.body.removeAttribute("class");
-    let id = this.getAttribute("id");
-    document.body.classList.add(id);
-    if (id === 'colorSiteBlue') {
-        document.getElementById("normal-eyed").style.display = "inline-block";
-        document.getElementById("normal-eyed-white").style.display = "none";
-        links.forEach(item => {
-            item.classList.add('linkColorSiteBlue');
-            item.classList.remove("linkColorSiteWhite", "linkColorSiteBlack", "linkColorSiteBeige");
-        });
-        buttons.forEach(item => {
-            item.classList.add('buttonColorSiteBlue');
-            item.classList.remove("buttonColorSiteWhite", "buttonColorSiteBlack", "buttonColorSiteBeige");
-        });
-        checkbox.forEach(item => {
-            item.classList.add('checkboxColorSiteBlue');
-            item.classList.remove("checkboxColorSiteWhite", "checkboxColorSiteBlack", "checkboxColorSiteBeige");
-        });
-    } else if (id === 'colorSiteBlack') {
-        document.getElementById("normal-eyed").style.display = "none";
-        document.getElementById("normal-eyed-white").style.display = "inline-block";
-        links.forEach(item => {
-            item.classList.add('linkColorSiteBlack');
-            item.classList.remove("linkColorSiteWhite", "linkColorSiteBlue", "linkColorSiteBeige");
-        });
-        buttons.forEach(item => {
-            item.classList.add('buttonColorSiteBlack');
-            item.classList.remove("buttonColorSiteWhite", "buttonColorSiteBlue", "buttonColorSiteBeige");
-        });
-        checkbox.forEach(item => {
-            item.classList.add('checkboxColorSiteBlack');
-            item.classList.remove("checkboxColorSiteWhite", "checkboxColorSiteBlue", "checkboxColorSiteBeige");
-        });
-    } else if (id === 'colorSiteWhite') {
-        document.getElementById("normal-eyed").style.display = "inline-block";
-        document.getElementById("normal-eyed-white").style.display = "none";
-        links.forEach(item => {
-            item.classList.add('linkColorSiteWhite');
-            item.classList.remove("linkColorSiteBlack", "linkColorSiteBlue", "linkColorSiteBeige");
-        });
-        buttons.forEach(item => {
-            item.classList.add('buttonColorSiteWhite');
-            item.classList.remove("buttonColorSiteBlack", "buttonColorSiteBlue", "buttonColorSiteBeige");
-        });
-        checkbox.forEach(item => {
-            item.classList.add('checkboxColorSiteWhite');
-            item.classList.remove("checkboxColorSiteBlack", "checkboxColorSiteBlue", "checkboxColorSiteBeige");
-        });
-    } else if (id === 'colorSiteBeige') {
-        document.getElementById("normal-eyed").style.display = "inline-block";
-        document.getElementById("normal-eyed-white").style.display = "none";
-        links.forEach(item => {
-            item.classList.add('linkColorSiteBeige');
-            item.classList.remove("linkColorSiteBlack", "linkColorSiteBlue", "linkColorSiteWhite");
-        });
-        buttons.forEach(item => {
-            item.classList.add('buttonColorSiteBeige');
-            item.classList.remove("buttonColorSiteBlack", "buttonColorSiteBlue", "buttonColorSiteWhite");
-        });
-        checkbox.forEach(item => {
-            item.classList.add('checkboxColorSiteBeige');
-            item.classList.remove("checkboxColorSiteBlack", "checkboxColorSiteBlue", "checkboxColorSiteWhite");
-        });
-    } else console.log('Error classlist');
 }
 
 function imagesNoClick(event) {
@@ -212,15 +198,15 @@ function spacing() {
 }
 
 function init() {
-    document.getElementById("tender-eyed").addEventListener("click", tenderEyed);
-    document.getElementById("normal-eyed").addEventListener("click", normalEyed);
-    document.getElementById("normal-eyed-white").addEventListener("click", normalEyed);
+    tenderEyeSvg.addEventListener("click", tenderEyed);
+    normalEyeSvg.addEventListener("click", normalEyed);
+    normalEyeWhiteSvg.addEventListener("click", normalEyed);
     document.getElementById("reduceFont").addEventListener("click", () => updateFontSizes(-1));
     document.getElementById("increaseFont").addEventListener("click", () => updateFontSizes(1));
     document.querySelectorAll(".colorSite").forEach(item => item.addEventListener("click", colorSiteClick));
     document.querySelectorAll(".changeLetterSpacing").forEach(item => item.addEventListener("click", spacing));
     document.getElementById("imagesNo").addEventListener("click", imagesNoClick);
-    document.getElementById("imagesYes").addEventListener("click", imagesYesClick);
+    imgYes.addEventListener("click", imagesYesClick);
     document.getElementById("imagesBlackWhite").addEventListener("click", imagesBlackWhiteClick);
 }
 
