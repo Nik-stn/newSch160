@@ -19,11 +19,11 @@ const imgYes = document.getElementById("imagesYes");
 
 function applyWhiteStyles() {
     normalEyeSvg.style.display = "inline-block";
-    siteBody.classList.add("colorSiteWhite");
     vision.style.display = "block";
     tenderEyeSvg.style.display = "none";
     siteMain.style.background = "0";
     normalEyeWhiteSvg.style.display = "none";
+    siteBody.classList.add("colorSiteWhite");
     links.forEach(item => {
         item.classList.add('linkColorSiteWhite');
         item.classList.remove("linkColorSiteBlue", "linkColorSiteBlack", "linkColorSiteBeige");
@@ -42,7 +42,11 @@ function applyWhiteStyles() {
 
 function applyBlueStyles() {
     normalEyeSvg.style.display = "inline-block";
+    vision.style.display = "block";
+    tenderEyeSvg.style.display = "none";
+    siteMain.style.background = "0";
     normalEyeWhiteSvg.style.display = "none";
+    siteBody.classList.add("colorSiteBlue");
     links.forEach(item => {
         item.classList.add('linkColorSiteBlue');
         item.classList.remove("linkColorSiteWhite", "linkColorSiteBlack", "linkColorSiteBeige");
@@ -60,6 +64,10 @@ function applyBlueStyles() {
 function applyBlackStyles() {
     normalEyeSvg.style.display = "none";
     normalEyeWhiteSvg.style.display = "inline-block";
+    vision.style.display = "block";
+    tenderEyeSvg.style.display = "none";
+    siteMain.style.background = "0";
+    siteBody.classList.add("colorSiteBlack");
     links.forEach(item => {
         item.classList.add('linkColorSiteBlack');
         item.classList.remove("linkColorSiteWhite", "linkColorSiteBlue", "linkColorSiteBeige");
@@ -76,7 +84,11 @@ function applyBlackStyles() {
 
 function applyBeigeStyles() {
     normalEyeSvg.style.display = "inline-block";
+    vision.style.display = "block";
+    tenderEyeSvg.style.display = "none";
+    siteMain.style.background = "0";
     normalEyeWhiteSvg.style.display = "none";
+    siteBody.classList.add("colorSiteBeige");
     links.forEach(item => {
         item.classList.add('linkColorSiteBeige');
         item.classList.remove("linkColorSiteBlack", "linkColorSiteBlue", "linkColorSiteWhite");
@@ -104,14 +116,16 @@ function deleteVisionStyles() {
     buttons.forEach(item => item.classList.remove('buttonColorSiteBlue', "buttonColorSiteWhite", "buttonColorSiteBlack", "buttonColorSiteBeige"));
     checkbox.forEach(item => item.classList.remove('checkboxColorSiteBlue', "checkboxColorSiteWhite", "checkboxColorSiteBlack", "checkboxColorSiteBeige"));
     noBorder.forEach(item => item.classList.remove('footerNoBorder', 'newsNoBorder'));
-    localStorage.removeItem('applyBlackStyles', 'applyWhiteStyles', 'applyBlueStyles', 'applyBeigeStyles');
+    localStorage.clear();
 }
 
 function tenderEyed(event) {
     event.preventDefault();
     applyWhiteStyles();
     localStorage.setItem('applyWhiteStyles', applyWhiteStyles);
-    localStorage.removeItem('applyBlackStyles', 'applyBlueStyles', 'applyBeigeStyles');
+    localStorage.removeItem('applyBlackStyles');
+    localStorage.removeItem('applyBlueStyles');
+    localStorage.removeItem('applyBeigeStyles');
 }
 
 function normalEyed(event) {
@@ -127,19 +141,27 @@ function colorSiteClick(event) {
     if (id === 'colorSiteBlue') {
         applyBlueStyles();
         localStorage.setItem('applyBlueStyles', applyBlueStyles);
-        localStorage.removeItem('applyBlackStyles', 'applyWhiteStyles', 'applyBeigeStyles');
+        localStorage.removeItem('applyBlackStyles');
+        localStorage.removeItem('applyWhiteStyles');
+        localStorage.removeItem('applyBeigeStyles');
     } else if (id === 'colorSiteBlack') {
         applyBlackStyles();
         localStorage.setItem('applyBlackStyles', applyBlackStyles);
-        localStorage.removeItem('applyBlueStyles', 'applyWhiteStyles', 'applyBeigeStyles');
+        localStorage.removeItem('applyBlueStyles');
+        localStorage.removeItem('applyBeigeStyles');
+        localStorage.removeItem('applyWhiteStyles');
     } else if (id === 'colorSiteWhite') {
         applyWhiteStyles();
         localStorage.setItem('applyWhiteStyles', applyWhiteStyles);
-        localStorage.removeItem('applyBlackStyles', 'applyBlueStyles', 'applyBeigeStyles');
+        localStorage.removeItem('applyBlackStyles');
+        localStorage.removeItem('applyBlueStyles');
+        localStorage.removeItem('applyBeigeStyles');
     } else if (id === 'colorSiteBeige') {
         applyBeigeStyles();
         localStorage.setItem('applyBeigeStyles', applyBeigeStyles);
-        localStorage.removeItem('applyBlackStyles', 'applyWhiteStyles', 'applyBlueStyles');
+        localStorage.removeItem('applyBlackStyles');
+        localStorage.removeItem('applyWhiteStyles');
+        localStorage.removeItem('applyBlueStyles');
     } else console.log('Error classlist');
 }
 
