@@ -14,15 +14,18 @@ const tenderEyeSvg = document.getElementById("tender-eyed");
 const siteMain = document.querySelector(".main");
 const normalEyeWhiteSvg = document.getElementById("normal-eyed-white");
 const imgYes = document.getElementById("imagesYes");
+const letterSpacing = document.querySelectorAll(".changeLetterSpacing");
 
-
-
-function applyWhiteStyles() {
+function updateStyles() {
     normalEyeSvg.style.display = "inline-block";
     vision.style.display = "block";
     tenderEyeSvg.style.display = "none";
     siteMain.style.background = "0";
     normalEyeWhiteSvg.style.display = "none";
+}
+
+function applyWhiteStyles() {
+    updateStyles();
     siteBody.classList.add("colorSiteWhite");
     links.forEach(item => {
         item.classList.add('linkColorSiteWhite');
@@ -41,11 +44,7 @@ function applyWhiteStyles() {
 }
 
 function applyBlueStyles() {
-    normalEyeSvg.style.display = "inline-block";
-    vision.style.display = "block";
-    tenderEyeSvg.style.display = "none";
-    siteMain.style.background = "0";
-    normalEyeWhiteSvg.style.display = "none";
+    updateStyles();
     siteBody.classList.add("colorSiteBlue");
     links.forEach(item => {
         item.classList.add('linkColorSiteBlue');
@@ -62,11 +61,9 @@ function applyBlueStyles() {
 }
 
 function applyBlackStyles() {
+    updateStyles();
     normalEyeSvg.style.display = "none";
     normalEyeWhiteSvg.style.display = "inline-block";
-    vision.style.display = "block";
-    tenderEyeSvg.style.display = "none";
-    siteMain.style.background = "0";
     siteBody.classList.add("colorSiteBlack");
     links.forEach(item => {
         item.classList.add('linkColorSiteBlack');
@@ -83,11 +80,7 @@ function applyBlackStyles() {
 }
 
 function applyBeigeStyles() {
-    normalEyeSvg.style.display = "inline-block";
-    vision.style.display = "block";
-    tenderEyeSvg.style.display = "none";
-    siteMain.style.background = "0";
-    normalEyeWhiteSvg.style.display = "none";
+    updateStyles();
     siteBody.classList.add("colorSiteBeige");
     links.forEach(item => {
         item.classList.add('linkColorSiteBeige');
@@ -123,9 +116,6 @@ function tenderEyed(event) {
     event.preventDefault();
     applyWhiteStyles();
     localStorage.setItem('applyWhiteStyles', applyWhiteStyles);
-    localStorage.removeItem('applyBlackStyles');
-    localStorage.removeItem('applyBlueStyles');
-    localStorage.removeItem('applyBeigeStyles');
 }
 
 function normalEyed(event) {
@@ -165,58 +155,103 @@ function colorSiteClick(event) {
     } else console.log('Error classlist');
 }
 
-const getWhiteStyles = localStorage.getItem('applyWhiteStyles');
-const getBlackStyles = localStorage.getItem('applyBlackStyles');
-const getBlueStyles = localStorage.getItem('applyBlueStyles');
-const getBeigeStyles = localStorage.getItem('applyBeigeStyles');
-
-if (getWhiteStyles !== null) {
-    applyWhiteStyles();
-} else if (getBlackStyles !== null) {
-    applyBlackStyles();
-} else if (getBlueStyles !== null) {
-    applyBlueStyles();
-} else if (getBeigeStyles !== null) {
-    applyBeigeStyles();
-}
-
 function updateFontSizes(changeAmount) {
-    return siteContent.forEach(item => {
-        let fz = parseFloat(window.getComputedStyle(item).fontSize);
+    let fz;
+    siteContent.forEach(item => {
+        fz = parseFloat(window.getComputedStyle(item).fontSize);
         fz += changeAmount;
         if (fz >= 12 && fz <= 24) item.style.fontSize = fz + "px";
         else if (fz > 24) fz = 24;
         else fz = 12;
     });
+    localStorage.setItem('applyFontSize', fz);
 }
 
 function imagesNoClick(event) {
     event.preventDefault();
-    img.forEach(item => {
+    const imgDelete = img.forEach(item => {
         item.classList.remove("imagesBlackWhite");
         item.style.display = "none";
     });
+    localStorage.setItem('applyImgDelete', imgDelete);
+    localStorage.removeItem('applyImgColor');
+    localStorage.removeItem('applyImgBlackWhiteStyles');
 }
 
 function imagesYesClick(event) {
     event.preventDefault();
-    img.forEach(item => {
+    const imgColor = img.forEach(item => {
         item.classList.remove("imagesBlackWhite");
         item.style.display = "block";
     });
+    localStorage.setItem('applyImgColor', imgColor);
+    localStorage.removeItem('applyImgDelete');
+    localStorage.removeItem('applyImgBlackWhiteStyles');
 }
 
 function imagesBlackWhiteClick(event) {
     event.preventDefault();
-    img.forEach(item => {
+    const imgBlackWhite = img.forEach(item => {
         item.classList.add("imagesBlackWhite");
         item.style.display = "block";
     });
+    localStorage.setItem('applyImgBlackWhiteStyles', imgBlackWhite);
+    localStorage.removeItem('applyImgColor');
+    localStorage.removeItem('applyImgDelete');
 }
 
 function spacing() {
     const data = this.getAttribute("data-letter-spacing");
     siteContent.forEach(item => item.style.letterSpacing = data + 'px');
+    localStorage.setItem('applySpaceStyles', data);
+}
+
+function changeImageFontSpacing() {
+    siteContent.forEach(item => item.style.letterSpacing = getSpacing + 'px');
+    siteContent.forEach(item => item.style.fontSize = getFontSize + "px");
+    if (getImgColor !== null) {
+        img.forEach(item => {
+            item.classList.remove("imagesBlackWhite");
+            item.style.display = "block";
+        });
+    } else if (getImgBlackWhite !== null) {
+        img.forEach(item => {
+            item.classList.add("imagesBlackWhite");
+            item.style.display = "block";
+        });
+    } else if (getImgDelete !== null) {
+        img.forEach(item => {
+            item.classList.remove("imagesBlackWhite");
+            item.style.display = "none";
+        });
+    }
+}
+
+const getWhiteStyles = localStorage.getItem('applyWhiteStyles');
+const getBlackStyles = localStorage.getItem('applyBlackStyles');
+const getBlueStyles = localStorage.getItem('applyBlueStyles');
+const getBeigeStyles = localStorage.getItem('applyBeigeStyles');
+const getSpacing = localStorage.getItem('applySpaceStyles');
+const getFontSize = localStorage.getItem('applyFontSize');
+const getImgBlackWhite = localStorage.getItem('applyImgBlackWhiteStyles');
+const getImgDelete = localStorage.getItem('applyImgDelete');
+const getImgColor = localStorage.getItem('applyImgColor');
+
+if (getWhiteStyles !== null) {
+    applyWhiteStyles();
+    changeImageFontSpacing();
+} 
+else if (getBlackStyles !== null) {
+    applyBlackStyles();
+    changeImageFontSpacing();
+} 
+else if (getBlueStyles !== null) {
+    applyBlueStyles();
+    changeImageFontSpacing();
+} 
+else if (getBeigeStyles !== null) {
+    applyBeigeStyles();
+    changeImageFontSpacing();
 }
 
 function init() {
@@ -226,7 +261,7 @@ function init() {
     document.getElementById("reduceFont").addEventListener("click", () => updateFontSizes(-1));
     document.getElementById("increaseFont").addEventListener("click", () => updateFontSizes(1));
     document.querySelectorAll(".colorSite").forEach(item => item.addEventListener("click", colorSiteClick));
-    document.querySelectorAll(".changeLetterSpacing").forEach(item => item.addEventListener("click", spacing));
+    letterSpacing.forEach(item => item.addEventListener("click", spacing));
     document.getElementById("imagesNo").addEventListener("click", imagesNoClick);
     imgYes.addEventListener("click", imagesYesClick);
     document.getElementById("imagesBlackWhite").addEventListener("click", imagesBlackWhiteClick);
