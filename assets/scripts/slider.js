@@ -30,7 +30,6 @@ function showSlides(n) {
 }
 
 //auto-slider
-let autoIndex = 0;
 autoSlides();
 
 function autoSlides() {
@@ -39,10 +38,10 @@ function autoSlides() {
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  autoIndex++;
-  if (autoIndex > slides.length) {
-    autoIndex = 1;
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
   }
-  slides[autoIndex - 1].style.display = "block";
+  slides[slideIndex - 1].style.display = "block";
   setTimeout(autoSlides, 5000);
 }
