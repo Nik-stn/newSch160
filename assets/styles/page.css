@@ -333,6 +333,43 @@
     color: #000;
 }
 
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-gap: 20px;
+    border: 2px red solid;
+}
+
+.card-item {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 2px red solid;
+}
+
+.card-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 0.5fr)) ;
+    justify-items: center;
+    border: 2px red solid;
+}
+
+.card-row-inner {
+    display: grid;
+    grid-template-columns: minmax(100px, 900px);
+    justify-items: center;
+    border: 2px red solid;
+}
+
+.card-row-inner p {
+    border: 2px green solid;
+}
+
+.card-img img {
+    width: 100%;
+    max-width: 300px;
+    height: inherit;
+}
 
 .excerpt {
     display: flex;
