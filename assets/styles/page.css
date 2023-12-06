@@ -345,7 +345,7 @@
     border: 2px #C0C0C0 solid;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(100px, 1000px);
     font-weight: 600;
 }
 
@@ -377,6 +377,10 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.card-row-inner p img {
+    max-width: 20px;
 }
 
 .card-row-inner p:hover, .card-row h3:hover {
