@@ -2,7 +2,7 @@
 const next = document.querySelector(".slider-control.next");
 const previous = document.querySelector(".slider-control.previous");
 
-let slideIndex = 1;
+let slideIndex = 0;
 showSlides(slideIndex);
 
 next.addEventListener("click", () => {
