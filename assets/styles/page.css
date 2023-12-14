@@ -543,6 +543,13 @@
     border-right: 0px;
 }
 
+.MapBody {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: stretch;
+}
+
 .news-block-item {
     position: relative;
     display: flex;
@@ -554,6 +561,7 @@
     border-radius: 43px;
     margin: 15px;
     padding: 20px;
+    flex: 1 0 260px;
 }
 
 .news-block-item:hover {
@@ -568,8 +576,9 @@
     display: flex;
 }
 
-.news-block-img a {
-    line-height: 0;
+.news-block-item h3, .news-block-text {
+    text-align: left;
+    display: flex;
 }
 
 .news-block-img img {
@@ -587,6 +596,7 @@
     background: #fcad028e;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     font-weight: 700;
 }
