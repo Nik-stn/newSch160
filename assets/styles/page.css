@@ -466,7 +466,7 @@
     left: 2px;
 }
 
-.table-img~table {
+.content-box table {
     text-align: center;
     background: white;
     border-radius: 3px;
@@ -479,7 +479,7 @@
     animation: float 5s infinite;
 }
 
-.table-img~table tr:first-child td {
+.content-box table tr:first-child td {
     color: #D5DDE5;
     background: #1b1e24;
     border-bottom: 4px solid #9ea7af;
@@ -489,58 +489,54 @@
     vertical-align: middle;
 }
 
-.table-img~table tr:first-child td:first-child {
+.content-box table tr:first-child td:first-child {
     border-top-left-radius: 3px;
 }
 
-.table-img~table tr:first-child td:last-child {
+.content-box table tr:first-child td:last-child {
     border-top-right-radius: 3px;
     border-right: none;
 }
 
-.table-img~table tr {
+.content-box table tr {
     border: 1px solid #C1C3D1;
     color: #666B85;
     font-weight: normal;
     text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
 
-.table-img~table tr:hover td {
+.content-box table tr:hover td {
     background: #4E5066;
     color: #FFFFFF;
     border-top: 1px solid #22262e;
 }
 
-.table-img~table tr:nth-child(2) {
+.content-box table tr:nth-child(2) {
     border-top: none;
 }
 
-.table-img~table tr:last-child {
+.content-box table tr:last-child {
     border-bottom: none;
 }
 
-.table-img~table tr:nth-child(even):hover td {
+.content-box table tr:nth-child(even):hover td {
     background: #4E5066;
 }
 
-.table-img~table tr:last-child td:last-child {
+.content-box table tr:last-child td:last-child {
     border-bottom-right-radius: 3px;
 }
 
-.table-img~table tr:last-child td:first-child {
+.content-box table tr:last-child td:first-child {
     border-bottom-left-radius: 3px;
 }
 
-.table-img~table tr td {
+.content-box table tr td {
     background: #f3f3f3;
     vertical-align: middle;
     font-weight: 300;
     text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
     border-right: 1px solid #C1C3D1;
-}
-
-.table-img~table tr td:last-child {
-    border-right: 0px;
 }
 
 .MapBody {
@@ -562,6 +558,7 @@
     margin: 15px;
     padding: 20px;
     flex: 1 0 260px;
+    transition: all 0.3s ease-in-out;
 }
 
 .news-block-item:hover {
@@ -569,6 +566,7 @@
     z-index: 4;
     overflow-x: visible;
     background: #f3f3f3;
+    transition: all 0.3s ease-in-out;
 }
 
 .news-block-img {
@@ -599,6 +597,7 @@
     justify-content: center;
     text-align: center;
     font-weight: 700;
+    text-transform: uppercase;
 }
 
 /* Старый стили */
