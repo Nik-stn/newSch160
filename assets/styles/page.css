@@ -466,7 +466,7 @@
     left: 2px;
 }
 
-.content-box table {
+.table-img~table, .content-table {
     text-align: center;
     background: white;
     border-radius: 3px;
@@ -479,7 +479,7 @@
     animation: float 5s infinite;
 }
 
-.content-box table tr:first-child td {
+.table-img~table tr:first-child td, .content-table tr:first-child td {
     color: #D5DDE5;
     background: #1b1e24;
     border-bottom: 4px solid #9ea7af;
@@ -489,49 +489,49 @@
     vertical-align: middle;
 }
 
-.content-box table tr:first-child td:first-child {
+.table-img~table tr:first-child td:first-child, .content-table tr:first-child td:first-child {
     border-top-left-radius: 3px;
 }
 
-.content-box table tr:first-child td:last-child {
+.table-img~table tr:first-child td:last-child, .content-table tr:first-child td:last-child {
     border-top-right-radius: 3px;
     border-right: none;
 }
 
-.content-box table tr {
+.table-img~table tr, .content-table tr {
     border: 1px solid #C1C3D1;
     color: #666B85;
     font-weight: normal;
     text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
 }
 
-.content-box table tr:hover td {
+.table-img~table tr:hover td, .content-table tr:hover td {
     background: #4E5066;
     color: #FFFFFF;
     border-top: 1px solid #22262e;
 }
 
-.content-box table tr:nth-child(2) {
+.table-img~table tr:nth-child(2), .content-table tr:nth-child(2){
     border-top: none;
 }
 
-.content-box table tr:last-child {
+.table-img~table tr:last-child, .content-table tr:last-child {
     border-bottom: none;
 }
 
-.content-box table tr:nth-child(even):hover td {
+.table-img~table tr:nth-child(even):hover td, .content-table tr:nth-child(even):hover td {
     background: #4E5066;
 }
 
-.content-box table tr:last-child td:last-child {
+.table-img~table tr:last-child td:last-child, .content-table tr:last-child td:last-child {
     border-bottom-right-radius: 3px;
 }
 
-.content-box table tr:last-child td:first-child {
+.table-img~table tr:last-child td:first-child, .content-table tr:last-child td:first-child {
     border-bottom-left-radius: 3px;
 }
 
-.content-box table tr td {
+.table-img~table tr td, .content-table tr td {
     background: #f3f3f3;
     vertical-align: middle;
     font-weight: 300;
