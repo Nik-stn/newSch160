@@ -152,7 +152,7 @@
 
 .content-box {
     text-align: justify;
-    /* overflow-x: auto; */
+    overflow-x: auto;
 }
 
 .content-box table {
@@ -543,7 +543,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: stretch;
+    justify-content: center;
 }
 
 .news-block-item {
