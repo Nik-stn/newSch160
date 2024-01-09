@@ -31,9 +31,11 @@
     cursor: default;
     width: inherit;
 }
+
 /* end */
 
-.news, .announcement {
+.news,
+.announcement {
     width: 50%;
     border-radius: 5px;
 }
@@ -43,12 +45,14 @@
     width: inherit;
 }
 
-.news-tabs {
+.news-tabs,
+.announcement-tab {
     display: flex;
     gap: 5px;
 }
 
-.news-tabs-btn, .announcement-tab-btn  {
+.news-tabs-btn,
+.announcement-tab-btn {
     background: #00043c;
     color: #fff;
     border: 0;
@@ -62,20 +66,15 @@
     border-top-left-radius: 4px;
 }
 
-.announcement-tab-btn {
-    background: #ffc421;
-    color: #000;
-    border-top: 3px solid #00043c;
-
-}
-
-.news-tabs-btn.active {
+.news-tabs-btn.active,
+.announcement-tab-btn.active {
     background: #ffc421;
     color: #000;
     border-top: 3px solid #00043c;
 }
 
-.news-box, .announcement-box {
+.news-box,
+.announcement-box {
     border: 2px solid rgb(204, 204, 204);
     padding: 10px 0;
 }
@@ -102,21 +101,104 @@
     }
 }
 
-.news-sch,.announcement-sch {
+.news-sch,
+.announcement-sch,
+.announcement-poll {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
 }
 
-.news-sch-item, .announcement-sch-item {
+.announcement-poll {
+    gap: 15px;
+}
+
+.news-sch-item,
+.announcement-sch-item,
+.announcement-poll-item {
     width: 47%;
     border: 2px solid rgba(255, 196, 33, 0.5);
     position: relative;
     font-size: 16px;
 }
 
-.news-sch-link:after, .announcement-sch-link::after {
+.announcement-poll-item {
+    padding: 9px;
+    font-size: 18px;
+    background: #ffffff81;
+}
+
+.announcement-poll-title {
+    margin-bottom: 10px;
+}
+
+.poll-text {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.poll-text input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.poll-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 4px;
+    background-color: #ccc;
+}
+
+/* On mouse-over, add a grey background color */
+.poll-text:hover input~.poll-checkmark {
+    background-color: #ffc421;
+}
+
+/* When the checkbox is checked, add a blue background */
+.poll-text input:checked~.poll-checkmark {
+    background-color: #00043c;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.poll-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.poll-text input:checked~.poll-checkmark:after {
+    display: block;
+}
+
+.poll-text .poll-checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.news-sch-link:after,
+.announcement-sch-link::after {
     content: "";
     width: 100%;
     height: 100%;
@@ -126,31 +208,36 @@
     transition: all .2s ease-in-out;
 }
 
-.news-sch-link:hover:after, .announcement-sch-link:hover::after {
+.news-sch-link:hover:after,
+.announcement-sch-link:hover::after {
     background-position: 100% 100%;
     z-index: 2;
     position: absolute;
 }
 
-.news-sch-link, .announcement-sch-link {
+.news-sch-link,
+.announcement-sch-link {
     text-align: center;
     color: #000;
     position: relative;
     z-index: 1;
 }
 
-.news-sch-link img, .announcement-sch-link img {
+.news-sch-link img,
+.announcement-sch-link img {
     transition: transform .2s ease-in-out;
     filter: brightness(70%);
     width: 500px;
 }
 
-.news-sch-link:hover img, .announcement-sch-link:hover img {
+.news-sch-link:hover img,
+.announcement-sch-link:hover img {
     transform: scale(1.2);
     transition: transform .2s ease-in-out;
 }
 
-.news-sch-logo, .announcement-sch-logo {
+.news-sch-logo,
+.announcement-sch-logo {
     width: 100%;
     height: 300px;
     overflow: hidden;
@@ -159,7 +246,8 @@
     justify-content: center;
 }
 
-.news-sch-content, .announcement-sch-content {
+.news-sch-content,
+.announcement-sch-content {
     position: absolute;
     width: 100%;
     bottom: 0;
@@ -169,15 +257,18 @@
     transition: all .3s ease-in-out;
 }
 
-.news-sch-link:hover .news-sch-content, .announcement-sch-link:hover .announcement-sch-content {
+.news-sch-link:hover .news-sch-content,
+.announcement-sch-link:hover .announcement-sch-content {
     bottom: 30%;
 }
 
-.news-sch-date, .announcement-sch-date {
+.news-sch-date,
+.announcement-sch-date {
     margin-bottom: 10px;
 }
 
-.news-sch-title, .announcement-sch-title {
+.news-sch-title,
+.announcement-sch-title {
     margin-bottom: 20px;
 }
 
@@ -205,24 +296,28 @@
     transition: all .3s linear;
 }
 
-.news-sch-archive, .announcement-sch-archive {
+.news-sch-archive,
+.announcement-sch-archive {
     display: flex;
     justify-content: center;
     margin: 10px 0;
 }
 
-.news-sch-title, .announcement-sch-title {
+.news-sch-title,
+.announcement-sch-title {
     padding: 0 10px;
 }
 
-.news-sch-arcive-text, .announcement-sch-arcive-text {
+.news-sch-arcive-text,
+.announcement-sch-arcive-text,
+.poll-link-archive-text {
     width: 200px;
     height: 40px;
     cursor: pointer;
     background: #ffc421;
     border: 2px solid black;
     border-radius: 20px;
-    box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,29 +325,43 @@
     font-size: 18px;
 }
 
-.news-sch-arcive-text:hover, .announcement-sch-arcive-text:hover {
-    transform: translateY(-5px);
-	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+.poll-link-archive-text {
+    margin-left: 30px;
+    width: 130px;
+    height: 30px;
 }
 
-.news-sch-archive-link, .announcement-sch-archive-link {
+.news-sch-arcive-text:hover,
+.announcement-sch-arcive-text:hover,
+.poll-link-archive-text:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+.news-sch-archive-link,
+.announcement-sch-archive-link,
+.announcement-poll-archive-link {
     color: #000;
     text-align: center;
 }
 
 @media (max-width: 1600px) {
-    .news-tabs-btn, .announcement-tab-btn {
+
+    .news-tabs-btn,
+    .announcement-tab-btn {
         font-size: 14px;
     }
 }
 
 @media (max-width: 1400px) {
 
-    .news-sch-logo, .announcement-sch-logo {
+    .news-sch-logo,
+    .announcement-sch-logo {
         height: 250px;
     }
 
-    .news-tabs-btn, .announcement-tab-btn {
+    .news-tabs-btn,
+    .announcement-tab-btn {
         height: 35px;
         font-size: 12px;
     }
@@ -260,19 +369,23 @@
 
 @media (max-width: 1200px) {
 
-    .news-sch-item, .announcement-sch-item {
+    .news-sch-item,
+    .announcement-sch-item {
         font-size: 14px;
     }
 
-    .news-sch, .announcement-sch {
+    .news-sch,
+    .announcement-sch {
         gap: 15px;
     }
 
-    .news-sch-logo, .announcement-sch-logo {
+    .news-sch-logo,
+    .announcement-sch-logo {
         height: 200px;
     }
 
-    .news-box, .announcement-box {
+    .news-box,
+    .announcement-box {
         padding: 5px 0;
     }
 
@@ -291,19 +404,24 @@
 }
 
 @media (max-width: 1024px) {
-    .news-sch-arcive-text, .announcement-sch-arcive-text {
+
+    .news-sch-arcive-text,
+    .announcement-sch-arcive-text {
         border-width: 1px;
     }
 
-    .news-sch, .announcement-sch {
+    .news-sch,
+    .announcement-sch {
         gap: 10px;
     }
 
-    .news-sch-logo, .announcement-sch-logo {
+    .news-sch-logo,
+    .announcement-sch-logo {
         height: 180px;
     }
 
-    .news-tabs-btn.active, .announcement-tab-btn {
+    .news-tabs-btn.active,
+    .announcement-tab-btn {
         border-top-width: 2px;
     }
 }
@@ -313,73 +431,91 @@
         margin-right: 10px;
     }
 
-    .news-sch-item, .announcement-sch-item {
+    .news-sch-item,
+    .announcement-sch-item {
         font-size: 12px;
     }
 
-    .news-sch-arcive-text, .announcement-sch-arcive-text {
+    .news-sch-arcive-text,
+    .announcement-sch-arcive-text {
         height: 35px;
         width: 160px;
         font-size: 16px;
     }
 
-    .news-sch-link img, .announcement-sch-link img {
+    .news-sch-link img,
+    .announcement-sch-link img {
         width: 300px;
     }
 
-    .news-sch, .announcement-sch {
+    .news-sch,
+    .announcement-sch {
         gap: 5px;
     }
 
-    .news-sch-logo, .announcement-sch-logo {
+    .news-sch-logo,
+    .announcement-sch-logo {
         height: 160px;
     }
-    
-    .news-sch-date, .announcement-sch-date {
+
+    .news-sch-date,
+    .announcement-sch-date {
         margin-bottom: 5px;
     }
 
-    .news-sch-title, .announcement-sch-title {
+    .news-sch-title,
+    .announcement-sch-title {
         margin-bottom: 10px;
     }
 }
 
 @media (max-width: 768px) {
-    .news, .announcement {
+
+    .news,
+    .announcement {
         width: 100%;
     }
 
-    .news-sch-link img, .announcement-sch-link img {
+    .news-sch-link img,
+    .announcement-sch-link img {
         width: 500px;
     }
 
-    .news-sch-item, .announcement-sch-item {
+    .news-sch-item,
+    .announcement-sch-item {
         font-size: 14px;
     }
 
-    .news-sch-logo, .announcement-sch-logo {
+    .news-sch-logo,
+    .announcement-sch-logo {
         height: 200px;
     }
 
-    .news, .announcement {
+    .news,
+    .announcement {
         margin-top: 10px;
     }
 
-    .news-tabs-btn, .announcement-tab-btn {
+    .news-tabs-btn,
+    .announcement-tab-btn {
         font-size: 12px;
     }
 }
 
 @media (max-width: 480px) {
-    .news-sch-item, .announcement-sch-item{
+
+    .news-sch-item,
+    .announcement-sch-item {
         width: 90%;
     }
 
-    .news-sch-date, .announcement-sch-date {
+    .news-sch-date,
+    .announcement-sch-date {
         font-size: 14px;
     }
 
-    .news-tabs-btn, .announcement-tab-btn {
+    .news-tabs-btn,
+    .announcement-tab-btn {
         font-size: 11px;
     }
 }
