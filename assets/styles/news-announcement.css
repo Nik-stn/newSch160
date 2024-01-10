@@ -145,6 +145,7 @@
     user-select: none;
 }
 
+/* Hide the browser's default radio button */
 .poll-text input {
     position: absolute;
     opacity: 0;
@@ -153,7 +154,9 @@
     width: 0;
 }
 
-.poll-checkmark {
+/* Create a custom radio button */
+.poll-checkbox,
+.poll-radio {
     position: absolute;
     top: 0;
     left: 0;
@@ -163,29 +166,35 @@
     background-color: #ccc;
 }
 
-/* On mouse-over, add a grey background color */
-.poll-text:hover input~.poll-checkmark {
+.poll-radio {
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add background color */
+.poll-text:hover input~.poll-checkbox, .poll-text:hover input~.poll-radio {
     background-color: #ffc421;
 }
 
-/* When the checkbox is checked, add a blue background */
-.poll-text input:checked~.poll-checkmark {
-    background-color: #00043c;
+/* When the checkmark is checked, add background */
+.poll-text input:checked~.poll-checkbox, .poll-text input:checked~.poll-radio {
+    background-color: #00043c ;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.poll-checkmark:after {
+.poll-checkbox:after, .poll-radio:after {
     content: "";
     position: absolute;
     display: none;
 }
 
 /* Show the checkmark when checked */
-.poll-text input:checked~.poll-checkmark:after {
+.poll-text input:checked~.poll-checkbox:after, .poll-text input:checked~.poll-radio:after {
     display: block;
 }
 
-.poll-text .poll-checkmark:after {
+/* Style the checkmark/indicator */
+.poll-text .poll-checkbox:after {
     left: 9px;
     top: 5px;
     width: 6px;
@@ -195,6 +204,16 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+/* Style the checkmark/indicator */
+.poll-text .poll-radio:after {
+    top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #fff;
 }
 
 .news-sch-link:after,
