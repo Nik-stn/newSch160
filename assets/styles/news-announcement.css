@@ -52,7 +52,7 @@
 }
 
 .news-tabs-btn,
-.announcement-tab-btn {
+.announcement-tabs-btn {
     background: #00043c;
     color: #fff;
     border: 0;
@@ -67,7 +67,7 @@
 }
 
 .news-tabs-btn.active,
-.announcement-tab-btn.active {
+.announcement-tabs-btn.active {
     background: #ffc421;
     color: #000;
     border-top: 3px solid #00043c;
@@ -79,11 +79,11 @@
     padding: 10px 0;
 }
 
-.news-tabs-item {
+.news-tabs-item, .announcement-tabs-item {
     display: none;
 }
 
-.news-tabs-item.active {
+.news-tabs-item.active, .announcement-tabs-item.active {
     display: block;
     animation: transform .7s linear;
 }
@@ -367,7 +367,7 @@
 @media (max-width: 1600px) {
 
     .news-tabs-btn,
-    .announcement-tab-btn {
+    .announcement-tabs-btn {
         font-size: 14px;
     }
 }
@@ -380,7 +380,7 @@
     }
 
     .news-tabs-btn,
-    .announcement-tab-btn {
+    .announcement-tabs-btn {
         height: 35px;
         font-size: 12px;
     }
@@ -440,7 +440,7 @@
     }
 
     .news-tabs-btn.active,
-    .announcement-tab-btn {
+    .announcement-tabs-btn {
         border-top-width: 2px;
     }
 }
@@ -516,7 +516,7 @@
     }
 
     .news-tabs-btn,
-    .announcement-tab-btn {
+    .announcement-tabs-btn {
         font-size: 12px;
     }
 }
@@ -534,7 +534,7 @@
     }
 
     .news-tabs-btn,
-    .announcement-tab-btn {
+    .announcement-tabs-btn {
         font-size: 11px;
     }
 }
