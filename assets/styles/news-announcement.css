@@ -79,11 +79,13 @@
     padding: 10px 0;
 }
 
-.news-tabs-item, .announcement-tabs-item {
+.news-tabs-item,
+.announcement-tabs-item {
     display: none;
 }
 
-.news-tabs-item.active, .announcement-tabs-item.active {
+.news-tabs-item.active,
+.announcement-tabs-item.active {
     display: block;
     animation: transform .7s linear;
 }
@@ -145,6 +147,12 @@
     user-select: none;
 }
 
+.announcement-poll-archive {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
 /* Hide the browser's default radio button */
 .poll-text input {
     position: absolute;
@@ -172,24 +180,28 @@
 }
 
 /* On mouse-over, add background color */
-.poll-text:hover input~.poll-checkbox, .poll-text:hover input~.poll-radio {
+.poll-text:hover input~.poll-checkbox,
+.poll-text:hover input~.poll-radio {
     background-color: #ffc421;
 }
 
 /* When the checkmark is checked, add background */
-.poll-text input:checked~.poll-checkbox, .poll-text input:checked~.poll-radio {
-    background-color: #00043c ;
+.poll-text input:checked~.poll-checkbox,
+.poll-text input:checked~.poll-radio {
+    background-color: #00043c;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-.poll-checkbox:after, .poll-radio:after {
+.poll-checkbox:after,
+.poll-radio:after {
     content: "";
     position: absolute;
     display: none;
 }
 
 /* Show the checkmark when checked */
-.poll-text input:checked~.poll-checkbox:after, .poll-text input:checked~.poll-radio:after {
+.poll-text input:checked~.poll-checkbox:after,
+.poll-text input:checked~.poll-radio:after {
     display: block;
 }
 
@@ -209,11 +221,11 @@
 /* Style the checkmark/indicator */
 .poll-text .poll-radio:after {
     top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: #fff;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
 }
 
 .news-sch-link:after,
@@ -389,8 +401,14 @@
 @media (max-width: 1200px) {
 
     .news-sch-item,
-    .announcement-sch-item {
+    .announcement-sch-item,
+    .announcement-poll-item {
         font-size: 14px;
+    }
+
+    .poll-checkbox, .poll-radio {
+        width: 20px;
+        height: 20px;
     }
 
     .news-sch,
@@ -425,13 +443,18 @@
 @media (max-width: 1024px) {
 
     .news-sch-arcive-text,
-    .announcement-sch-arcive-text {
+    .announcement-sch-arcive-text,
+    .poll-link-archive-text {
         border-width: 1px;
     }
 
     .news-sch,
     .announcement-sch {
         gap: 10px;
+    }
+
+    .announcement-poll-item {
+        width: 97%;
     }
 
     .news-sch-logo,
@@ -451,16 +474,27 @@
     }
 
     .news-sch-item,
-    .announcement-sch-item {
+    .announcement-sch-item,
+    .announcement-poll-item {
         font-size: 12px;
     }
 
     .news-sch-arcive-text,
-    .announcement-sch-arcive-text {
+    .announcement-sch-arcive-text,
+    .poll-link-archive-text {
         height: 35px;
         width: 160px;
         font-size: 16px;
     }
+
+    .poll-link-archive-text {
+        width: 100px;
+    }
+
+    .announcement-sch-arcive-text {
+        width: 180px;
+    }
+
 
     .news-sch-link img,
     .announcement-sch-link img {
@@ -500,8 +534,13 @@
         width: 500px;
     }
 
+    .announcement-poll-item {
+        width: 47%;
+    }
+
     .news-sch-item,
-    .announcement-sch-item {
+    .announcement-sch-item,
+    .announcement-poll-item {
         font-size: 14px;
     }
 
@@ -518,6 +557,12 @@
     .news-tabs-btn,
     .announcement-tabs-btn {
         font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .announcement-poll-item {
+        width: 97%;
     }
 }
 
