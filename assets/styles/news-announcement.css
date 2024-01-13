@@ -153,6 +153,18 @@
     margin: 10px 0;
 }
 
+.poll-result .pos {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+    border-radius: 1.5em;
+}
+
+.post.poll-result .poll-result-stats {
+    list-style-type: none;
+}
+
 /* Hide the browser's default radio button */
 .poll-text input {
     position: absolute;
