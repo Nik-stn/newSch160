@@ -423,6 +423,16 @@
         height: 20px;
     }
 
+    .poll-text .poll-checkbox:after {
+        left: 35%;
+        top: 15%;
+    }
+
+    .poll-text .poll-radio:after {
+        top: 6px;
+        left: 6px;
+    }
+
     .news-sch,
     .announcement-sch {
         gap: 15px;
