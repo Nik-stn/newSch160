@@ -623,6 +623,10 @@ ul.no-list .name {
     font-weight: 700;
 }
 
+.adm_procedure .show-hide {
+    margin-left: 15px;
+}
+
 .excerpt .show-hide:hover,
 .excerpt .read_more:hover {
     text-decoration: underline;
