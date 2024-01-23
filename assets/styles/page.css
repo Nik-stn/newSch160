@@ -786,8 +786,8 @@ ul.no-list .name {
 
 .excerpt_preview img {
     min-width: 0;
-    max-width: 100px;
-    height: auto;
+    max-width: 300px;
+    height: 100%;
     display: block;
 }
 
