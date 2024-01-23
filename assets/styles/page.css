@@ -4,7 +4,6 @@
 @import url('mobile-menu.css');
 @import url('gallery.css');
 @import url('vision.css');
-/* @import url('news-announcement.css'); */
 
 .main-flex {
     width: 100%;
@@ -196,7 +195,7 @@
 }
 
 .poll-archive-text {
-    width: 200px;
+    width: 220px;
 }
 
 .aside-title {
