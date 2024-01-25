@@ -780,7 +780,8 @@
 
 .entry_spoiler.excerpt .spoiler {
     padding: 0 1em 1.5em;
-    border-top: 1px solid #00043c;;
+    border-top: 1px solid #00043c;
+    width: 100%;
 }
 
 .entry_spoiler.excerpt .show-hide {
