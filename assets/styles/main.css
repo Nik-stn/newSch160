@@ -7,6 +7,31 @@
     outline: 0;
 }
 
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #997dff, #00065a;
+}
+
+html::-webkit-scrollbar {
+    width: 15px;
+}
+
+html::-webkit-scrollbar-track {
+    background: #f4f4f4;
+}
+
+html::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(45deg, #997dff, #00065a);
+    border: 3px solid #f4f4f4;
+    border-radius: 20px;
+    box-shadow: 4px 4px 8px 0px #f4f4f433;
+    
+}
+
+html::-webkit-scrollbar-track-piece:vertical:start {
+    background-color: #00043c;
+}
+
 body {
     font-family: 'Tahoma', sans-serif;
     font-size: 20px;
@@ -40,13 +65,13 @@ table {
 .rebuild {
     display: flex;
     align-items: center;
-    justify-content: center ;
+    justify-content: center;
     gap: 10px;
     margin: 20px 0;
 }
 
 .rebuild-img {
-    width: clamp(100px, 15cqw, 200px) ;
+    width: clamp(100px, 15cqw, 200px);
 }
 
 .rebuild-title {
@@ -109,6 +134,14 @@ table {
 @media (max-width: 900px) {}
 
 @media (max-width: 768px) {
+    html::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        border: 1.5px solid #f4f4f4;
+    }
+
     body {
         font-size: 12px;
     }
@@ -125,6 +158,13 @@ table {
 }
 
 @media (max-width: 480px) {
+    html::-webkit-scrollbar {
+        width: 7px;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        border: 0.75px solid #f4f4f4;
+    }
 
     .section {
         padding: 3px 4px 1px;
