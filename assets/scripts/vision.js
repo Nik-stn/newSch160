@@ -1,9 +1,9 @@
-const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img, .sch-map,  .slider-icon, .banners-icon, .header-mobile .parent");
+const img = document.querySelectorAll("#ya-site-form0 input.ya-site-form__submit, img, .sch-map,  .slider-icon, .banners-icon, .heade.header-pc .level_0 .active>r-mobile .parent");
 const siteContent = document.querySelectorAll(".site-content, .popular-item, .news-box, .announcement-poll-item, .announcement-sch-item");
-const buttons = document.querySelectorAll(".popular-item, .btn-header-bar, .btn-header-bar-blue, .header-nav, .announcement-tabs-btn, .news-tabs-btn, .announcement-tab-btn, .news-sch-arcive-text, .announcement-sch-arcive-text, .poll-link-archive-text, .footer, .header-mobile .level_0");
+const buttons = document.querySelectorAll(".popular-item, .btn-header-bar, .btn-header-bar-blue, .poll-answer-btn, .poll-archive-btn, .header-nav, .announcement-tabs-btn, .news-tabs-btn, .announcement-tab-btn, .news-sch-arcive-text, .announcement-sch-arcive-text, .poll-link-archive-text, .footer, .header-mobile .level_0, .show-hide");
 const checkbox = document.querySelectorAll(".checkbox-line span, .scrooll-to-top");
-const noBorder = document.querySelectorAll('.footer-flex, .news-sch-item, .announcement-poll-item, .announcement-sch-item, .news-rss-content');
-const links = document.querySelectorAll('.header-pc .parent>a, .btn-header-bar, .btn-header-bar-blue, .header-pc .parent>span, .announcement-tabs-btn,  .news-rss-link, .news-tabs-btn, .news-sch-content, .announcement-sch-content, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .parent>a, .header-mobile .level_1>li>a, .popular-item a, .link-header-bar, .news-sch-archive-link, .announcement-poll-archive-link, .poll-link-archive, .announcement-sch-archive-link');
+const noBorder = document.querySelectorAll('.footer-flex, .news-sch-item, .announcement-poll-item, .announcement-sch-item, .news-rss-content, .poll-item, .entry_spoiler.excerpt');
+const links = document.querySelectorAll('.header-pc .parent>a, .btn-header-bar, .btn-header-bar-blue, .show-hide, .header-pc .parent>span, .announcement-tabs-btn,  .news-rss-link, .news-tabs-btn, .news-sch-content, .announcement-sch-content, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .parent>a, .header-mobile .level_1>li>a, .popular-item a, .breadcrumbs-link, .link-header-bar, .news-sch-archive-link, .announcement-poll-archive-link, .poll-link-archive, .announcement-sch-archive-link, .poll-answer-btn, .aside-link, .aside-sub-link, .poll-archive-btn, .breadcrumbs-item>span');
 const mostSelectors = document.querySelectorAll('.popular-item, .btn-header-bar, .btn-header-bar-blue, .header-nav, .main, .header-pc .parent>a, .header-pc .parent>span, .announcement-tabs-btn, .news-tabs-btn, .announcement-tab-btn, .news-sch-content, .announcement-sch-content, .news-sch-arcive-text, .announcement-sch-arcive-text, .poll-link-archive-text, .footer, .about-text, .footer-nav .parent, .count-title, .about-text-item a, .footer-nav li a, .footer-copyright a, .footer-copyright, .header-mobile .level_0, .header-mobile .parent>a, .header-mobile .level_1>li>a, .checkbox-line span, .scrooll-to-top');
 const noHover = document.querySelectorAll('.header-pc .parent>a:hover::before, .header-pc .parent>span:hover::before');
 
@@ -58,6 +58,8 @@ function applyBlueStyles() {
         item.classList.add('checkboxColorSiteBlue');
         item.classList.remove("checkboxColorSiteWhite", "checkboxColorSiteBlack", "checkboxColorSiteBeige");
     });
+    noBorder.forEach(item => item.classList.add('footerNoBorder', 'newsNoBorder'));
+    noHover.forEach(item => item.style.backgroundColor = 'inherit');
 }
 
 function applyBlackStyles() {
@@ -77,6 +79,8 @@ function applyBlackStyles() {
         item.classList.add('checkboxColorSiteBlack');
         item.classList.remove("checkboxColorSiteWhite", "checkboxColorSiteBlue", "checkboxColorSiteBeige");
     });
+    noBorder.forEach(item => item.classList.add('footerNoBorder', 'newsNoBorder'));
+    noHover.forEach(item => item.style.backgroundColor = 'inherit');
 }
 
 function applyBeigeStyles() {
@@ -94,6 +98,8 @@ function applyBeigeStyles() {
         item.classList.add('checkboxColorSiteBeige');
         item.classList.remove("checkboxColorSiteBlack", "checkboxColorSiteBlue", "checkboxColorSiteWhite");
     });
+    noBorder.forEach(item => item.classList.add('footerNoBorder', 'newsNoBorder'));
+    noHover.forEach(item => item.style.backgroundColor = 'inherit');
 }
 
 function deleteVisionStyles() {

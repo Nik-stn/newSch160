@@ -61,55 +61,71 @@
     color: brown;
 }
 
-.linkColorSiteWhite, .active.linkColorSiteWhite, li a.linkColorSiteWhite, .header-mobile .parent>a.linkColorSiteWhite, .header-pc .parent>.linkColorSiteWhite, .about-text-item a.linkColorSiteWhite, .announcement-tab-btn.buttonColorSiteWhite, .footer-copyright a.linkColorSiteWhite {
+.linkColorSiteWhite, .active.linkColorSiteWhite, li a.linkColorSiteWhite, .header-mobile .parent>a.linkColorSiteWhite, .header-pc .parent>.linkColorSiteWhite, .about-text-item a.linkColorSiteWhite, .announcement-tab-btn.buttonColorSiteWhite, .footer-copyright a.linkColorSiteWhite, .entry_spoiler.excerpt .show-hide.linkColorSiteWhite, .header-pc .level_0 .active>span.linkColorSiteWhite, .poll-answer-btn.linkColorSiteWhite, .poll-archive-btn.linkColorSiteWhite, .breadcrumbs-item>span.linkColorSiteWhite {
     color: #000;
 }
 
-.buttonColorSiteWhite, .active.buttonColorSiteWhite, .header-mobile .level_0.buttonColorSiteWhite {
+.buttonColorSiteWhite, .active.buttonColorSiteWhite, .header-mobile .level_0.buttonColorSiteWhite, .entry_spoiler.excerpt .show-hide.buttonColorSiteWhite, .poll-answer-btn.buttonColorSiteWhite, .poll-archive-btn.buttonColorSiteWhite {
     background: #f8f8f8;
+}
+
+.header-pc .level_0 .active>span.linkColorSiteWhite {
+    background: #e9e9e9;
 }
 
 .checkboxColorSiteWhite, span.checkboxColorSiteWhite, .checkbox:checked~.checkbox-line span.checkboxColorSiteWhite {
     background: #000;
 }
 
-.linkColorSiteBlack, .active.linkColorSiteBlack,  li a.linkColorSiteBlack, .header-mobile .parent>a.linkColorSiteBlack, .header-pc .parent>.linkColorSiteBlack, .about-text-item a.linkColorSiteBlack, .announcement-tab-btn.buttonColorSiteBlack, .footer-copyright a.linkColorSiteBlack {
+.linkColorSiteBlack, .active.linkColorSiteBlack,  li a.linkColorSiteBlack, .header-mobile .parent>a.linkColorSiteBlack, .header-pc .parent>.linkColorSiteBlack, .about-text-item a.linkColorSiteBlack, .announcement-tab-btn.buttonColorSiteBlack, .footer-copyright a.linkColorSiteBlack, .entry_spoiler.excerpt .show-hide.linkColorSiteBlack, .header-pc .level_0 .active>span.linkColorSiteBlack, .poll-answer-btn.linkColorSiteBlack, .poll-archive-btn.linkColorSiteBlack, .breadcrumbs-item>span.linkColorSiteBlack {
     color: #e2e2e2;
 }
 
-.buttonColorSiteBlack, .active.buttonColorSiteBlack, .header-mobile .level_0.buttonColorSiteBlack {
+.buttonColorSiteBlack, .active.buttonColorSiteBlack, .header-mobile .level_0.buttonColorSiteBlack, .entry_spoiler.excerpt .show-hide.buttonColorSiteBlack, .poll-answer-btn.buttonColorSiteBlack, .poll-archive-btn.buttonColorSiteBlack {
     background: #242424;
+}
+
+.header-pc .level_0 .active>span.linkColorSiteBlack {
+    background: #1d1d1d;
 }
 
 .checkboxColorSiteBlack, span.checkboxColorSiteBlack, .checkbox:checked~.checkbox-line span.checkboxColorSiteBlack {
     background: #555555;
 }
 
-.linkColorSiteBlue, .active.linkColorSiteBlue,  li a.linkColorSiteBlue, .header-mobile .parent>a.linkColorSiteBlue, .header-pc .parent>.linkColorSiteBlue, .about-text-item a.linkColorSiteBlue, .announcement-tab-btn.buttonColorSiteBlue, .footer-copyright a.linkColorSiteBlue {
+.linkColorSiteBlue, .active.linkColorSiteBlue,  li a.linkColorSiteBlue, .header-mobile .parent>a.linkColorSiteBlue, .header-pc .parent>.linkColorSiteBlue, .about-text-item a.linkColorSiteBlue, .announcement-tab-btn.buttonColorSiteBlue, .footer-copyright a.linkColorSiteBlue, .entry_spoiler.excerpt .show-hide.linkColorSiteBlue, .header-pc .level_0 .active>span.linkColorSiteBlue, .poll-answer-btn.linkColorSiteBlue, .poll-archive-btn.linkColorSiteBlue, .breadcrumbs-item>span.linkColorSiteBlue {
     color: #1616ff;
 }
 
-.buttonColorSiteBlue, .active.buttonColorSiteBlue, .header-mobile .level_0.buttonColorSiteBlue {
+.buttonColorSiteBlue, .active.buttonColorSiteBlue, .header-mobile .level_0.buttonColorSiteBlue, .entry_spoiler.excerpt .show-hide.buttonColorSiteBlue, .poll-answer-btn.buttonColorSiteBlue, .poll-archive-btn.buttonColorSiteBlue {
     background: #a4d5ff;
+}
+
+.header-pc .level_0 .active>span.linkColorSiteBlue {
+    background: #9bd0ff;
 }
 
 .checkboxColorSiteBlue, span.checkboxColorSiteBlue, .checkbox:checked~.checkbox-line span.checkboxColorSiteBlue {
     background: #fff;
 }
 
-.linkColorSiteBeige, .active.linkColorSiteBeige,  li a.linkColorSiteBeige, .header-mobile .parent>a.linkColorSiteBeige, .header-pc .parent>.linkColorSiteBeige, .about-text-item a.linkColorSiteBeige, .announcement-tab-btn.buttonColorSiteBeige, .footer-copyright a.linkColorSiteBeige {
+.linkColorSiteBeige, .active.linkColorSiteBeige,  li a.linkColorSiteBeige, .header-mobile .parent>a.linkColorSiteBeige, .header-pc .parent>.linkColorSiteBeige, .about-text-item a.linkColorSiteBeige, .announcement-tab-btn.buttonColorSiteBeige, .footer-copyright a.linkColorSiteBeige, .entry_spoiler.excerpt .show-hide.linkColorSiteBeige, .header-pc .level_0 .active>span.linkColorSiteBeige, .poll-answer-btn.linkColorSiteBeige, .poll-archive-btn.linkColorSiteBeige, .breadcrumbs-item>span.linkColorSiteBeige {
     color: #a03030;
 }
 
-.buttonColorSiteBeige, .active.buttonColorSiteBeige, .header-mobile .level_0.buttonColorSiteBeige {
+.buttonColorSiteBeige, .active.buttonColorSiteBeige, .header-mobile .level_0.buttonColorSiteBeige, .entry_spoiler.excerpt .show-hide.buttonColorSiteBeige, .poll-answer-btn.buttonColorSiteBeige, .poll-archive-btn.buttonColorSiteBeige {
     background: #fdf9d5;
+}
+
+.header-pc .level_0 .active>span.linkColorSiteBeige {
+    background: #fff8c3;
 }
 
 .checkboxColorSiteBeige, span.checkboxColorSiteBeige, .checkbox:checked~.checkbox-line span.checkboxColorSiteBeige {
     background: #fff;
 }
 
-.footerNoBorder, .newsNoBorder {
+.footerNoBorder.newsNoBorder {
     border: 0;
 }
 
