@@ -61,7 +61,7 @@
     color: brown;
 }
 
-.linkColorSiteWhite, .active.linkColorSiteWhite, li a.linkColorSiteWhite, .header-mobile .parent>a.linkColorSiteWhite, .header-pc .parent>.linkColorSiteWhite, .about-text-item a.linkColorSiteWhite, .announcement-tab-btn.buttonColorSiteWhite, .footer-copyright a.linkColorSiteWhite, .entry_spoiler.excerpt .show-hide.linkColorSiteWhite, .header-pc .level_0 .active>span.linkColorSiteWhite, .poll-answer-btn.linkColorSiteWhite, .poll-archive-btn.linkColorSiteWhite, .breadcrumbs-item>span.linkColorSiteWhite {
+.linkColorSiteWhite, .active.linkColorSiteWhite, li a.linkColorSiteWhite, .header-mobile .parent>a.linkColorSiteWhite, .header-pc .parent>.linkColorSiteWhite, .about-text-item a.linkColorSiteWhite, .announcement-tab-btn.buttonColorSiteWhite, .footer-copyright a.linkColorSiteWhite, .entry_spoiler.excerpt .show-hide.linkColorSiteWhite, .header-pc .level_0 .active>span.linkColorSiteWhite, .poll-answer-btn.linkColorSiteWhite, .poll-archive-btn.linkColorSiteWhite, .breadcrumbs-item>span.linkColorSiteWhite, .content-box .content-item.linkColorSiteWhite {
     color: #000;
 }
 
@@ -69,7 +69,7 @@
     background: #f8f8f8;
 }
 
-.header-pc .level_0 .active>span.linkColorSiteWhite {
+.header-pc .level_0 .active>span.linkColorSiteWhite, .content-box .content-item.linkColorSiteWhite {
     background: #e9e9e9;
 }
 
@@ -77,7 +77,7 @@
     background: #000;
 }
 
-.linkColorSiteBlack, .active.linkColorSiteBlack,  li a.linkColorSiteBlack, .header-mobile .parent>a.linkColorSiteBlack, .header-pc .parent>.linkColorSiteBlack, .about-text-item a.linkColorSiteBlack, .announcement-tab-btn.buttonColorSiteBlack, .footer-copyright a.linkColorSiteBlack, .entry_spoiler.excerpt .show-hide.linkColorSiteBlack, .header-pc .level_0 .active>span.linkColorSiteBlack, .poll-answer-btn.linkColorSiteBlack, .poll-archive-btn.linkColorSiteBlack, .breadcrumbs-item>span.linkColorSiteBlack {
+.linkColorSiteBlack, .active.linkColorSiteBlack,  li a.linkColorSiteBlack, .header-mobile .parent>a.linkColorSiteBlack, .header-pc .parent>.linkColorSiteBlack, .about-text-item a.linkColorSiteBlack, .announcement-tab-btn.buttonColorSiteBlack, .footer-copyright a.linkColorSiteBlack, .entry_spoiler.excerpt .show-hide.linkColorSiteBlack, .header-pc .level_0 .active>span.linkColorSiteBlack, .poll-answer-btn.linkColorSiteBlack, .poll-archive-btn.linkColorSiteBlack, .breadcrumbs-item>span.linkColorSiteBlack, .content-box .content-item.linkColorSiteBlack {
     color: #e2e2e2;
 }
 
@@ -85,7 +85,7 @@
     background: #242424;
 }
 
-.header-pc .level_0 .active>span.linkColorSiteBlack {
+.header-pc .level_0 .active>span.linkColorSiteBlack, .content-box .content-item.linkColorSiteBlack {
     background: #1d1d1d;
 }
 
@@ -93,7 +93,7 @@
     background: #555555;
 }
 
-.linkColorSiteBlue, .active.linkColorSiteBlue,  li a.linkColorSiteBlue, .header-mobile .parent>a.linkColorSiteBlue, .header-pc .parent>.linkColorSiteBlue, .about-text-item a.linkColorSiteBlue, .announcement-tab-btn.buttonColorSiteBlue, .footer-copyright a.linkColorSiteBlue, .entry_spoiler.excerpt .show-hide.linkColorSiteBlue, .header-pc .level_0 .active>span.linkColorSiteBlue, .poll-answer-btn.linkColorSiteBlue, .poll-archive-btn.linkColorSiteBlue, .breadcrumbs-item>span.linkColorSiteBlue {
+.linkColorSiteBlue, .active.linkColorSiteBlue,  li a.linkColorSiteBlue, .header-mobile .parent>a.linkColorSiteBlue, .header-pc .parent>.linkColorSiteBlue, .about-text-item a.linkColorSiteBlue, .announcement-tab-btn.buttonColorSiteBlue, .footer-copyright a.linkColorSiteBlue, .entry_spoiler.excerpt .show-hide.linkColorSiteBlue, .header-pc .level_0 .active>span.linkColorSiteBlue, .poll-answer-btn.linkColorSiteBlue, .poll-archive-btn.linkColorSiteBlue, .breadcrumbs-item>span.linkColorSiteBlue, .content-box .content-item.linkColorSiteBlue {
     color: #1616ff;
 }
 
@@ -101,7 +101,7 @@
     background: #a4d5ff;
 }
 
-.header-pc .level_0 .active>span.linkColorSiteBlue {
+.header-pc .level_0 .active>span.linkColorSiteBlue, .content-box .content-item.linkColorSiteBlue {
     background: #9bd0ff;
 }
 
@@ -109,7 +109,7 @@
     background: #fff;
 }
 
-.linkColorSiteBeige, .active.linkColorSiteBeige,  li a.linkColorSiteBeige, .header-mobile .parent>a.linkColorSiteBeige, .header-pc .parent>.linkColorSiteBeige, .about-text-item a.linkColorSiteBeige, .announcement-tab-btn.buttonColorSiteBeige, .footer-copyright a.linkColorSiteBeige, .entry_spoiler.excerpt .show-hide.linkColorSiteBeige, .header-pc .level_0 .active>span.linkColorSiteBeige, .poll-answer-btn.linkColorSiteBeige, .poll-archive-btn.linkColorSiteBeige, .breadcrumbs-item>span.linkColorSiteBeige {
+.linkColorSiteBeige, .active.linkColorSiteBeige,  li a.linkColorSiteBeige, .header-mobile .parent>a.linkColorSiteBeige, .header-pc .parent>.linkColorSiteBeige, .about-text-item a.linkColorSiteBeige, .announcement-tab-btn.buttonColorSiteBeige, .footer-copyright a.linkColorSiteBeige, .entry_spoiler.excerpt .show-hide.linkColorSiteBeige, .header-pc .level_0 .active>span.linkColorSiteBeige, .poll-answer-btn.linkColorSiteBeige, .poll-archive-btn.linkColorSiteBeige, .breadcrumbs-item>span.linkColorSiteBeige, .content-box .content-item.linkColorSiteBeige {
     color: #a03030;
 }
 
@@ -117,7 +117,7 @@
     background: #fdf9d5;
 }
 
-.header-pc .level_0 .active>span.linkColorSiteBeige {
+.header-pc .level_0 .active>span.linkColorSiteBeige, .content-box .content-item.linkColorSiteBeige {
     background: #fff8c3;
 }
 
