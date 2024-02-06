@@ -1,0 +1,23 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.panel-tab {
+    background: #ffc421;
+    color: #000;
+    border-top: 3px solid #00043c;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    align-self: flex-start;
+}
+
+.panel-box {
+    border: 2px solid rgb(204, 204, 204);
+    padding: 10px 0;
+}
