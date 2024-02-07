@@ -21,3 +21,19 @@
     border: 2px solid rgb(204, 204, 204);
     padding: 10px 0;
 }
+
+.owl-stage-outer {
+    cursor: grab;
+}
+
+.owl-stage-outer:active {
+    cursor: grabbing;
+}
+
+.panel-box .owl-theme .owl-nav {
+    margin-top: 0;
+}
+
+.panel-box .owl-nav span {
+    font-size: 30px;
+}
