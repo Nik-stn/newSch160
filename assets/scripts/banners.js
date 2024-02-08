@@ -31,7 +31,7 @@ function carouselize(carousel) {
 
   logoAmountVisible = Math.floor(clientWidth / (logoWidth / logoAmount));
   
-  bannersInner.style.width = (logoWidth + (logoAmount * 20)) + 'px';  
+  bannersInner.style.width = (logoWidth + (logoAmount * 40)) + 'px';  
 
   let logoSteps = 0;
   const btnPrev = carousel.querySelector('.banners-control.previous');
