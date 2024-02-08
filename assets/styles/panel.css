@@ -20,6 +20,7 @@
 .panel-box {
     border: 2px solid rgb(204, 204, 204);
     padding: 10px 0;
+    position: relative;
 }
 
 .owl-stage-outer {
@@ -34,6 +35,24 @@
     margin-top: 0;
 }
 
+.panel-box .owl-nav button {
+    width: 100%;
+    max-width: 100px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+
+.panel-box .owl-theme .owl-nav button:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
 .panel-box .owl-nav span {
-    font-size: 30px;
+    font-size: 100px;
+    color: #fdbe34;
+}
+
+.panel-box .owl-nav .owl-prev {
+    left: 0;
 }
