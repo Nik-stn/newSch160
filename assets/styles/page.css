@@ -163,7 +163,7 @@
 }
 
 .poll-answer-btn, .poll-archive-btn {
-    color: #000;
+    color: #1f1911;
     text-align: center;
     margin-left: 30px;
     width: 130px;
@@ -302,7 +302,7 @@
 }
 
 .content-box .parent a {
-    color: #000;
+    color: #1f1911;
 }
 
 .content-box .parent a:hover {
@@ -356,7 +356,7 @@
 
 .tabs-link.active {
     background: #ffc421;
-    color: #000;
+    color: #1f1911;
     border-top: 3px solid #00043c;
 }
 
@@ -433,7 +433,7 @@
 .MapMonth span {
     display: flex;
     justify-content: space-between;
-    color: #000;
+    color: #1f1911;
     height: 2rem;
 }
 
@@ -461,13 +461,13 @@
 }
 
 .MapMonth a {
-    color: #000;
+    color: #1f1911;
 }
 
 .MapMonth a:hover,
 .MapYear span:hover {
     background: #fcad02;
-    color: #000;
+    color: #1f1911;
 }
 
 .cards {
@@ -546,7 +546,7 @@
     background-color: #ffc421;
     border: 0 solid #E5E7EB;
     box-sizing: border-box;
-    color: #000000;
+    color: #1f1911;
     display: flex;
     font-weight: 700;
     justify-content: center;

@@ -69,7 +69,7 @@
 .news-tabs-btn.active,
 .announcement-tabs-btn.active {
     background: #ffc421;
-    color: #000;
+    color: #1f1911;
     border-top: 3px solid #00043c;
 }
 
@@ -261,7 +261,7 @@
 .news-sch-link,
 .announcement-sch-link {
     text-align: center;
-    color: #000;
+    color: #1f1911;
     position: relative;
     z-index: 1;
 }
@@ -383,7 +383,7 @@
 .news-sch-archive-link,
 .announcement-sch-archive-link,
 .announcement-poll-archive-link {
-    color: #000;
+    color: #1f1911;
     text-align: center;
 }
 

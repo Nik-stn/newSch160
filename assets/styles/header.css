@@ -58,7 +58,7 @@
     justify-content: center;
     align-items: center;
     transition: 500ms;
-    color: #000;
+    color: #1f1911;
 }
 
 .btn-header-bar-blue {
@@ -100,7 +100,7 @@
 
 .header-pc .level_0 .active>span {
     background: #fdbe34;
-    color: #000;
+    color: #1f1911;
     display: block;
 }
 
@@ -139,7 +139,7 @@ td.ya-site-form__search-input-layout-l, td.ya-site-form__search-input-layout-r, 
 }
 
 .header-pc .parent>a:hover, .header-pc .parent>span:hover {
-    color: #000;
+    color: #1f1911;
     transition: all 0.3s ease 0s;
     cursor: pointer;
 }
@@ -188,7 +188,7 @@ td.ya-site-form__search-input-layout-l, td.ya-site-form__search-input-layout-r, 
 
 .header-pc .level_1>li>a {
     display: block;
-    color: #000;
+    color: #1f1911;
     text-align: left;
     padding: 7px;
 }
