@@ -1,3 +1,7 @@
+.photo-video_annotation h1 {
+    display: none;
+}
+
 .gallery {
     margin-top: 16px;
 }

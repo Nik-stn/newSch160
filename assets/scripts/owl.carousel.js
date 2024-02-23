@@ -3453,6 +3453,10 @@ $('.owl-carousel').owlCarousel({
     responsiveClass:true,
 	stagePadding: 10,
 	nav:true,
+	loop:true,
+	autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
     responsive:{
         0:{
             items:1,
