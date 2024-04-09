@@ -736,6 +736,51 @@
     text-transform: uppercase;
 }
 
+.content-box .content-link-item {
+    border: 2px solid #ddd;
+    display: block;
+    padding: 7px;
+    border-top: 0;
+}
+
+.content-box .content-link-item:hover {
+    background: #00043c69;
+    transition: all 0.1s ease-in-out;
+}
+
+.content-box .content-link-item span {
+    font-weight: 700;
+    color: #fff;
+    margin: 0 2px ;
+    padding: .2em .6em .3em;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 5px;
+    font-size: 75%;
+}
+
+.content-box .content-link-item:first-child {
+    border-top: 2px solid #ddd;
+}
+
+.content-box .content-link-title {
+    margin: 0;
+}
+
+.content-box .content-link-title img {
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.content-box .content-link-file {
+    background: #00043c;
+}
+
+.content-box .content-link-size {
+    background: #00043c;
+}
+
 /* Старый стили */
 .excerpt {
     display: flex;
