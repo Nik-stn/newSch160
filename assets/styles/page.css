@@ -793,6 +793,11 @@
     overflow: hidden;
 }
 
+.experpt_card {
+    display: flex;
+    gap: 20px;
+}
+
 .entry_spoiler.excerpt {
     padding: 0;
     border-radius: 43px;
@@ -874,7 +879,7 @@ ul.no-list .name {
 .excerpt_preview img {
     min-width: 0;
     max-width: 200px;
-    height: 100%;
+    height: auto;
     display: block;
     border-radius: 43px;
 }
