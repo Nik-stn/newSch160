@@ -264,6 +264,7 @@
     color: #1f1911;
     position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 .news-sch-link img,
@@ -298,21 +299,57 @@
     color: #fff;
     font-weight: 700;
     transition: all .3s ease-in-out;
+    overflow: hidden;
 }
 
 .news-sch-link:hover .news-sch-content,
 .announcement-sch-link:hover .announcement-sch-content {
-    bottom: 30%;
+    bottom: 5%;
 }
 
 .news-sch-date,
-.announcement-sch-date {
-    margin-bottom: 10px;
-}
-
+.announcement-sch-date,
 .news-sch-title,
 .announcement-sch-title {
+    margin-bottom: 5px;
+}
+
+.announcement-sch-button, .news-sch-button {
+    cursor: pointer;
     margin-bottom: 20px;
+    color: #1f1911;
+    background: #ffc421;
+    border: 0;
+    border-radius: 20px;
+    padding: 7px 10px;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.announcement-sch-button:hover::after, .news-sch-button:hover::after {
+    transform: translate(0, 0);
+}
+
+.announcement-sch-button:hover, .news-sch-button:hover {
+    color: #fff;
+}
+
+.announcement-sch-button::after, .news-sch-button::after {
+    position: absolute;
+    content: "";
+    background: #00043c;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 20px;
+    transform: translate(-100%, 0) rotate(10deg);
+    z-index: -1;
+    transition: transform 0.3s ease;
 }
 
 .news-rss {
@@ -413,11 +450,12 @@
 
     .news-sch-item,
     .announcement-sch-item,
-    .announcement-poll-item {
+    .announcement-poll-item, .announcement-sch-button, .news-sch-button {
         font-size: 14px;
     }
 
-    .poll-checkbox, .poll-radio {
+    .poll-checkbox,
+    .poll-radio {
         width: 20px;
         height: 20px;
     }
@@ -474,6 +512,10 @@
         gap: 10px;
     }
 
+    .announcement-sch-button, .news-sch-button {
+        margin-bottom: 10px;
+    }
+
     .announcement-poll-item {
         width: 97%;
     }
@@ -496,7 +538,7 @@
 
     .news-sch-item,
     .announcement-sch-item,
-    .announcement-poll-item {
+    .announcement-poll-item, .announcement-sch-button, .news-sch-button {
         font-size: 12px;
     }
 
@@ -562,7 +604,7 @@
 
     .news-sch-item,
     .announcement-sch-item,
-    .announcement-poll-item {
+    .announcement-poll-item, .announcement-sch-button, .news-sch-button {
         font-size: 14px;
     }
 
