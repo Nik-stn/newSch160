@@ -49,6 +49,11 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.banners-control svg path{
+    stroke: #fdbe34;
+    fill: #fdbe34;
+}
+
 .banners-control.next {
     right: 0;
 }

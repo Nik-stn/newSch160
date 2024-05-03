@@ -45,6 +45,11 @@
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.slider-control svg path{
+    stroke: #fdbe34;
+    fill: #fdbe34;
+}
+
 .slider-item {
     animation: fade 1.5s ease-in-out;
 }
