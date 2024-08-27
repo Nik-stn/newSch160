@@ -21,3 +21,9 @@ document.querySelector('.scrooll-to-top').addEventListener('click', (event) => {
   event.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+const images = document.querySelectorAll('.content-box img, .modal img');
+images.forEach(img => {
+    img.setAttribute('loading', 'lazy');
+});
