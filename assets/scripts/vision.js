@@ -42,8 +42,8 @@ function applyWhiteStyles() {
     noBorder.forEach(item => item.classList.add('footerNoBorder', 'newsNoBorder'));
     noHover.forEach(item => {
         item.style.zIndex = 'unset';
-        item.addEventListener('mouseover', function() {
-            this.removeClass('hover');
+        item.addEventListener('mouseover', function(e) {
+            e.removeClass('hover');
         });
     });
 }
