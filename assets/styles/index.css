@@ -1,3 +1,6 @@
+@import url('bootstrap.min.css');
+@import url('owl.carousel.min.css');
+@import url('owl.theme.default.min.css');
 @import url('main.css');
 @import url('header.css');
 @import url('slider.css');
@@ -12,7 +15,5 @@
 @import url('page.css');
 @import url('panel.css');
 @import url('vision.css');
-@import url('owl.carousel.min.css');
-@import url('owl.theme.default.min.css');
 
 
