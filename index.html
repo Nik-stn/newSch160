@@ -128,7 +128,7 @@
 
     <div class="site-content">
         <section class="section vision" style="display: none;">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="vision-flex">
                     <div class="vision-item">
                         <div class="vision-block font-size">
@@ -184,7 +184,7 @@
         </section>
 
         <header class="header" id="top">
-            <div class="container">
+            <div class="container-fluid">
 
 
 
@@ -550,7 +550,7 @@
                         </ul>
                     </div>
                     <div class="header-pc">
-                        <ul class="site-nav level_0">
+                        <ul class="site-nav level_0 mb-0">
                             <li class="nav-item parent">
                                 <a href="./page.html" class="nav-link">Одно окно
                                 </a>
@@ -736,110 +736,193 @@
         </header>
 
         <main class="main">
-
-
-
-            <!-- slider + popular -->
-              <section class="section">
-                 <div class="container">
-                    <div class="section-inner">
-                        <div class="slider">
-                            <div class="slider-item"><img src="assets/images/slider/pupils1.jpg" alt="pupils"></div>
-                            <div class="slider-item"><img src="assets/images/slider/pupils2.jpg" alt="pupils"></div>
-                            <div class="slider-item"><img src="assets/images/slider/pupils3.jpg" alt="pupils"></div>
-                            <div class="slider-item"><img src="assets/images/slider/pupils4.jpg" alt="pupils"></div>
-                            <div class="slider-item"><img src="assets/images/slider/pupils5.jpg" alt="pupils"></div>
-                            <div class="slider-item"><img src="assets/images/slider/pupils6.jpg" alt="pupils"></div>
-                            <button class="slider-control previous">
-                                <svg class="slider-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
-                                    <path  stroke-width="10" stroke-linecap="round" 
-                                        d="M561 816 320 575l241-241 43 43-198 198 198 198-43 43Z" />
-                                </svg>
-                            </button>
-                            <button class="slider-control next">
-                                <svg class="slider-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 96 960 960">
-                                    <path  stroke-width="10" stroke-linecap="round" 
-                                        d="m375 816-43-43 198-198-198-198 43-43 241 241-241 241Z" />
-                                </svg>
-                            </button>
+            <div class="container-xl container-fluid py-3">
+                <!-- slider + popular -->
+                 <div class="slider">
+                    <div id="carouselMainPage" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                        <figure class="carousel-item">
+                            <img
+                            alt=""
+                            src="assets/images/slider/pupils1.jpg"
+                            width="1290"
+                            height="600"
+                            class="w-100"
+                            loading="lazy"
+                            />
+                            <figcaption class="carousel-caption">
+                            <p>
+                                Приветствуем Вас на официальном сайте<br />Средней школы №160 г. Минска
+имени Героя Советского Союза О.А. Лосика
+                            </p>
+                            </figcaption>
+                        </figure>
+                        <figure class="carousel-item">
+                            <img
+                            alt=""
+                            src="assets/images/slider/pupils2.jpg"
+                            width="1290"
+                            height="600"
+                            class="w-100"
+                            loading="lazy"
+                            />
+                            <figcaption class="carousel-caption">
+                            <p>
+                                Приветствуем Вас на официальном сайте<br />Средней школы №160 г. Минска
+имени Героя Советского Союза О.А. Лосика
+                            </p>
+                            </figcaption>
+                        </figure>
+                        <figure class="carousel-item">
+                            <img
+                            alt=""
+                            src="assets/images/slider/pupils3.jpg"
+                            width="1290"
+                            height="600"
+                            class="w-100"
+                            loading="lazy"
+                            />
+                            <figcaption class="carousel-caption">
+                            <p>
+                                Приветствуем Вас на официальном сайте<br />Средней школы №160 г. Минска
+имени Героя Советского Союза О.А. Лосика
+                            </p>
+                            </figcaption>
+                        </figure>
+                        <figure class="carousel-item active">
+                            <img
+                            alt=""
+                            src="assets/images/slider/pupils4.jpg"
+                            width="1290"
+                            height="600"
+                            class="w-100"
+                            loading="lazy"
+                            />
+                            <figcaption class="carousel-caption">
+                            <p>
+                                Приветствуем Вас на официальном сайте<br />Средней школы №160 г. Минска
+имени Героя Советского Союза О.А. Лосика
+                            </p>
+                            </figcaption>
+                        </figure>
+                        <figure class="carousel-item">
+                            <img
+                            alt=""
+                            src="assets/images/slider/pupils5.jpg"
+                            width="1290"
+                            height="600"
+                            class="w-100"
+                            loading="lazy"
+                            />
+                            <figcaption class="carousel-caption">
+                            <p>
+                                Приветствуем Вас на официальном сайте<br />Средней школы №160 г. Минска
+имени Героя Советского Союза О.А. Лосика
+                            </p>
+                            </figcaption>
+                        </figure>
+                        
                         </div>
+                        <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carouselMainPage"
+                        data-bs-slide="prev"
+                        >
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carouselMainPage"
+                        data-bs-slide="next"
+                        >
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
                  </div>
-            </section>
-            <section class="section">
-           
-                <div class="container">
-                    <!-- <div class="rebuild">
-                        <img class="rebuild-img" src="assets/images/reconstruction.png" alt="reconstruction">
-                        <h2 class="rebuild-title">Сайт находится на реконструкции. Приносим свои извинения за временные
-                            неудобства.</h2>
-                    </div> -->
-                    <div class="section-inner">
 
 
-                        <div class="popular">
-                            <div class="popular-box">
-                                <h2 class="popular-title">Популярные разделы </h2>
-                                <div class="popular-wrap">
-                                    <div class="popular-item accessible ">
-                                        <a href="#" class="popular-link">
-                                            Образование в 2022/2023 учебном году
-                                        </a>
-                                    </div>
-                                    <div class="popular-item accessible">
-                                        <a href="#" class="popular-link">
-                                            Шестой школьный день
-                                        </a>
-                                    </div>
-                                    <div class="popular-item accessible">
-                                        <a href="#" class="popular-link">
-                                            Каникулы
-                                        </a>
-                                    </div>
-                                    <div class="popular-item accessible">
-                                        <a href="#" class="popular-link">
-                                            Экзаменационная кампания
-                                        </a>
-                                    </div>
-                                    <div class="popular-item accessible">
-                                        <a href="#" class="popular-link">
-                                            Деловой стиль одежды
-                                        </a>
-                                    </div>
-                                    <div class="popular-item accessible">
-                                        <a href="#" class="popular-link">
-                                            2023 - Год мира и созидания
-                                        </a>
-                                    </div>
-                                    <div class="popular-item accessible">
-                                        <a href="#" class="popular-link">
-                                            Правила приема в школу
-                                        </a>
-                                    </div>
-                                    <div class="popular-item accessible">
-                                        <a href="#" class="popular-link">
-                                            Расписание учебных занятий
-                                        </a>
-                                    </div>
-                                    <div class="popular-item accessible">
-                                        <a href="#" class="popular-link">
-                                            Пакет "Безопасность"
-                                        </a>
-                                    </div>
-                                    <div class="popular-item accessible">
-                                        <a href="#" class="popular-link">
-                                            Профилактика вирусных заболеваний
-                                        </a>
+                <section class="section">
+               
+                    <div class="container">
+                        <!-- <div class="rebuild">
+                            <img class="rebuild-img" src="assets/images/reconstruction.png" alt="reconstruction">
+                            <h2 class="rebuild-title">Сайт находится на реконструкции. Приносим свои извинения за временные
+                                неудобства.</h2>
+                        </div> -->
+                        <div class="section-inner">
+    
+    
+                            <div class="popular">
+                                <div class="popular-box">
+                                    <h2 class="popular-title">Популярные разделы </h2>
+                                    <div class="popular-wrap">
+                                        <div class="popular-item accessible ">
+                                            <a href="#" class="popular-link">
+                                                Образование в 2022/2023 учебном году
+                                            </a>
+                                        </div>
+                                        <div class="popular-item accessible">
+                                            <a href="#" class="popular-link">
+                                                Шестой школьный день
+                                            </a>
+                                        </div>
+                                        <div class="popular-item accessible">
+                                            <a href="#" class="popular-link">
+                                                Каникулы
+                                            </a>
+                                        </div>
+                                        <div class="popular-item accessible">
+                                            <a href="#" class="popular-link">
+                                                Экзаменационная кампания
+                                            </a>
+                                        </div>
+                                        <div class="popular-item accessible">
+                                            <a href="#" class="popular-link">
+                                                Деловой стиль одежды
+                                            </a>
+                                        </div>
+                                        <div class="popular-item accessible">
+                                            <a href="#" class="popular-link">
+                                                2023 - Год мира и созидания
+                                            </a>
+                                        </div>
+                                        <div class="popular-item accessible">
+                                            <a href="#" class="popular-link">
+                                                Правила приема в школу
+                                            </a>
+                                        </div>
+                                        <div class="popular-item accessible">
+                                            <a href="#" class="popular-link">
+                                                Расписание учебных занятий
+                                            </a>
+                                        </div>
+                                        <div class="popular-item accessible">
+                                            <a href="#" class="popular-link">
+                                                Пакет "Безопасность"
+                                            </a>
+                                        </div>
+                                        <div class="popular-item accessible">
+                                            <a href="#" class="popular-link">
+                                                Профилактика вирусных заболеваний
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+    
+                            
+    
                         </div>
-
-                        
-
                     </div>
-                </div>
-            </section> <!-- slider + popular -->
+                </section> <!-- slider + popular -->
+
+            </div>
+
+
 
             <!-- news + announcement -->
             <section class="section">
