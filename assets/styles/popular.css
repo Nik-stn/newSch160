@@ -1,8 +1,3 @@
-.popular  {
-    width: 35%;
-    align-self: center;
-}
-
 .popular-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -48,14 +43,7 @@
     padding: 0 20px;
 }
 
-@media (max-width: 1800px) {
-    .popular  {
-        width: 40%;
-    }
-}
-
 @media (max-width: 1600px) {
-    
     .popular-item  {
         font-size: 16px;
         margin: 15px auto;
@@ -101,11 +89,6 @@
 }
 
 @media (max-width: 768px) {
-    .popular {
-        width: 100%;
-        margin: auto;
-    }
-
     .popular-item {
         width: 30%;
         height: 40px;
@@ -124,9 +107,4 @@
     .popular-item {
         width: 55%;
     }
-}
-
-@media (max-width: 320px) {
-
-
 }
