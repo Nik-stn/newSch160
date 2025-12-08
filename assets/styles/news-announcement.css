@@ -216,3 +216,238 @@
         height: 200px;
     }
 }
+
+
+.announcement-poll {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.announcement-poll {
+    gap: 15px;
+}
+
+
+.announcement-poll-item {
+    width: 47%;
+    border: 2px solid rgba(255, 196, 33, 0.5);
+    position: relative;
+    font-size: 16px;
+}
+
+.announcement-poll-item {
+    padding: 9px;
+    font-size: 18px;
+    background: #ffffff81;
+}
+
+.announcement-poll-title {
+    margin-bottom: 10px;
+}
+
+.poll-text {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.announcement-poll-archive {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.poll-result .pos {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.5em;
+    border-radius: 1.5em;
+}
+
+.post.poll-result .poll-result-stats {
+    list-style-type: none;
+}
+
+/* Hide the browser's default radio button */
+.poll-text input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.poll-checkbox,
+.poll-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 4px;
+    background-color: #ccc;
+}
+
+.poll-radio {
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add background color */
+.poll-text:hover input~.poll-checkbox,
+.poll-text:hover input~.poll-radio {
+    background-color: #ffc421;
+}
+
+/* When the checkmark is checked, add background */
+.poll-text input:checked~.poll-checkbox,
+.poll-text input:checked~.poll-radio {
+    background-color: #00043c;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.poll-checkbox:after,
+.poll-radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.poll-text input:checked~.poll-checkbox:after,
+.poll-text input:checked~.poll-radio:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.poll-text .poll-checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+/* Style the checkmark/indicator */
+.poll-text .poll-radio:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.poll-link-archive-text {
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    background: #ffc421;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms;
+    font-size: 18px;
+}
+
+.poll-link-archive-text {
+    margin-left: 30px;
+    width: 130px;
+    height: 30px;
+}
+
+.poll-link-archive-text:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.announcement-poll-archive-link {
+    color: #1f1911;
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .announcement-poll-item, .announcement-sch-button, .news-sch-button {
+        font-size: 14px;
+    }
+
+    .poll-checkbox,
+    .poll-radio {
+        width: 20px;
+        height: 20px;
+    }
+
+    .poll-text .poll-checkbox:after {
+        left: 35%;
+        top: 15%;
+    }
+
+    .poll-text .poll-radio:after {
+        top: 6px;
+        left: 6px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .poll-link-archive-text {
+        border-width: 1px;
+    }
+
+    .announcement-poll-item {
+        width: 97%;
+    }
+}
+
+@media (max-width: 900px) {
+    .announcement-poll-item, .announcement-sch-button, .news-sch-button {
+        font-size: 12px;
+    }
+
+    .poll-link-archive-text {
+        height: 35px;
+        width: 160px;
+        font-size: 16px;
+    }
+
+    .poll-link-archive-text {
+        width: 100px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .announcement-poll-item {
+        width: 47%;
+    }
+
+    .announcement-poll-item, .announcement-sch-button, .news-sch-button {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 600px) {
+    .announcement-poll-item {
+        width: 97%;
+    }
+}
+
+
