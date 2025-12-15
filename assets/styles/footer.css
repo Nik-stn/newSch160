@@ -12,7 +12,7 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 90px 0 38px;
+    padding: 38px 0 38px;
     border-bottom: 1px solid rgba(253, 189, 52, 0.5);
 }
 
