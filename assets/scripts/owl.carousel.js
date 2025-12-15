@@ -3461,6 +3461,9 @@ $('.panel .owl-carousel').owlCarousel({
         0:{
             items:1,
         },
+		300:{
+            items:2,
+        },
         600:{
             items:3,
         },
@@ -3480,14 +3483,21 @@ $(".banners .owl-carousel").owlCarousel({
     autoplayTimeout: 4000,
     autoplayHoverPause: true,
     dots: false,
+	// autoWidth: true,
 	 responsive:{
         0:{
             items:1,
         },
-        600:{
+		300:{
             items:3,
         },
-        1000:{
+        400:{
+            items:4,
+        },
+		600:{
+            items:5,
+        },
+        800:{
             items:7,
         },
 		1600:{
